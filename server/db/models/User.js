@@ -8,13 +8,7 @@ const User = db.define('user', {
     unique: true,
     allowNull: false
   },
-  poliOri: {
-    type: Sequelize.INTEGER,
-    validate: {
-      min: 1,
-      max: 5
-    }
-  },
+
   password: {
     type: Sequelize.STRING,
     // Making `.password` act like a func hides it when serializing to JSON.
@@ -36,6 +30,10 @@ const User = db.define('user', {
   }
 })
 
+const createUser = async () => {
+  await User.create({ email: 'sarah@email.com', password: '123' })
+}
+createUser()
 module.exports = User
 
 /**

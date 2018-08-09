@@ -7,4 +7,4 @@ const Topic = db.define('topic', {
   }
 })
 
-module.exports = Source
+module.exports = Topic
