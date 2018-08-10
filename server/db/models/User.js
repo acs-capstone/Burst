@@ -5,7 +5,7 @@ const db = require('../db')
 const User = db.define('user', {
   email: {
     type: Sequelize.STRING,
-    unique: true,
+    //unique: true,
     allowNull: false
   },
 
@@ -30,10 +30,6 @@ const User = db.define('user', {
   }
 })
 
-const createUser = async () => {
-  await User.create({ email: 'sarah@email.com', password: '123' })
-}
-createUser()
 module.exports = User
 
 /**
