@@ -33,13 +33,6 @@ export default class Topics extends Component {
     if (evt.target.name === 'submit') {
       this.setState({ hasSubmitted: true });
     } else {
-      !this.state.choices.includes(evt.target.value)
-        ? this.setState({ choices: [...this.state.choices, evt.target.value] })
-        : this.setState({
-            choices: this.state.choices.filter(choice => {
-              if (choice !== evt.target.value) return choice;
-            })
-          });
       console.log('CURRENT CHOICES', this.state.choices);
       //need some logic for:
       //if button is clicked it is highlighted and added to choices array. Otherwise, it will be unhighlited and it will be removed from choices
@@ -47,15 +40,14 @@ export default class Topics extends Component {
   }
 
   render() {
-    if (this.state.hasSubmitted === true) {
-      return <Sources />;
-    }
     return (
       <div>
         {this.state.topics.map(topic => {
-          return <ChoiceButton choice={topic} handleClick={this.handleClick} />;
+          return (
+            <ChoiceButton choice={topic} handleClick={this.props.handleClick} />
+          );
         })}
-        <button type="submit" name="submit" onClick={this.handleClick}>
+        <button type="submit" name="submit" onClick={this.props.handleClick}>
           Submit
         </button>
       </div>
