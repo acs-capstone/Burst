@@ -22,7 +22,7 @@ const getAllSources = (sources) => ({ type: GET_SOURCES, sources })
 export const getSourcesList = () => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get('localhost:8080/api/sources') //need to change for deployment process.env
+      const { data } = await axios.get('localhost:8080/api/sources') //TODO: need to change for deployment process.env
       dispatch(getAllSources(data))
     } catch (error) {
       console.error(error)
