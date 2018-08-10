@@ -1,3 +1,5 @@
+// This is just a test query from newsAPI
+
 {
   "status": "ok",
   "totalResults": 1729,
