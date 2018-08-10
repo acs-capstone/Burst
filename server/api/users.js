@@ -12,6 +12,23 @@ router.get('/', async (req, res, next) => {
   }
 })
 
+//gets user data by Id - need a Poli Id
+router.get('/:id', async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id, {
+      include: [{ model: Source }, { model: Topic }]
+    })
+    //this gets us the 'bubble bursting' sources
+    const oppSources = await Source.findAll({
+      where:
+        { polioriId: user.polioriId + 2 } // TODO: need to add bubble burst algo here
+    })
+    res.json({ oppSources, user })
+  } catch (err) {
+    next(err)
+  }
+})
+
 //updates user instance after quiz - needs poliOriId, arrayOfSources, arrayOfTopics
 router.put('/:id', async (req, res, next) => {
   try {
