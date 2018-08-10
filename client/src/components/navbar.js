@@ -41,7 +41,7 @@ const Navbar = ({ id, handleClick, isLoggedIn }) => (
             </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#" onClick={handleClick}>
+            <a className="nav-link" href="/" onClick={handleClick}>
               Logout
             </a>
           </li>
