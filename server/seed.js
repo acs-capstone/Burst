@@ -1,7 +1,14 @@
 const sources = require('./parser/rankings.json')
 const { Source, PoliOri } = require('./db/models/')
 const db = require('./db')
-//console.log(sources)
+const sourcesObj = require('./parser/allSidesSourceIdParser')
+
+sources.forEach(source => {
+  if (sourcesObj[source.name]) {
+    source.newsApiId = sourcesObj[source.name]
+    console.log(source)
+  }
+})
 
 const poliOriSeed = async () => {
   try {
@@ -17,7 +24,7 @@ const poliOriSeed = async () => {
 const allSidesSeed = async () => {
   for (let i = 0; i < sources.length; i++) {
     try {
-      await Source.create(sources[i])
+      const source = await Source.create(sources[i])
       //Source.setPoliOri({}) need syntax for this
     } catch (err) {
       console.log(err)

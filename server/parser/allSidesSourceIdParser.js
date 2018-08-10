@@ -2,32 +2,38 @@ var cheerio = require('cheerio')
 var cheerioAdv = require('cheerio-advanced-selectors')
 cheerio = cheerioAdv.wrap(cheerio)
 const fs = require('fs')
-const newsapipage = newsApi.org.sources.html
+const path = require('path')
+const newsapipage = path.join(__dirname, '/newsApi.org.sources.html')
 
-function get() {
+const sourcesObj = {}
+function getIds() {
   const text = fs.readFileSync(newsapipage, 'utf-8')
   const $ = cheerio.load(text)
-
-  $('tr').each(function(i, elem) {
+  const sources = []
+  $('.source').each(function(i, elem) {
     const source = {}
-    // get title text
-    const title = $(this)
-      .find('.source-title')
+    const name = $(this)
+      .find('.name')
       .text()
       .trim()
-    const rating = $(this)
-      .find('[typeof="foaf:Image"]')
-      .attr('title')
-    if (rating) {
-      ratingStripped = rating.replace('Political News Media Bias Rating: ', '')
-      source['name'] = title
-      source['poliOriId'] = poliOri[ratingStripped]
-      source['poliOriStr'] = ratingStripped
-      rankings.push(source)
-    }
+
+    const id = $(this)
+      .find('kbd')
+      .text()
+      .trim()
+
+    source['id'] = id
+    source['name'] = name
+    sourcesObj[name] = id
+
+    sources.push(source)
   })
 
-  fs.writeFileSync('./rankings.json', JSON.stringify(rankings), 'utf-8')
-  console.log(rankings)
-  return rankings
+  fs.writeFileSync('./sourceIds.json', JSON.stringify(sources), 'utf-8')
+
+  return sources
 }
+
+getIds()
+
+module.exports = sourcesObj
