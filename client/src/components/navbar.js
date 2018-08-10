@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { logout } from '../store'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { logout } from '../store';
 
 const Navbar = ({ id, handleClick, isLoggedIn }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -89,7 +89,7 @@ const Navbar = ({ id, handleClick, isLoggedIn }) => (
       </form> */}
     </div>
   </nav>
-)
+);
 
 /**
  * CONTAINER
@@ -98,21 +98,21 @@ const mapState = state => {
   return {
     isLoggedIn: !!state.user.id,
     id: state.user.id
-  }
-}
+  };
+};
 
 const mapDispatch = dispatch => {
   return {
     handleClick() {
-      dispatch(logout())
+      dispatch(logout());
     }
-  }
-}
+  };
+};
 
 export default connect(
   mapState,
   mapDispatch
-)(Navbar)
+)(Navbar);
 
 /**
  * PROP TYPES
@@ -120,4 +120,4 @@ export default connect(
 Navbar.propTypes = {
   handleClick: PropTypes.func.isRequired,
   isLoggedIn: PropTypes.bool.isRequired
-}
+};
