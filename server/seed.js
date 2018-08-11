@@ -1,5 +1,5 @@
 const sources = require('./parser/rankings.json')
-const { Source, PoliOri } = require('./db/models/')
+const { Source, PoliOri, Topic } = require('./db/models/')
 const db = require('./db')
 const sourcesObj = require('./parser/allSidesSourceIdParser')
 
@@ -10,6 +10,29 @@ sources.forEach(source => {
   }
 })
 
+// const topics = [
+//   { name: 'Women’s Rights' },
+//   { name: 'Finance & Tax' },
+//   { name: 'Gun Control' },
+//   { name: 'Immigration' },
+//   { name: 'Elections' },
+//   { name: 'Energy & Environment' },
+//   { name: 'International Relations' },
+//   { name: 'Healthcare' },
+//   { name: 'Trade' }
+// ]
+
+// const topicsSeed = async () => {
+//   try {
+//     await Promise.all(topics.map(topic => {
+//       Topic.create(topic)
+//     })
+//     )
+//   } catch (err) {
+//     console.log(err)
+//   }
+// }
+
 const poliOriSeed = async () => {
   try {
     await Promise.all([
@@ -19,8 +42,11 @@ const poliOriSeed = async () => {
       PoliOri.create({ poliOri: 'Lean Right' }),
       PoliOri.create({ poliOri: 'Right' })
     ])
-  } catch (e) {}
+  } catch (err) {
+    console.log(err)
+  }
 }
+
 const allSidesSeed = async () => {
   for (let i = 0; i < sources.length; i++) {
     try {
@@ -40,6 +66,7 @@ async function runSeed() {
     console.log('db synced!')
     await poliOriSeed()
     await allSidesSeed()
+    // await topicsSeed()
   } catch (err) {
     console.error(err)
     process.exitCode = 1
