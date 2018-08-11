@@ -1,5 +1,4 @@
 import React from 'react'
-import moment from 'moment'
 const Article = props => {
   const { article } = props
   return (
