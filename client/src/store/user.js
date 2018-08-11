@@ -57,10 +57,19 @@ export const logout = () => async dispatch => {
   }
 }
 
+export const getUserThunk = (userId) => async dispatch => {
+  try {
+    const { data } = await axios.get(`/users/${userId}`)
+    dispatch(getUser(data))
+  } catch (err) {
+    console.error(err)
+  }
+}
+
 /**
  * REDUCER
  */
-export default function(state = defaultUser, action) {
+export default function (state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
       return action.user
