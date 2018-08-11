@@ -19,11 +19,11 @@ router.get('/:id', async (req, res, next) => {
       include: [{ model: Source }, { model: Topic }]
     })
     //this gets us the 'bubble bursting' sources
-    const oppSources = await Source.findAll({
-      where:
-        { poliOriId: user.poliOriId + 2 } // TODO: need to add bubble burst algo here
-    })
-    res.json({ oppSources, user })
+    // const oppSources = await Source.findAll({
+    //   where: { poliOriId: user.poliOriId + 2 } // TODO: need to add bubble burst algo here
+    // })
+
+    res.json(user)
   } catch (err) {
     next(err)
   }
@@ -40,4 +40,3 @@ router.put('/:id', async (req, res, next) => {
     next(err)
   }
 })
-
