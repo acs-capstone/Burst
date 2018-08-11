@@ -32,6 +32,7 @@ class AllArticles extends Component {
       <div className="container">
         <div className="row">
           <div className="col-lg-11">
+            All Articles
             <ArticleList
               user={this.props.user}
               articles={this.props.articles}
