@@ -1,12 +1,11 @@
 import React from 'react'
-
 const Article = props => {
   const { article } = props
   return (
-    article.description && (
-      <li class="media border-primary col-lg-11 ">
+    article.description.length > 50 && (
+      <li className="media border-primary col-lg-11 ">
         <img
-          class="mr-3 .img-thumbnail img-small img-fluid"
+          className="mr-3 .img-thumbnail img-small img-fluid"
           src={
             article.urlToImage || 'https://bitcoin.org/img/icons/opengraph.png'
           }
@@ -20,7 +19,7 @@ const Article = props => {
           <p>{article.description}</p>
 
           <small>
-            Source: {article.source.name} | published at: {article.publishedAt}
+            {article.source.name} | published at: {article.publishedAt}
           </small>
         </div>
       </li>
