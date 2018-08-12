@@ -3,7 +3,7 @@ const Article = props => {
   const { article } = props
   return (
     article.description.length > 50 && (
-      <li class="media border-primary col-lg-11 ">
+      <li className="media border-primary col-lg-11 ">
         <img
           className="mr-3 .img-thumbnail img-small img-fluid"
           src={

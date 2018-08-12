@@ -24,7 +24,7 @@ const removeUser = () => ({ type: REMOVE_USER })
 export const me = () => async dispatch => {
   try {
     const { data } = await axios.get(`/auth/me`)
-    console.log('USER res.data:', data)
+
     dispatch(getUser(data || defaultUser))
   } catch (err) {
     console.error(err)
@@ -57,9 +57,11 @@ export const logout = () => async dispatch => {
   }
 }
 
-export const getUserThunk = (userId) => async dispatch => {
+export const getUserThunk = userId => async dispatch => {
   try {
-    const { data } = await axios.get(`/users/${userId}`)
+    const { data } = await axios.get(
+      `http://localhost:8080/api/users/${userId}`
+    )
     dispatch(getUser(data))
   } catch (err) {
     console.error(err)
@@ -69,7 +71,7 @@ export const getUserThunk = (userId) => async dispatch => {
 /**
  * REDUCER
  */
-export default function (state = defaultUser, action) {
+export default function(state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
       return action.user

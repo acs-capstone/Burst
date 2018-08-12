@@ -4,8 +4,11 @@ import { NavLink } from 'react-router-dom'
 import { me } from '../store'
 
 import ArticleList from './ArticleList'
-const articlesObj = require('./bitcoin.json')
-const articles = articlesObj.articles
+import { fetchArticles } from '../store/articles'
+import { getUserThunk } from '../store/user'
+
+//const articlesObj = require('./bitcoin.json')
+//const articles = articlesObj.articles
 
 const initialState = {
   articles: [],
@@ -17,8 +20,16 @@ class AllArticles extends Component {
     super()
     this.state = initialState
   }
-  componentDidMount() {
-    console.log('COMPONENT MOUNTED')
+  async componentDidMount() {
+    try {
+      const user = await this.props.getUserThunk(this.props.user.id)
+      const articles = await this.props.fetchArticles(this.props.user)
+
+      console.log('*ARTICLES', this.props.articles)
+      console.log('*USER', this.props.user)
+    } catch (err) {
+      console.error(err.message)
+    }
   }
 
   handleChange = evt => this.setState({ [evt.target.name]: evt.target.value })
@@ -45,8 +56,18 @@ class AllArticles extends Component {
 }
 
 const mapState = state => ({
-  articles: articles,
+  articles: state.articles,
   user: state.user
 })
 
-export default connect(mapState)(AllArticles)
+const mapDispatch = dispatch => {
+  return {
+    fetchArticles: userObj => dispatch(fetchArticles(userObj)),
+    getUserThunk: userId => dispatch(getUserThunk(userId))
+  }
+}
+
+export default connect(
+  mapState,
+  mapDispatch
+)(AllArticles)

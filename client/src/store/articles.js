@@ -13,17 +13,30 @@ const initialState = []
 /**
  * ACTION CREATORS
  */
-const getArticles = (articles) => ({ type: GET_ARTICLES, articles })
+const getArticles = articles => ({ type: GET_ARTICLES, articles })
 
 /**
  * THUNK CREATORS
  */
 //gets articles in bubble
-// export const getArticlesThunk = (topics, sources) => {
+
+export const fetchArticles = user => async dispatch => {
+  try {
+    const { data } = await axios.put(
+      `http://localhost:8080/api/articles/${user.id}`,
+      user
+    )
+    console.log('HERE!')
+    dispatch(getArticles(data))
+    console.log('GET ART DATA', data)
+  } catch (err) {
+    console.error(err)
+  }
+}
+
 //   return async (dispatch) => {
 //     try {
 //       await axios.get()
-
 
 //       const stringOfTopics = topics.map(topic => {
 //         return topic.name
@@ -42,9 +55,11 @@ const getArticles = (articles) => ({ type: GET_ARTICLES, articles })
 /**
  * REDUCER
  */
-const reducer = (state = initialState, action) => {
+export default function(state = initialState, action) {
   switch (action.type) {
     case GET_ARTICLES:
       return action.articles
+    default:
+      return state
   }
 }

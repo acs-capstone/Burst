@@ -13,14 +13,19 @@ router.put('/:id', async (req, res, next) => {
     const sources = req.body.sources
     const poliOriId = req.body.poliOriId
 
-    const stringOfTopics = topics.map(topic => {
-      return topic.name
-    }).join(',')
+    console.log('TOPICS ON USER', req.body)
+    const stringOfTopics = topics
+      .map(topic => {
+        return topic.name
+      })
+      .join(',')
 
-    const stringify = (arrOfSources) => {
-      return arrOfSources.map(source => {
-        return source.newsApiId
-      }).join(',')
+    const stringify = arrOfSources => {
+      return arrOfSources
+        .map(source => {
+          return source.newsApiId
+        })
+        .join(',')
     }
 
     const inBubble = await newsapi.v2.everything({
@@ -29,8 +34,7 @@ router.put('/:id', async (req, res, next) => {
     })
 
     const oppSources = await Source.findAll({
-      where:
-      {
+      where: {
         poliOriId: +poliOriId + 2, // TODO: need to add bubble burst algo here
         newsApiId: {
           [Op.ne]: null
@@ -44,7 +48,6 @@ router.put('/:id', async (req, res, next) => {
     })
 
     res.json({ inBubble, outOfBubble })
-
   } catch (error) {
     console.error(error)
   }
