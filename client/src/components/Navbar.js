@@ -15,7 +15,11 @@ const Navbar = ({ id, handleClick, isLoggedIn }) => (
               Home
             </Link>
           </li>
-
+          <li className="nav-item">
+            <Link className="nav-link" to="/news">
+              News Feed
+            </Link>
+          </li>
           <li className="nav-item">
             <a className="nav-link" href="/" onClick={handleClick}>
               Logout
@@ -23,21 +27,21 @@ const Navbar = ({ id, handleClick, isLoggedIn }) => (
           </li>
         </ul>
       ) : (
-        <ul className="navbar-nav ml-auto">
-          {/* The navbar will show these links before you log in */}
+          <ul className="navbar-nav ml-auto">
+            {/* The navbar will show these links before you log in */}
 
-          <li className="nav-item">
-            <Link className="nav-link" to="/login">
-              Login
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">
+                Login
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/signup">
-              Sign Up
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/signup">
+                Sign Up
             </Link>
-          </li>
-        </ul>
-      )}
+            </li>
+          </ul>
+        )}
     </div>
   </nav>
 )

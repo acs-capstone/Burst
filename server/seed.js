@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 const sources = require('./parser/rankings.json')
 const { Source, PoliOri, Topic, User } = require('./db/models/')
+=======
+const oldSources = require('./parser/rankings.json')
+const { Source, PoliOri, Topic } = require('./db/models/')
+>>>>>>> master
 const db = require('./db')
 const sourcesObj = require('./parser/allSidesSourceIdParser')
 
-sources.forEach(source => {
-  if (sourcesObj[source.name]) {
-    source.newsApiId = sourcesObj[source.name]
-    // console.log(source)
-  }
+const sources = oldSources.map(source => {
+  const split = source.name
+    .toLowerCase()
+    .replace(/-/g, '')
+    .split(' ')
+
+  const newsApiId = split.join('-')
+  source.newsApiId = newsApiId
+  return source
 })
 
 const topics = [
