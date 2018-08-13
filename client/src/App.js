@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <Navbar />
-        <div className="content">
+        <div className="content-div">
           <Routes />
         </div>
         <footer className="py-5 bg-light">
