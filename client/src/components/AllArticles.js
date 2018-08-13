@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
 import { me } from '../store'
 
 import ArticleList from './ArticleList'
@@ -24,9 +23,8 @@ class AllArticles extends Component {
     try {
       const user = await this.props.getUserThunk(this.props.user.id)
       const articles = await this.props.fetchArticles(this.props.user)
-
-      console.log('*ARTICLES', this.props.articles)
-      console.log('*USER', this.props.user)
+      // console.log('*ARTICLES', this.props.articles)
+      // console.log('*USER', this.props.user)
     } catch (err) {
       console.error(err.message)
     }
