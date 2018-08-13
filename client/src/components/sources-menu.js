@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class SourcesMenu extends Component {
   render() {
@@ -11,8 +11,11 @@ export default class SourcesMenu extends Component {
             New York Times
           </option>
         </select>
+        <button onClick={props.handleClick} type="submit" name="submit">
+          Submit
+        </button>
       </div>
-    );
+    )
   }
 }
 

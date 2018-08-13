@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Route, Switch } from 'react-router-dom'
 
-import { Login, Signup, UserHome, AllArticles } from './components'
+import { Login, Signup, UserHome, AllArticles, Quiz } from './components'
 import { me } from './store'
 
 /**
