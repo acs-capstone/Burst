@@ -18,8 +18,9 @@ router.put('/:id', async (req, res, next) => {
       .map(topic => {
         return topic.name
       })
-      .join(',')
+      .join(' OR ')
 
+    //function to turn our array of sources into a string delimited by commas
     const stringify = arrOfSources => {
       return arrOfSources
         .map(source => {
@@ -28,9 +29,21 @@ router.put('/:id', async (req, res, next) => {
         .join(',')
     }
 
+    //function to get date for oldest article allowed
+    const createDate = (days, months, years) => {
+      var date = new Date()
+      date.setDate(date.getDate() + days)
+      date.setMonth(date.getMonth() + months)
+      date.setFullYear(date.getFullYear() + years)
+      return date.toISOString()
+    }
+
     const inBubble = await newsapi.v2.everything({
       q: stringOfTopics,
-      sources: stringify(sources)
+      sources: stringify(sources),
+      sortBy: 'relevancy', //do we want to sort by relevancy?
+      language: 'en',
+      from: createDate(0, -1, 0)
     })
 
     const oppSources = await Source.findAll({
@@ -44,10 +57,36 @@ router.put('/:id', async (req, res, next) => {
 
     const outOfBubble = await newsapi.v2.everything({
       q: stringOfTopics,
-      sources: stringify(oppSources)
+      sources: stringify(oppSources),
+      sortBy: 'relevancy', //do we want to sort by relevancy?
+      language: 'en',
+      from: createDate(0, -1, 0)
     })
+    //add key out:true key to denote out of bubble articles
+    const outWithKey = outOfBubble.articles.slice(0, 6).map(obj => { return { ...obj, out: true } })
+    //join outOfBubble and inBubble arrays
+    const inAndOutArr = inBubble.articles.slice(0, 14).concat(outWithKey)
 
-    res.json({ inBubble, outOfBubble })
+    //randomize order of articles function
+    function randomize(arr) {
+      let currentIndex = arr.length
+      let tempVal;
+      let randomIdx;
+
+      while (0 !== currentIndex) {
+        randomIdx = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        tempVal = arr[currentIndex]
+        arr[currentIndex] = arr[randomIdx]
+        arr[randomIdx] = tempVal
+      }
+      return arr
+    }
+
+    const combinedArticleList = randomize(inAndOutArr)
+
+    res.json(combinedArticleList) //sends array of randomized articles
   } catch (error) {
     console.error(error)
   }
