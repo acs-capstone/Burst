@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'
 
 const ChoiceButton = props => {
   return (
     <button
       className="choice-button"
       // type="submit"
-      value={props.choice}
+      value={props.topic.id}
       onClick={props.handleClick}
     >
-      {props.choice}
+      {props.topic.name}
     </button>
-  );
-};
+  )
+}
 
-export default ChoiceButton;
+export default ChoiceButton

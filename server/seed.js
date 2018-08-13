@@ -1,5 +1,5 @@
 const sources = require('./parser/rankings.json')
-const { Source, PoliOri, Topic } = require('./db/models/')
+const { Source, PoliOri, Topic, User } = require('./db/models/')
 const db = require('./db')
 const sourcesObj = require('./parser/allSidesSourceIdParser')
 
@@ -63,6 +63,13 @@ const poliOriSeed = async () => {
   }
 }
 
+const usersSeed = async () => {
+  await Promise.all([
+    User.create({ email: 'murphy@email.com', password: '123' }),
+    User.create({ email: 'cody@email.com', password: '123' })
+  ])
+}
+
 const allSidesSeed = async () => {
   for (let i = 0; i < sources.length; i++) {
     try {
@@ -82,6 +89,7 @@ async function runSeed() {
     console.log('db synced!')
     await poliOriSeed()
     await allSidesSeed()
+    await usersSeed()
     await Promise.all(topics.map(topic => Topic.create(topic)))
     // await topicsSeed()
   } catch (err) {

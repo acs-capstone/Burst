@@ -33,9 +33,10 @@ router.get('/:id', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id)
-    user.update({ poliOriId: req.body.poliOriId })
-    user.setSources(req.body.arrayOfSources)
-    user.setTopics(req.body.arrayOfTopics)
+    await user.update({ poliOriId: req.body.poliOriId })
+    await user.addSources(req.body.arrayOfSources)
+    await user.addTopics(req.body.arrayOfTopics)
+    res.json(user)
   } catch (err) {
     next(err)
   }

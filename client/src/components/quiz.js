@@ -4,8 +4,11 @@ import Answers from './answers'
 import Prompt from './prompt'
 import Topics from './topics'
 import SourcesMenu from './sources-menu'
+import { updateUserThunk } from '../store/user'
+import { connect } from 'react-redux'
+import { Redirect, Link } from 'react-router'
 
-export default class Quiz extends Component {
+class Quiz extends Component {
   constructor() {
     super()
     this.state = {
@@ -17,7 +20,10 @@ export default class Quiz extends Component {
       hasSubmittedSources: false,
       hasSubmittedTopics: false,
       sources: [],
-      topics: []
+      topics: [],
+      currentSource: 0,
+      currentSourceName: '',
+      sourceNames: []
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -25,17 +31,26 @@ export default class Quiz extends Component {
 
   async componentDidMount() {
     try {
-      await this.setState({ questions, question: questions[0] })
+      await this.setState({
+        questions,
+        question: questions[0]
+      })
     } catch (err) {
       console.err(err.message)
     }
   }
 
   handleChange(evt) {
-    this.setState({ sources: [...this.state.sources, evt.target.value] })
+    this.setState({
+      currentSource: evt.target.value,
+      currentSourceName: evt.target.name
+    })
+
+    console.log('currentSourceName', this.state.currentSource)
+    console.log('currentSourceName', this.state.currentSourceName)
   }
 
-  handleClick(evt) {
+  async handleClick(evt) {
     //update score on state with question value if in quiz portion
     if (!this.state.hasSubmittedQuiz) {
       this.setState({
@@ -47,7 +62,9 @@ export default class Quiz extends Component {
         this.setState({ question: questions[this.state.count] })
       } else {
         //if question number is same as length, questions are finished and quiz is submitted
-        this.setState({ hasSubmittedQuiz: true })
+        let finalScore = Math.round(this.state.score / 2) //TODO: Change to 11 once all Q's are added
+        console.log('*FINAL SCORE*', finalScore)
+        this.setState({ score: finalScore, hasSubmittedQuiz: true })
       }
       //if quiz is submitted, but topics haven't been submitted, show topics component
     } else if (this.state.hasSubmittedQuiz && !this.state.hasSubmittedTopics) {
@@ -65,22 +82,36 @@ export default class Quiz extends Component {
               })
             })
       }
-    } else {
+    } else if (!this.hasSubmittedSources && evt.target.name === 'add-source') {
+      await this.setState({
+        sources: [...this.state.sources, this.state.currentSource],
+        sourceNames: [...this.state.sourceNames, this.state.currentSourceName]
+      })
       console.log(
-        'sources:',
+        'ADDED TO STAE__*!_',
         this.state.sources,
-        'topics:',
-        this.state.topics,
-        'score:',
-        this.state.score
+        this.state.sourceNames
       )
+      await this.setState({ currentSource: 0 })
+      //add current source on state to all sources array
+    } else {
+      await this.props.updateUserThunk({
+        arrayOfSources: this.state.sources,
+        arrayOfTopics: this.state.topics,
+        poliOriId: this.state.score,
+        userId: this.props.user.id
+      })
+      this.setState({ hasSubmittedSources: true })
+      console.log('///', this.state.hasSubmittedSources)
+      console.log('userInfoUpdated')
+      this.props.history.push(`/news/${this.props.user.id}`)
     }
-
     //render the topics component or sources component?
   }
   //update question on state, so view changes
 
   render() {
+    console.log('**', this.props.user)
     if (!this.state.hasSubmittedQuiz) {
       const question = this.state.question
       return (
@@ -94,6 +125,7 @@ export default class Quiz extends Component {
         <SourcesMenu
           handleClick={this.handleClick}
           handleChange={this.handleChange}
+          sources={this.state.sources}
         />
       )
     } else {
@@ -102,4 +134,18 @@ export default class Quiz extends Component {
   }
 }
 
-//eventually will need to pass down event handlers
+const mapState = state => ({
+  user: state.user
+})
+const mapDispatch = dispatch => {
+  return {
+    updateUserThunk: userPrefObj => dispatch(updateUserThunk(userPrefObj))
+  }
+}
+
+export default connect(
+  mapState,
+  mapDispatch
+)(Quiz)
+
+//have to make sure to send back userId with userPrefObj from quiz
