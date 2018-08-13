@@ -11,27 +11,43 @@ sources.forEach(source => {
 })
 
 const topics = [
-  { name: 'Women’s Rights' },
-  { name: 'Finance & Tax' },
-  { name: 'Gun Control' },
-  { name: 'Immigration' },
-  { name: 'Elections' },
-  { name: 'Energy & Environment' },
-  { name: 'International Relations' },
-  { name: 'Healthcare' },
-  { name: 'Trade' }
+  {
+    name: 'Women’s Rights',
+    searchValue: '(Women’s AND Rights)'
+  },
+  {
+    name: 'Finance & Tax',
+    searchValue: '(Finance AND Tax)'
+  },
+  {
+    name: 'Gun Control',
+    searchValue: '(Gun AND Control)'
+  },
+  {
+    name: 'Immigration',
+    searchValue: 'Immigration'
+  },
+  {
+    name: 'Elections',
+    searchValue: 'Elections'
+  },
+  {
+    name: 'Energy & Environment',
+    searchValue: '(Energy AND Enviornment)'
+  },
+  {
+    name: 'International Relations',
+    searchValue: '(International AND Relations)'
+  },
+  {
+    name: 'Healthcare',
+    searchValue: 'Healthcare'
+  },
+  {
+    name: 'Trade',
+    searchValue: 'Trade'
+  }
 ]
-
-// const topicsSeed = async () => {
-//   try {
-//     await Promise.all(topics.map(topic => {
-//       Topic.create(topic)
-//     })
-//     )
-//   } catch (err) {
-//     console.log(err)
-//   }
-// }
 
 const poliOriSeed = async () => {
   try {
