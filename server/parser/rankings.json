@@ -1,1 +1,994 @@
-[{"name":"AARP","poliOriId":3,"poliOriStr":"Center"},{"name":"ABC News","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Accuracy in Media","poliOriId":5,"poliOriStr":"Right"},{"name":"ACLU","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Al Cardenas","poliOriId":5,"poliOriStr":"Right"},{"name":"Al Jazeera","poliOriId":3,"poliOriStr":"Center"},{"name":"Alison Lundergan Grimes","poliOriId":1,"poliOriStr":"Left"},{"name":"AllSides","poliOriStr":"Mixed"},{"name":"AllSides Community","poliOriStr":"Mixed"},{"name":"Allysia Finley (Wall Street Journal)","poliOriId":5,"poliOriStr":"Right"},{"name":"AlterNet","poliOriId":1,"poliOriStr":"Left"},{"name":"American Association of Retired Persons","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"American Conservative Union","poliOriId":5,"poliOriStr":"Right"},{"name":"American Enterprise Institute","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"American Spectator","poliOriId":5,"poliOriStr":"Right"},{"name":"American Thinker","poliOriId":5,"poliOriStr":"Right"},{"name":"Americans for Democratic Action","poliOriId":1,"poliOriStr":"Left"},{"name":"Americans for Tax Reform","poliOriId":5,"poliOriStr":"Right"},{"name":"Amnesty International","poliOriId":3,"poliOriStr":"Center"},{"name":"Andrew Napolitano","poliOriId":5,"poliOriStr":"Right"},{"name":"Ann Coulter","poliOriId":5,"poliOriStr":"Right"},{"name":"Annafi Wahed","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"AP","poliOriId":3,"poliOriStr":"Center"},{"name":"Aquinas College Saint","poliOriId":1,"poliOriStr":"Left"},{"name":"Arkadi Gerney","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Arkansas Democrat-Gazette","poliOriId":1,"poliOriStr":"Left"},{"name":"Associated Press","poliOriId":3,"poliOriStr":"Center"},{"name":"Association for Psychological Science","poliOriId":3,"poliOriStr":"Center"},{"name":"Atlanta Journal-Constitution","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Atlas Network","poliOriId":5,"poliOriStr":"Right"},{"name":"AtlasOne","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Austin American-Statesman","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Axios","poliOriId":3,"poliOriStr":"Center"},{"name":"Ballotpedia","poliOriId":3,"poliOriStr":"Center"},{"name":"Barack Obama","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Barnstable Patriot","poliOriId":3,"poliOriStr":"Center"},{"name":"BBC News","poliOriId":3,"poliOriStr":"Center"},{"name":"Bearing Drift","poliOriId":5,"poliOriStr":"Right"},{"name":"Ben Sargent (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Ben Shapiro","poliOriId":5,"poliOriStr":"Right"},{"name":"Ben Stein","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Beth Ballentine","poliOriId":3,"poliOriStr":"Center"},{"name":"Bill Cassidy","poliOriId":5,"poliOriStr":"Right"},{"name":"Billy Binion","poliOriId":3,"poliOriStr":"Center"},{"name":"Bloomberg","poliOriId":3,"poliOriStr":"Center"},{"name":"Blue Virginia","poliOriId":1,"poliOriStr":"Left"},{"name":"Bob Gorrell (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Boing Boing","poliOriId":1,"poliOriStr":"Left"},{"name":"Boston Herald","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Boston Herald Editorial","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Bowling Green Daily News","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Breitbart News","poliOriId":5,"poliOriStr":"Right"},{"name":"Brent Bozell","poliOriId":5,"poliOriStr":"Right"},{"name":"Bret Stephens","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Brookings Institution","poliOriId":3,"poliOriStr":"Center"},{"name":"Bruce Braley","poliOriId":1,"poliOriStr":"Left"},{"name":"Business Insider","poliOriId":3,"poliOriStr":"Center"},{"name":"Bustle","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Buzzfeed","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"C-SPAN","poliOriId":3,"poliOriStr":"Center"},{"name":"CalMatters","poliOriId":3,"poliOriStr":"Center"},{"name":"CalWatchdog","poliOriId":3,"poliOriStr":"Center"},{"name":"Care 2","poliOriId":1,"poliOriStr":"Left"},{"name":"Carnegie Endowment for International Peace","poliOriId":3,"poliOriStr":"Center"},{"name":"Carrie Lukas","poliOriId":5,"poliOriStr":"Right"},{"name":"Cato Institute (blog)","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"CBN","poliOriId":5,"poliOriStr":"Right"},{"name":"CBS News","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Center - Major Media Sources","poliOriId":3,"poliOriStr":"Center"},{"name":"Center For American Progress","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Center for Defense Information","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Center for Media & Democracy PR Watch","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Center for Public Integrity","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Center for Responsive Politics","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Center for Strategic and Budgetary Assessments","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Center for Strategic and International Studies","poliOriId":3,"poliOriStr":"Center"},{"name":"Center on Budget and Policy Priorities","poliOriId":1,"poliOriStr":"Left"},{"name":"Centre View","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Chan Lowe (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Charles Blow","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Charles Krauthammer","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Chicago Booth Initiative on Global Markets","poliOriStr":"Mixed"},{"name":"Chicago Sun-Times","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Chicago Tribune","poliOriId":3,"poliOriStr":"Center"},{"name":"Children’s Defense Fund","poliOriId":1,"poliOriStr":"Left"},{"name":"Chip Bok (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Chris Britt (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Chris Ruddy","poliOriId":5,"poliOriStr":"Right"},{"name":"Christian Coalition","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Christian Science Monitor","poliOriId":3,"poliOriStr":"Center"},{"name":"Christiane Amanpour","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Chuck Asay (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Citizens Against Government Waste","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Citizens for Tax Justice","poliOriId":1,"poliOriStr":"Left"},{"name":"City Journal","poliOriId":5,"poliOriStr":"Right"},{"name":"CivilPolitics.org","poliOriId":3,"poliOriStr":"Center"},{"name":"Clay Bennett (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"CNBC","poliOriId":3,"poliOriStr":"Center"},{"name":"CNN (Web News)","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"CNN - Editorial","poliOriId":1,"poliOriStr":"Left"},{"name":"CNS News","poliOriId":5,"poliOriStr":"Right"},{"name":"CNSNews.com","poliOriId":5,"poliOriStr":"Right"},{"name":"Commentary Magazine","poliOriId":5,"poliOriStr":"Right"},{"name":"Common Cause","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Conservative HQ","poliOriId":5,"poliOriStr":"Right"},{"name":"Consumer Federation of America","poliOriId":1,"poliOriStr":"Left"},{"name":"Cook Report","poliOriId":3,"poliOriStr":"Center"},{"name":"Cory Garden","poliOriId":5,"poliOriStr":"Right"},{"name":"Council on Foreign Relations","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Council on Foreign Relations","poliOriId":1,"poliOriStr":"Left"},{"name":"Counter Currents","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Counter Pointing","poliOriStr":"Mixed"},{"name":"Counterpointing","poliOriStr":"Mixed"},{"name":"CrowdPAC","poliOriId":3,"poliOriStr":"Center"},{"name":"CU Independent","poliOriId":3,"poliOriStr":"Center"},{"name":"Current Affairs","poliOriId":1,"poliOriStr":"Left"},{"name":"Daily Beast","poliOriId":1,"poliOriStr":"Left"},{"name":"Daily Cardinal","poliOriId":3,"poliOriStr":"Center"},{"name":"Daily Kos","poliOriId":1,"poliOriStr":"Left"},{"name":"Daily Mail","poliOriId":5,"poliOriStr":"Right"},{"name":"Daily Northwestern","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Daily Press","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Daily Progress","poliOriId":3,"poliOriStr":"Center"},{"name":"Daily Targum","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Damon Linker","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Dan Lucas","poliOriId":5,"poliOriStr":"Right"},{"name":"Dan Sullivan`","poliOriId":5,"poliOriStr":"Right"},{"name":"Dan Wasserman (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Dana Milbank","poliOriId":3,"poliOriStr":"Center"},{"name":"Dana Summers (cartoonist)","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"David Brooks","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"David Holmes","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"David Ignatius","poliOriId":3,"poliOriStr":"Center"},{"name":"David Leonhardt","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"David Perdue","poliOriId":5,"poliOriStr":"Right"},{"name":"Debra Saunders","poliOriId":5,"poliOriStr":"Right"},{"name":"Defense One","poliOriId":3,"poliOriStr":"Center"},{"name":"Democracy Now","poliOriId":1,"poliOriStr":"Left"},{"name":"Democratic Elected Official","poliOriId":1,"poliOriStr":"Left"},{"name":"Democratic Party","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Deseret News","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Dick Locher (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Dick Morris","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Diplomatic Courier","poliOriId":3,"poliOriStr":"Center"},{"name":"Donald Trump","poliOriId":5,"poliOriStr":"Right"},{"name":"Drew Litton (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Drew Sheneman (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Drudge Report","poliOriId":5,"poliOriStr":"Right"},{"name":"Duf Sundheim","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Duke Chronicle","poliOriId":3,"poliOriStr":"Center"},{"name":"E J Dionne","poliOriId":1,"poliOriStr":"Left"},{"name":"Economic Policy Institute","poliOriId":1,"poliOriStr":"Left"},{"name":"Economic Policy Institute","poliOriId":1,"poliOriStr":"Left"},{"name":"Economic Strategy Institute","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Ed Rogers","poliOriId":5,"poliOriStr":"Right"},{"name":"EdVotes.org","poliOriId":1,"poliOriStr":"Left"},{"name":"Edward Morrissey","poliOriId":5,"poliOriStr":"Right"},{"name":"Electronic Privacy Information Center","poliOriId":3,"poliOriStr":"Center"},{"name":"Elizabeth Warren","poliOriId":1,"poliOriStr":"Left"},{"name":"Employee Benefit Research Institute","poliOriId":3,"poliOriStr":"Center"},{"name":"Environmental Defense Fund","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Eric Allie (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Erik Wemple","poliOriId":3,"poliOriStr":"Center"},{"name":"Esquire","poliOriId":1,"poliOriStr":"Left"},{"name":"Estes Park Trail Gazette","poliOriId":3,"poliOriStr":"Center"},{"name":"Eugene Robinson","poliOriId":1,"poliOriStr":"Left"},{"name":"Eurek Alert","poliOriId":3,"poliOriStr":"Center"},{"name":"Ezra Klein","poliOriId":1,"poliOriStr":"Left"},{"name":"Face the Facts USA","poliOriId":3,"poliOriStr":"Center"},{"name":"Fact Checker Blog","poliOriId":3,"poliOriStr":"Center"},{"name":"FactCheck.org","poliOriId":3,"poliOriStr":"Center"},{"name":"FAIR","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Fair.org","poliOriId":3,"poliOriStr":"Center"},{"name":"Falls Church News - Press","poliOriId":1,"poliOriStr":"Left"},{"name":"Family Research Council","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Fareed Zakaria","poliOriId":3,"poliOriStr":"Center"},{"name":"Federation of American Scientists","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Financial Times","poliOriId":3,"poliOriStr":"Center"},{"name":"Fiscal Times","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"FiveThirtyEight","poliOriId":3,"poliOriStr":"Center"},{"name":"Food Democracy Now","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Forbes","poliOriId":3,"poliOriStr":"Center"},{"name":"Foreign Affairs","poliOriId":3,"poliOriStr":"Center"},{"name":"Fox News","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Fox News Editorial","poliOriId":5,"poliOriStr":"Right"},{"name":"Fox News Latino","poliOriId":5,"poliOriStr":"Right"},{"name":"Frank Bruni","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Frank Miniter","poliOriId":5,"poliOriStr":"Right"},{"name":"Freakonomics","poliOriId":3,"poliOriStr":"Center"},{"name":"Freedom House","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Froma Harrop","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"FrontPage Magazine","poliOriId":5,"poliOriStr":"Right"},{"name":"Funny News","poliOriId":5,"poliOriStr":"Right"},{"name":"Gallup","poliOriId":3,"poliOriStr":"Center"},{"name":"Gary Markstein (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Gary Peters","poliOriId":1,"poliOriStr":"Left"},{"name":"Gary Varvel (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"George Will","poliOriId":5,"poliOriStr":"Right"},{"name":"Glenn Beck","poliOriId":5,"poliOriStr":"Right"},{"name":"Glenn McCoy (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"GOP.gov","poliOriId":5,"poliOriStr":"Right"},{"name":"Grist","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Grover Norquist","poliOriId":5,"poliOriStr":"Right"},{"name":"Guest Writer - Left","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Guest Writer - Right","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Hampton Roads Messanger","poliOriId":3,"poliOriStr":"Center"},{"name":"Handgun Control, Inc.","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Harvard Business School","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Healthcare.gov","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Heather Mac Donald","poliOriId":5,"poliOriStr":"Right"},{"name":"Henry Payne (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Herald Democrat","poliOriId":1,"poliOriStr":"Left"},{"name":"Hillary Clinton","poliOriId":1,"poliOriStr":"Left"},{"name":"Honolulu Civil Beat","poliOriId":3,"poliOriStr":"Center"},{"name":"Hoover Institution","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"HotAir","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"How Do We Fix It?","poliOriId":3,"poliOriStr":"Center"},{"name":"Howard Kurtz","poliOriId":3,"poliOriStr":"Center"},{"name":"Hudson Institute","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"HuffPost","poliOriId":1,"poliOriStr":"Left"},{"name":"Inacow","poliOriId":5,"poliOriStr":"Right"},{"name":"Independent Institute","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Independent Journal Review","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Indiana Daily Student","poliOriId":3,"poliOriStr":"Center"},{"name":"Indy Online","poliOriId":3,"poliOriStr":"Center"},{"name":"Indy Week","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"InfoWars","poliOriId":5,"poliOriStr":"Right"},{"name":"Inside Philanthropy","poliOriId":3,"poliOriStr":"Center"},{"name":"Institute for International Economics","poliOriId":3,"poliOriStr":"Center"},{"name":"Intellectual Conservative","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"International Business Times","poliOriId":3,"poliOriStr":"Center"},{"name":"International Institute for Strategic Studies","poliOriId":3,"poliOriStr":"Center"},{"name":"Investor's Business Daily","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"IVN","poliOriId":3,"poliOriStr":"Center"},{"name":"Jack Ohman (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Jack Welch","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Jacobin","poliOriId":1,"poliOriStr":"Left"},{"name":"James Hohmann","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"James Pethokoukis","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"James Poulos","poliOriId":5,"poliOriStr":"Right"},{"name":"Jeanne Shaheen","poliOriId":1,"poliOriStr":"Left"},{"name":"Jeff Danziger (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Jeff Jacoby","poliOriId":5,"poliOriStr":"Right"},{"name":"Jeff Stahler (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Jen Sorensen (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Jennifer Rubin","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Jerry Bowyer","poliOriId":5,"poliOriStr":"Right"},{"name":"Jerry Holbert (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Jesse Jackson","poliOriId":1,"poliOriStr":"Left"},{"name":"Jim Morin (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Jim Rutenberg","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Joan Blades","poliOriId":1,"poliOriStr":"Left"},{"name":"Joe Scarborough","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Joel Pett (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"John Boehner","poliOriId":5,"poliOriStr":"Right"},{"name":"John Deering (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"John Fund","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"John Gable, AllSides Founder","poliOriId":3,"poliOriStr":"Center"},{"name":"John K. Herr","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"John Pudner","poliOriId":5,"poliOriStr":"Right"},{"name":"John Stossel","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Jon Terbush","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Jonathan Chait","poliOriId":1,"poliOriStr":"Left"},{"name":"Jonathan Miller","poliOriId":1,"poliOriStr":"Left"},{"name":"Joni Ernst","poliOriId":5,"poliOriStr":"Right"},{"name":"Journalist's Resource","poliOriId":3,"poliOriStr":"Center"},{"name":"Juan Williams","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Jubilee Media","poliOriId":3,"poliOriStr":"Center"},{"name":"Judicial Watch","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Julian Zelizer","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Kathleen Parker","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Kay Hagan","poliOriId":1,"poliOriStr":"Left"},{"name":"Kay Hagan","poliOriId":1,"poliOriStr":"Left"},{"name":"Ken Catalino (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Kevin Kallaugher (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Kimberley A. Strassel","poliOriId":5,"poliOriStr":"Right"},{"name":"Kirsten Powers","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"KQED","poliOriId":3,"poliOriStr":"Center"},{"name":"KSL","poliOriId":5,"poliOriStr":"Right"},{"name":"Lalo Alcaraz (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Lanhee Chen","poliOriId":5,"poliOriStr":"Right"},{"name":"Las Vegas Sun","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Lauren Duca","poliOriId":1,"poliOriStr":"Left"},{"name":"Leesburg Today","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Left - Major Media Sources","poliOriId":1,"poliOriStr":"Left"},{"name":"Left Guest Commentaries","poliOriId":1,"poliOriStr":"Left"},{"name":"Leonard Pitts Jr","poliOriId":1,"poliOriStr":"Left"},{"name":"Lifehacker","poliOriId":3,"poliOriStr":"Center"},{"name":"Lisa Benson (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Lisa Gable","poliOriId":5,"poliOriStr":"Right"},{"name":"Listen First Project","poliOriStr":"Mixed"},{"name":"Live Action News","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Living Room Conversations","poliOriStr":"Mixed"},{"name":"Longmont Times-Call","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Los Angeles Times","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Louisville Courier-Journal","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Manhattan Institute","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Marc A. Thiessen","poliOriId":5,"poliOriStr":"Right"},{"name":"Mark Begich","poliOriId":1,"poliOriStr":"Left"},{"name":"Mark Begich","poliOriId":1,"poliOriStr":"Left"},{"name":"Mark Gerzon","poliOriId":3,"poliOriStr":"Center"},{"name":"Mark Mix","poliOriId":5,"poliOriStr":"Right"},{"name":"Mark Morford","poliOriId":1,"poliOriStr":"Left"},{"name":"Mark Prior","poliOriId":1,"poliOriStr":"Left"},{"name":"Mark Udall","poliOriId":1,"poliOriStr":"Left"},{"name":"Marshall Ramsey (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Mary Landrieu","poliOriId":1,"poliOriStr":"Left"},{"name":"Mary O'Grady","poliOriId":5,"poliOriStr":"Right"},{"name":"Mashable","poliOriId":1,"poliOriStr":"Left"},{"name":"Matt Bors (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Matt Davies (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Matt Drudge","poliOriId":5,"poliOriStr":"Right"},{"name":"Matt Towery","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Matt Welch","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Matt Wuerker (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Maureen Dowd","poliOriId":3,"poliOriStr":"Center"},{"name":"Media Matters","poliOriId":1,"poliOriStr":"Left"},{"name":"Media Research Center","poliOriId":5,"poliOriStr":"Right"},{"name":"Mediaite","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Miami Herald","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Michael Barone","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Michael Brendan Dougherty","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Michael Gerson","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Michael Kinsley","poliOriId":1,"poliOriStr":"Left"},{"name":"Michael Medved","poliOriId":5,"poliOriStr":"Right"},{"name":"Michael Ramirez (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Michele Nunn","poliOriId":1,"poliOriStr":"Left"},{"name":"Michelle Malkin","poliOriId":5,"poliOriStr":"Right"},{"name":"MichelleMalkin.com","poliOriId":5,"poliOriStr":"Right"},{"name":"Michigan Daily","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Mike Lester (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Mike Luckovich (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Mike Thompson (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Mismatch.org","poliOriStr":"Mixed"},{"name":"MIT News","poliOriId":3,"poliOriStr":"Center"},{"name":"Mitch McConnell","poliOriId":5,"poliOriStr":"Right"},{"name":"Mitt Romney","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Morgan Jacobsen","poliOriId":3,"poliOriStr":"Center"},{"name":"Mother Jones","poliOriId":1,"poliOriStr":"Left"},{"name":"MSNBC","poliOriId":1,"poliOriStr":"Left"},{"name":"NAACP","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Natalie Tennant","poliOriId":1,"poliOriStr":"Left"},{"name":"National Abortion and Reproductive Rights Action League","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"National Committee to Preserve Social Security and Medicare","poliOriId":1,"poliOriStr":"Left"},{"name":"National Federation of Independent Businesses","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"National Interest","poliOriId":3,"poliOriStr":"Center"},{"name":"National Journal","poliOriId":3,"poliOriStr":"Center"},{"name":"National Organization for Women","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"National Review","poliOriId":5,"poliOriStr":"Right"},{"name":"National Rifle Association","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"National Right to Life Committee","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"National Taxpayers Union","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"NBC Today Show","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"NBCNews.com","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"New Economy Working Group","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"New Republic","poliOriId":1,"poliOriStr":"Left"},{"name":"New York Daily News","poliOriId":1,"poliOriStr":"Left"},{"name":"New York Magazine","poliOriId":1,"poliOriStr":"Left"},{"name":"New York Post","poliOriId":5,"poliOriStr":"Right"},{"name":"New York Times","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"NewsBusters","poliOriId":5,"poliOriStr":"Right"},{"name":"Newsmax","poliOriId":5,"poliOriStr":"Right"},{"name":"Newsweek","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Newt Gingrich","poliOriId":5,"poliOriStr":"Right"},{"name":"Nicholas Kristof","poliOriId":1,"poliOriStr":"Left"},{"name":"Nick Anderson (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Nixon Center","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"NMPolitics.net","poliOriId":3,"poliOriStr":"Center"},{"name":"No Labels","poliOriId":3,"poliOriStr":"Center"},{"name":"NPR Editorial","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"NPR News","poliOriId":3,"poliOriStr":"Center"},{"name":"One America News Network","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"OpenSecrets.org","poliOriId":3,"poliOriStr":"Center"},{"name":"Orange County Register","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Pacific Research Institute","poliOriId":5,"poliOriStr":"Right"},{"name":"Pacific Standard","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Pat Oliphant (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Paul Krugman","poliOriId":1,"poliOriStr":"Left"},{"name":"Paul Ryan","poliOriId":5,"poliOriStr":"Right"},{"name":"Paul Szep (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"PBS NewsHour","poliOriId":3,"poliOriStr":"Center"},{"name":"Peacock Panache","poliOriId":1,"poliOriStr":"Left"},{"name":"Peggy Noonan","poliOriId":5,"poliOriStr":"Right"},{"name":"People for the American Way","poliOriId":1,"poliOriStr":"Left"},{"name":"People for the Ethical Treatment of Animals","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Peter Roff","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Pew Research","poliOriId":3,"poliOriStr":"Center"},{"name":"Physicians for a National Health Program","poliOriId":1,"poliOriStr":"Left"},{"name":"Piers Morgan","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Pittsburgh Post-Gazette","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Politico","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"PoliticusUSA","poliOriId":1,"poliOriStr":"Left"},{"name":"PolitiFact","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Portland Press Herald","poliOriId":3,"poliOriStr":"Center"},{"name":"Prager University","poliOriId":5,"poliOriStr":"Right"},{"name":"PRI (Public Radio International)","poliOriId":3,"poliOriStr":"Center"},{"name":"ProCon.org","poliOriStr":"Mixed"},{"name":"Progressive Voices of Iowa","poliOriId":1,"poliOriStr":"Left"},{"name":"ProPublica","poliOriId":3,"poliOriStr":"Center"},{"name":"PXW News","poliOriId":3,"poliOriStr":"Center"},{"name":"Quartz","poliOriId":3,"poliOriStr":"Center"},{"name":"Quillette","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Quinnipiac University","poliOriId":3,"poliOriStr":"Center"},{"name":"Rachel Eckhardt","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Ralph Benko","poliOriId":5,"poliOriStr":"Right"},{"name":"Ramesh Ponnuru","poliOriId":5,"poliOriStr":"Right"},{"name":"RAND Corporation","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Rand Paul","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Rasmussen Reports","poliOriId":3,"poliOriStr":"Center"},{"name":"Raw Story","poliOriId":1,"poliOriStr":"Left"},{"name":"RealClearPolitics","poliOriId":3,"poliOriStr":"Center"},{"name":"Reason","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Reason Foundation","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Record Journal","poliOriId":3,"poliOriStr":"Center"},{"name":"Red State","poliOriId":5,"poliOriStr":"Right"},{"name":"RedBlueDictionary.org","poliOriStr":"Mixed"},{"name":"redefinED","poliOriId":3,"poliOriStr":"Center"},{"name":"Rem Reider","poliOriId":3,"poliOriStr":"Center"},{"name":"Republican Elected Official","poliOriId":5,"poliOriStr":"Right"},{"name":"Republican Party","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Reuters","poliOriId":3,"poliOriStr":"Center"},{"name":"Rich Lowry","poliOriId":5,"poliOriStr":"Right"},{"name":"Rich Tafel","poliOriId":3,"poliOriStr":"Center"},{"name":"Rich Zeoli","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Richard A. Lowry","poliOriId":5,"poliOriStr":"Right"},{"name":"Richard M. Cohen","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Richmond Times Dispatch","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Rick Ungar","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Right - Major Media Sources","poliOriId":5,"poliOriStr":"Right"},{"name":"Right Guest Commentaries","poliOriId":5,"poliOriStr":"Right"},{"name":"Right Side News","poliOriId":5,"poliOriStr":"Right"},{"name":"Right Wing News","poliOriId":5,"poliOriStr":"Right"},{"name":"Rob Maness","poliOriId":5,"poliOriStr":"Right"},{"name":"Rob Rogers (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Robert Ariail (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Robert Samuelson","poliOriId":3,"poliOriStr":"Center"},{"name":"RollingStone.com","poliOriId":1,"poliOriStr":"Left"},{"name":"Ross Douthat","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Ruth Marcus","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Ryan Cooper","poliOriId":1,"poliOriStr":"Left"},{"name":"Ryan Cooper","poliOriId":1,"poliOriStr":"Left"},{"name":"Sally Pipes","poliOriId":5,"poliOriStr":"Right"},{"name":"Salon","poliOriId":1,"poliOriStr":"Left"},{"name":"San Francisco Chronicle","poliOriId":1,"poliOriStr":"Left"},{"name":"San Jose Mercury News","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Saturday Evening Post","poliOriId":3,"poliOriStr":"Center"},{"name":"SBG","poliOriId":3,"poliOriStr":"Center"},{"name":"Science Daily","poliOriId":3,"poliOriStr":"Center"},{"name":"Scientific American","poliOriId":3,"poliOriStr":"Center"},{"name":"Scott Brown","poliOriId":5,"poliOriStr":"Right"},{"name":"Scott Stantis (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Sean Haugh","poliOriId":3,"poliOriStr":"Center"},{"name":"SF Weekly","poliOriId":3,"poliOriStr":"Center"},{"name":"SFGate","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Shelley Moore Capito","poliOriId":5,"poliOriStr":"Right"},{"name":"Sierra Club","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Signe Wilkinson (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Sky-Hi Daily News","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Slate","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Small World (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Smerconish","poliOriId":3,"poliOriStr":"Center"},{"name":"Socialist Alternative","poliOriId":1,"poliOriStr":"Left"},{"name":"Socialist Project/The Bullet","poliOriId":1,"poliOriStr":"Left"},{"name":"Spokesman Review","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"State Journal","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Steve Benson (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Steve Breen (cartoonist)","poliOriId":3,"poliOriStr":"Center"},{"name":"Steve Kelley (cartoonist)","poliOriId":5,"poliOriStr":"Right"},{"name":"Steve Sack (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Stimson Center","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Stuart Carlson (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Sunlight Foundation","poliOriId":3,"poliOriStr":"Center"},{"name":"Suspend Belief Podcast","poliOriStr":"Mixed"},{"name":"Tallahassee Democrat","poliOriId":1,"poliOriStr":"Left"},{"name":"TechCrunch","poliOriId":3,"poliOriStr":"Center"},{"name":"Ted Rall (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Teen Vogue","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Terri Lynn Land","poliOriId":5,"poliOriStr":"Right"},{"name":"Test Source","poliOriId":3,"poliOriStr":"Center"},{"name":"The Advocate-Messenger","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The American Conservative","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"The Atlantic","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Boston Globe","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Cadiz Record","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Canyon County Zephyr","poliOriId":1,"poliOriStr":"Left"},{"name":"The College Fix","poliOriId":5,"poliOriStr":"Right"},{"name":"The Commercial Appeal","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Courier-Journal","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Daily Caller","poliOriId":5,"poliOriStr":"Right"},{"name":"The Daily Show (humor)","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Daily Signal","poliOriId":5,"poliOriStr":"Right"},{"name":"The Daily Wire","poliOriId":5,"poliOriStr":"Right"},{"name":"The Delaware County Daily Times","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Economist","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Federalist","poliOriId":5,"poliOriStr":"Right"},{"name":"The Gateway Pundit","poliOriId":5,"poliOriStr":"Right"},{"name":"The Guardian","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Heritage Foundation","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"The Hill","poliOriId":3,"poliOriStr":"Center"},{"name":"The Intercept","poliOriId":1,"poliOriStr":"Left"},{"name":"The Jerusalem Post","poliOriId":3,"poliOriStr":"Center"},{"name":"The Justice","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Korea Herald","poliOriId":3,"poliOriStr":"Center"},{"name":"The Libertarian Republic","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"The Nation","poliOriId":1,"poliOriStr":"Left"},{"name":"The New Yorker","poliOriId":1,"poliOriStr":"Left"},{"name":"The Observer (New York)","poliOriId":3,"poliOriStr":"Center"},{"name":"The Oracle","poliOriId":3,"poliOriStr":"Center"},{"name":"The Red and Black","poliOriId":3,"poliOriStr":"Center"},{"name":"The Reliable Bias","poliOriId":3,"poliOriStr":"Center"},{"name":"The Republican","poliOriId":3,"poliOriStr":"Center"},{"name":"The Root","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Sacramento Bee","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Saturday Evening Post","poliOriId":3,"poliOriStr":"Center"},{"name":"The Telegraph - UK","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"The Verge","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"The Village Square","poliOriStr":"Mixed"},{"name":"The Week","poliOriId":3,"poliOriStr":"Center"},{"name":"The Weekly Standard","poliOriId":5,"poliOriStr":"Right"},{"name":"TheBlaze.com","poliOriId":5,"poliOriStr":"Right"},{"name":"ThinkProgress","poliOriId":1,"poliOriStr":"Left"},{"name":"Thom Tillis","poliOriId":5,"poliOriStr":"Right"},{"name":"Thomas Frank","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Thomas Sowell","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Tim Groseclose","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Time Magazine","poliOriId":1,"poliOriStr":"Left"},{"name":"Tom Cole","poliOriId":5,"poliOriStr":"Right"},{"name":"Tom Cotton","poliOriId":5,"poliOriStr":"Right"},{"name":"Tom Toles (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Tony Auth (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Townhall","poliOriId":5,"poliOriStr":"Right"},{"name":"Truth or Fiction","poliOriId":3,"poliOriStr":"Center"},{"name":"TruthOut","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"U.S. News & World Report","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"United States Courts","poliOriId":3,"poliOriStr":"Center"},{"name":"Univision","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Upworthy","poliOriId":1,"poliOriStr":"Left"},{"name":"Urban Institute","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"USA TODAY","poliOriId":3,"poliOriStr":"Center"},{"name":"Vanity Fair","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Vice","poliOriId":1,"poliOriStr":"Left"},{"name":"Victor Hanson","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Volante","poliOriId":3,"poliOriStr":"Center"},{"name":"Vote Smart","poliOriId":3,"poliOriStr":"Center"},{"name":"Vox","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"VT Digger","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Wall Street Journal- Editorial","poliOriId":5,"poliOriStr":"Right"},{"name":"Wall Street Journal- News","poliOriId":3,"poliOriStr":"Center"},{"name":"Walt Handelsman (cartoonist)","poliOriId":1,"poliOriStr":"Left"},{"name":"Washington Examiner","poliOriId":5,"poliOriStr":"Right"},{"name":"Washington Free Beacon","poliOriId":5,"poliOriStr":"Right"},{"name":"Washington Monthly","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Washington Post","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Washington Times","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Watchdog.org","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Western Journalism","poliOriId":5,"poliOriStr":"Right"},{"name":"WFAE","poliOriId":3,"poliOriStr":"Center"},{"name":"WGBH","poliOriId":3,"poliOriStr":"Center"},{"name":"Whitehouse.gov","poliOriId":4,"poliOriStr":"Lean Right"},{"name":"Wikipedia","poliOriId":3,"poliOriStr":"Center"},{"name":"Wikipedia (Duplicate)","poliOriId":3,"poliOriStr":"Center"},{"name":"Willam A. Galston","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"William Bennett","poliOriId":5,"poliOriStr":"Right"},{"name":"William McGurn","poliOriId":5,"poliOriStr":"Right"},{"name":"Wisconsin Gazette","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"WND.com","poliOriId":5,"poliOriStr":"Right"},{"name":"World Wildlife Fund","poliOriId":3,"poliOriStr":"Center"},{"name":"Yahoo News","poliOriId":2,"poliOriStr":"Lean Left"},{"name":"Yes! Magazine","poliOriId":1,"poliOriStr":"Left"}]
+[
+  { "name": "AARP", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "ABC News", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Accuracy in Media", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "ACLU", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Al Cardenas", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Al Jazeera", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Alison Lundergan Grimes", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "AllSides", "poliOriStr": "Mixed" },
+  { "name": "AllSides Community", "poliOriStr": "Mixed" },
+  {
+    "name": "Allysia Finley (Wall Street Journal)",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  { "name": "AlterNet", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "American Association of Retired Persons",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "American Conservative Union",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  {
+    "name": "American Enterprise Institute",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "American Spectator", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "American Thinker", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Americans for Democratic Action",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Americans for Tax Reform", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Amnesty International", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Andrew Napolitano", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Ann Coulter", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Annafi Wahed", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "AP", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Aquinas College Saint", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Arkadi Gerney", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Arkansas Democrat-Gazette", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Associated Press", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Association for Psychological Science",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Atlanta Journal-Constitution",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Atlas Network", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "AtlasOne", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  {
+    "name": "Austin American-Statesman",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Axios", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Ballotpedia", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Barack Obama", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Barnstable Patriot", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "BBC News", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Bearing Drift", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Ben Sargent (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Ben Shapiro", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Ben Stein", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Beth Ballentine", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Bill Cassidy", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Billy Binion", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Bloomberg", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Blue Virginia", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Bob Gorrell (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Boing Boing", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Boston Herald", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  {
+    "name": "Boston Herald Editorial",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  {
+    "name": "Bowling Green Daily News",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Breitbart News", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Brent Bozell", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Bret Stephens", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Brookings Institution", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Bruce Braley", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Business Insider", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Bustle", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Buzzfeed", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "C-SPAN", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "CalMatters", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "CalWatchdog", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Care 2", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Carnegie Endowment for International Peace",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Carrie Lukas", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Cato Institute (blog)",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "CBN", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "CBS News", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Center - Major Media Sources",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Center For American Progress",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "Center for Defense Information",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "Center for Media & Democracy PR Watch",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "Center for Public Integrity",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "Center for Responsive Politics",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "Center for Strategic and Budgetary Assessments",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  {
+    "name": "Center for Strategic and International Studies",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Center on Budget and Policy Priorities",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Centre View", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Chan Lowe (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Charles Blow", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Charles Krauthammer", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  {
+    "name": "Chicago Booth Initiative on Global Markets",
+    "poliOriStr": "Mixed"
+  },
+  { "name": "Chicago Sun-Times", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Chicago Tribune", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Children’s Defense Fund", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Chip Bok (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Chris Britt (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Chris Ruddy", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Christian Coalition", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  {
+    "name": "Christian Science Monitor",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Christiane Amanpour", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Chuck Asay (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Citizens Against Government Waste",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "Citizens for Tax Justice", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "City Journal", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "CivilPolitics.org", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Clay Bennett (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "CNBC", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "CNN (Web News)", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "CNN - Editorial", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "CNS News", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "CNSNews.com", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Commentary Magazine", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Common Cause", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Conservative HQ", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Consumer Federation of America",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Cook Report", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Cory Garden", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Council on Foreign Relations",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "Council on Foreign Relations",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Counter Currents", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Counter Pointing", "poliOriStr": "Mixed" },
+  { "name": "Counterpointing", "poliOriStr": "Mixed" },
+  { "name": "CrowdPAC", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "CU Independent", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Current Affairs", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Daily Beast", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Daily Cardinal", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Daily Kos", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Daily Mail", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Daily Northwestern", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Daily Press", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Daily Progress", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Daily Targum", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Damon Linker", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Dan Lucas", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Dan Sullivan`", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Dan Wasserman (cartoonist)",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Dana Milbank", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Dana Summers (cartoonist)",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "David Brooks", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "David Holmes", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "David Ignatius", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "David Leonhardt", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "David Perdue", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Debra Saunders", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Defense One", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Democracy Now", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Democratic Elected Official",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Democratic Party", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Deseret News", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Dick Locher (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Dick Morris", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Diplomatic Courier", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Donald Trump", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Drew Litton (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Drew Sheneman (cartoonist)",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Drudge Report", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Duf Sundheim", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Duke Chronicle", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "E J Dionne", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Economic Policy Institute", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Economic Policy Institute", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Economic Strategy Institute",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Ed Rogers", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "EdVotes.org", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Edward Morrissey", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Electronic Privacy Information Center",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Elizabeth Warren", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Employee Benefit Research Institute",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Environmental Defense Fund",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Eric Allie (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Erik Wemple", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Esquire", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Estes Park Trail Gazette",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Eugene Robinson", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Eurek Alert", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Ezra Klein", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Face the Facts USA", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Fact Checker Blog", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "FactCheck.org", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "FAIR", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Fair.org", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Falls Church News - Press", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Family Research Council",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "Fareed Zakaria", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Federation of American Scientists",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Financial Times", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Fiscal Times", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "FiveThirtyEight", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Food Democracy Now", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Forbes", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Foreign Affairs", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Fox News", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Fox News Editorial", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Fox News Latino", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Frank Bruni", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Frank Miniter", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Freakonomics", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Freedom House", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Froma Harrop", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "FrontPage Magazine", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Funny News", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Gallup", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Gary Markstein (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Gary Peters", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Gary Varvel (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "George Will", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Glenn Beck", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Glenn McCoy (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "GOP.gov", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Grist", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Grover Norquist", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Guest Writer - Left", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Guest Writer - Right",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "Hampton Roads Messanger", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Handgun Control, Inc.",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "Harvard Business School",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Healthcare.gov", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Heather Mac Donald", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Henry Payne (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Herald Democrat", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Hillary Clinton", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Honolulu Civil Beat", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Hoover Institution", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "HotAir", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "How Do We Fix It?", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Howard Kurtz", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Hudson Institute", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "HuffPost", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Inacow", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Independent Institute",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  {
+    "name": "Independent Journal Review",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "Indiana Daily Student", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Indy Online", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Indy Week", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "InfoWars", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Inside Philanthropy", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Institute for International Economics",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Intellectual Conservative",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  {
+    "name": "International Business Times",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "International Institute for Strategic Studies",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Investor's Business Daily",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "IVN", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Jack Ohman (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Jack Welch", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Jacobin", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "James Hohmann", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "James Pethokoukis", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "James Poulos", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Jeanne Shaheen", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Jeff Danziger (cartoonist)",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Jeff Jacoby", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Jeff Stahler (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Jen Sorensen (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Jennifer Rubin", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Jerry Bowyer", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Jerry Holbert (cartoonist)",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  { "name": "Jesse Jackson", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Jim Morin (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Jim Rutenberg", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Joan Blades", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Joe Scarborough", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Joel Pett (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "John Boehner", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "John Deering (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "John Fund", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  {
+    "name": "John Gable, AllSides Founder",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "John K. Herr", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "John Pudner", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "John Stossel", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Jon Terbush", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Jonathan Chait", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Jonathan Miller", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Joni Ernst", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Journalist's Resource", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Juan Williams", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Jubilee Media", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Judicial Watch", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Julian Zelizer", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Kathleen Parker", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Kay Hagan", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Kay Hagan", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Ken Catalino (cartoonist)",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  {
+    "name": "Kevin Kallaugher (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Kimberley A. Strassel", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Kirsten Powers", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "KQED", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "KSL", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Lalo Alcaraz (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Lanhee Chen", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Las Vegas Sun", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Lauren Duca", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Leesburg Today", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  {
+    "name": "Left - Major Media Sources",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Left Guest Commentaries", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Leonard Pitts Jr", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Lifehacker", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Lisa Benson (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Lisa Gable", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Listen First Project", "poliOriStr": "Mixed" },
+  { "name": "Live Action News", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Living Room Conversations", "poliOriStr": "Mixed" },
+  { "name": "Longmont Times-Call", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Los Angeles Times", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Louisville Courier-Journal",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Manhattan Institute", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Marc A. Thiessen", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Mark Begich", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Mark Begich", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Mark Gerzon", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Mark Mix", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Mark Morford", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Mark Prior", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Mark Udall", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Marshall Ramsey (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Mary Landrieu", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Mary O'Grady", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Mashable", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Matt Bors (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Matt Davies (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Matt Drudge", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Matt Towery", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Matt Welch", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Matt Wuerker (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Maureen Dowd", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Media Matters", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Media Research Center", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Mediaite", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Miami Herald", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Michael Barone", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  {
+    "name": "Michael Brendan Dougherty",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "Michael Gerson", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Michael Kinsley", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Michael Medved", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Michael Ramirez (cartoonist)",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  { "name": "Michele Nunn", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Michelle Malkin", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "MichelleMalkin.com", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Michigan Daily", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Mike Lester (cartoonist)", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Mike Luckovich (cartoonist)",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  {
+    "name": "Mike Thompson (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Mismatch.org", "poliOriStr": "Mixed" },
+  { "name": "MIT News", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Mitch McConnell", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Mitt Romney", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Morgan Jacobsen", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Mother Jones", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "MSNBC", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "NAACP", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Natalie Tennant", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "National Abortion and Reproductive Rights Action League",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "National Committee to Preserve Social Security and Medicare",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  {
+    "name": "National Federation of Independent Businesses",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "National Interest", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "National Journal", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "National Organization for Women",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "National Review", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "National Rifle Association",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  {
+    "name": "National Right to Life Committee",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  {
+    "name": "National Taxpayers Union",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "NBC Today Show", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "NBCNews.com", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "New Economy Working Group",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "New Republic", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "New York Daily News", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "New York Magazine", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "New York Post", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "New York Times", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "NewsBusters", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Newsmax", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Newsweek", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Newt Gingrich", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Nicholas Kristof", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Nick Anderson (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Nixon Center", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "NMPolitics.net", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "No Labels", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "NPR Editorial", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "NPR News", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "One America News Network",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "OpenSecrets.org", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Orange County Register",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  {
+    "name": "Pacific Research Institute",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  { "name": "Pacific Standard", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Pat Oliphant (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Paul Krugman", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Paul Ryan", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Paul Szep (cartoonist)", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "PBS NewsHour", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Peacock Panache", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Peggy Noonan", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "People for the American Way",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  {
+    "name": "People for the Ethical Treatment of Animals",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Peter Roff", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Pew Research", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Physicians for a National Health Program",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Piers Morgan", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Pittsburgh Post-Gazette",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "Politico", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "PoliticusUSA", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "PolitiFact", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Portland Press Herald", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Prager University", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "PRI (Public Radio International)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "ProCon.org", "poliOriStr": "Mixed" },
+  {
+    "name": "Progressive Voices of Iowa",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "ProPublica", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "PXW News", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Quartz", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Quillette", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Quinnipiac University", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Rachel Eckhardt", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Ralph Benko", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Ramesh Ponnuru", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "RAND Corporation", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Rand Paul", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Rasmussen Reports", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Raw Story", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "RealClearPolitics", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Reason", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Reason Foundation", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Record Journal", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Red State", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "RedBlueDictionary.org", "poliOriStr": "Mixed" },
+  { "name": "redefinED", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Rem Reider", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "Republican Elected Official",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  { "name": "Republican Party", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Reuters", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Rich Lowry", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Rich Tafel", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Rich Zeoli", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Richard A. Lowry", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Richard M. Cohen", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Richmond Times Dispatch",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "Rick Ungar", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Right - Major Media Sources",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  { "name": "Right Guest Commentaries", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Right Side News", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Right Wing News", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Rob Maness", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Rob Rogers (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Robert Ariail (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "Robert Samuelson", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "RollingStone.com", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Ross Douthat", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Ruth Marcus", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Ryan Cooper", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Ryan Cooper", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Sally Pipes", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Salon", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "San Francisco Chronicle", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "San Jose Mercury News",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "Saturday Evening Post", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "SBG", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Science Daily", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Scientific American", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Scott Brown", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "Scott Stantis (cartoonist)",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  { "name": "Sean Haugh", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "SF Weekly", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "SFGate", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Shelley Moore Capito", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Sierra Club", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Signe Wilkinson (cartoonist)",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Sky-Hi Daily News", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Slate", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Small World (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Smerconish", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Socialist Alternative", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Socialist Project/The Bullet",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Spokesman Review", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "State Journal", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Steve Benson (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  {
+    "name": "Steve Breen (cartoonist)",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Steve Kelley (cartoonist)",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  { "name": "Steve Sack (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Stimson Center", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  {
+    "name": "Stuart Carlson (cartoonist)",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Sunlight Foundation", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Suspend Belief Podcast", "poliOriStr": "Mixed" },
+  { "name": "Tallahassee Democrat", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "TechCrunch", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Ted Rall (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Teen Vogue", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Terri Lynn Land", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Test Source", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "The Advocate-Messenger",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  {
+    "name": "The American Conservative",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "The Atlantic", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "The Boston Globe", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "The Cadiz Record", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "The Canyon County Zephyr", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "The College Fix", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "The Commercial Appeal",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "The Courier-Journal", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "The Daily Caller", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "The Daily Show (humor)",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "The Daily Signal", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "The Daily Wire", "poliOriId": 5, "poliOriStr": "Right" },
+  {
+    "name": "The Delaware County Daily Times",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "The Economist", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "The Federalist", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "The Gateway Pundit", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "The Guardian", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "The Heritage Foundation",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "The Hill", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "The Intercept", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "The Jerusalem Post", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "The Justice", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "The Korea Herald", "poliOriId": 3, "poliOriStr": "Center" },
+  {
+    "name": "The Libertarian Republic",
+    "poliOriId": 4,
+    "poliOriStr": "Lean Right"
+  },
+  { "name": "The Nation", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "The New Yorker", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "The Observer (New York)", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "The Oracle", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "The Red and Black", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "The Reliable Bias", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "The Republican", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "The Root", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "The Sacramento Bee", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "The Saturday Evening Post",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  { "name": "The Telegraph - UK", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "The Verge", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "The Village Square", "poliOriStr": "Mixed" },
+  { "name": "The Week", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "The Weekly Standard", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "TheBlaze.com", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "ThinkProgress", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Thom Tillis", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Thomas Frank", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Thomas Sowell", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Tim Groseclose", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Time Magazine", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Tom Cole", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Tom Cotton", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Tom Toles (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Tony Auth (cartoonist)", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Townhall", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Truth or Fiction", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "TruthOut", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "U.S. News & World Report",
+    "poliOriId": 2,
+    "poliOriStr": "Lean Left"
+  },
+  { "name": "United States Courts", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Univision", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Upworthy", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Urban Institute", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "USA TODAY", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Vanity Fair", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Vice", "poliOriId": 1, "poliOriStr": "Left" },
+  { "name": "Victor Hanson", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Volante", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Vote Smart", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Vox", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "VT Digger", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  {
+    "name": "Wall Street Journal- Editorial",
+    "poliOriId": 5,
+    "poliOriStr": "Right"
+  },
+  {
+    "name": "Wall Street Journal- News",
+    "poliOriId": 3,
+    "poliOriStr": "Center"
+  },
+  {
+    "name": "Walt Handelsman (cartoonist)",
+    "poliOriId": 1,
+    "poliOriStr": "Left"
+  },
+  { "name": "Washington Examiner", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Washington Free Beacon", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Washington Monthly", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Washington Post", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Washington Times", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Watchdog.org", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Western Journalism", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "WFAE", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "WGBH", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Whitehouse.gov", "poliOriId": 4, "poliOriStr": "Lean Right" },
+  { "name": "Wikipedia", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Wikipedia (Duplicate)", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Willam A. Galston", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "William Bennett", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "William McGurn", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "Wisconsin Gazette", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "WND.com", "poliOriId": 5, "poliOriStr": "Right" },
+  { "name": "World Wildlife Fund", "poliOriId": 3, "poliOriStr": "Center" },
+  { "name": "Yahoo News", "poliOriId": 2, "poliOriStr": "Lean Left" },
+  { "name": "Yes! Magazine", "poliOriId": 1, "poliOriStr": "Left" }
+]
