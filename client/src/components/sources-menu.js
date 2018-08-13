@@ -55,7 +55,7 @@ class SourcesMenu extends Component {
           </button>
         </div>
         <div>
-          {this.props.sources.map(source => {
+          {this.props.source.map(source => {
             return <h3>{source}</h3>
           })}
         </div>
