@@ -26,7 +26,7 @@ class Quiz extends Component {
       sourceNames: []
     }
     this.handleClick = this.handleClick.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+    this.handleSelectChange = this.handleSelectChange.bind(this)
   }
 
   async componentDidMount() {
@@ -40,14 +40,14 @@ class Quiz extends Component {
     }
   }
 
-  handleChange(evt) {
+  handleSelectChange(evt) {
     this.setState({
       currentSource: evt.target.value,
       currentSourceName: evt.target.name
     })
 
-    console.log('currentSourceName', this.state.currentSource)
-    console.log('currentSourceName', this.state.currentSourceName)
+    // console.log('currentSourceName', this.state.currentSource)
+    // console.log('currentSourceName', this.state.currentSourceName)
   }
 
   async handleClick(evt) {
@@ -69,7 +69,7 @@ class Quiz extends Component {
       //if quiz is submitted, but topics haven't been submitted, show topics component
     } else if (this.state.hasSubmittedQuiz && !this.state.hasSubmittedTopics) {
       if (evt.target.name === 'submit') {
-        console.log('toipcs-chosen:', this.state.topics)
+        //console.log('toipcs-chosen:', this.state.topics)
         this.setState({ hasSubmittedTopics: true })
       } else {
         !this.state.topics.includes(evt.target.value)
@@ -125,6 +125,7 @@ class Quiz extends Component {
         <SourcesMenu
           handleClick={this.handleClick}
           handleChange={this.handleChange}
+          sourceNames={this.state.sourceNames}
           sources={this.state.sources}
         />
       )

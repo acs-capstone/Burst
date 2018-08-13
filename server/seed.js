@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-const sources = require('./parser/rankings.json')
-const { Source, PoliOri, Topic, User } = require('./db/models/')
-=======
 const oldSources = require('./parser/rankings.json')
 const { Source, PoliOri, Topic } = require('./db/models/')
->>>>>>> master
 const db = require('./db')
 const sourcesObj = require('./parser/allSidesSourceIdParser')
 

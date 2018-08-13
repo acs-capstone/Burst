@@ -40,7 +40,7 @@ class SourcesMenu extends Component {
       <div>
         <div>
           <label htmlFor="sources-menu">Sources:</label>
-          <select onChange={this.props.handleChange}>
+          <select onChange={this.props.handleSelectChange}>
             <option defaultValue="selected"> Please Select A Source </option>
             {this.props.allSources.map(source => {
               return (
@@ -55,7 +55,7 @@ class SourcesMenu extends Component {
           </button>
         </div>
         <div>
-          {this.props.source.map(source => {
+          {this.props.sourceNames.map(source => {
             return <h3>{source}</h3>
           })}
         </div>
