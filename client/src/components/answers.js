@@ -10,7 +10,7 @@ const Answers = props => {
   if (props.answers && props.answers.length) {
     return props.answers.map(answer => {
       return (
-        <form id={answer.id}>
+        <form key={answer.id}>
           <button
             className="single-answer"
             value={answer.value}

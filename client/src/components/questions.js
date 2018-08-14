@@ -22,10 +22,12 @@ class Questions extends Component {
 
   async handleClick(evt) {
     try {
+      const questions = this.state.questions
+      const currentQuestionIndex = this.state.currentQuestionIndex
       evt.preventDefault()
       //if there are still questions left in array, keep looping through and rendering questions
-      if (this.state.currentQuestionIndex < this.state.questions.length) {
-        this.setState({
+      if (currentQuestionIndex < questions.length - 1) {
+        await this.setState({
           score: (this.state.score += +evt.target.value),
           currentQuestionIndex: (this.state.currentQuestionIndex += 1)
         })
@@ -33,7 +35,13 @@ class Questions extends Component {
         //when all questions have been aswered, calculate score and dispatch update userThnk
         let finalScore = Math.round(this.state.score / 2)
         //TODO: Change to 11 once all Q's are added
-        await this.props.updateUserThunk({ score: finalScore })
+        console.log('USERID', this.props.userId)
+        await this.props.updateUserThunk({
+          poliOriId: finalScore,
+          userId: this.props.userId
+        })
+
+        console.log('DONE!')
       }
     } catch (err) {
       console.err(err.message)
@@ -41,23 +49,22 @@ class Questions extends Component {
   }
 
   render() {
-    if (this.state.questions && this.state.questions.length) {
+    if (this.state.currentQuestionIndex < this.state.questions.length) {
       const question = this.state.questions[this.state.currentQuestionIndex]
-      console.log('CURRENT Q', question.id)
+
       return (
         <div>
-          <Prompt id={question.id} prompt={question.prompt} />
-          <Answers
-            id={question.id}
-            answers={question.answers}
-            handleClick={this.handleClick}
-          />
+          <Prompt prompt={question.prompt} />
+          <Answers answers={question.answers} handleClick={this.handleClick} />
         </div>
       )
     } else return null
   }
 }
 
+const mapState = state => ({
+  user: state.user
+})
 const mapDispatch = dispatch => {
   return {
     updateUserThunk: userPrefObj => dispatch(updateUserThunk(userPrefObj))
