@@ -41,7 +41,7 @@ class Topics extends Component {
       <div>
         {this.props.topics.map(topic => {
           return (
-            <ChoiceButton key={topic.id} topic={topic} handleClick={this.handleClickTopic} />
+            <ChoiceButton key={topic.id} topic={topic} handleClick={this.handleClickTopic} topics={this.state.topics} />
           )
         })}
         <button type="submit" name="submit" onClick={this.handleSubmit}>
