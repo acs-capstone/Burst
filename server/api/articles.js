@@ -13,7 +13,8 @@ router.put('/:id', async (req, res, next) => {
     const sources = req.body.sources
     const poliOriId = req.body.poliOriId
 
-    console.log('TOPICS ON USER', req.body)
+    // console.log('REQ BODY', req.body)
+
     const stringOfTopics = topics
       .map(topic => {
         return topic.name
@@ -46,14 +47,36 @@ router.put('/:id', async (req, res, next) => {
       from: createDate(0, -1, 0)
     })
 
+    //algorithm that determines what out of bubble sources you will get
+    const getOppAlgo = (num) => {
+      let oppPoliIds = []
+      if (num < 3) {
+        oppPoliIds.push(num + 1, num + 2)
+      } else if (num > 3) {
+        oppPoliIds.push(num - 1, num - 2)
+      } else if (num = 3) {
+        oppPoliIds.push(num + 1, num - 1)
+      }
+      return oppPoliIds
+    }
+
+    const oppIds = getOppAlgo(poliOriId)
+
     const oppSources = await Source.findAll({
       where: {
-        poliOriId: +poliOriId + 2, // TODO: need to add bubble burst algo here
+        poliOriId: {
+          [Op.or]: [
+            { [Op.eq]: oppIds[0] },
+            { [Op.eq]: oppIds[1] }
+          ]
+        },
         newsApiId: {
           [Op.ne]: null
         }
       }
     })
+
+    console.log('STRINGIFY', stringify(oppSources))
 
     const outOfBubble = await newsapi.v2.everything({
       q: stringOfTopics,
@@ -85,8 +108,8 @@ router.put('/:id', async (req, res, next) => {
     }
 
     const combinedArticleList = randomize(inAndOutArr)
-
     res.json(combinedArticleList) //sends array of randomized articles
+
   } catch (error) {
     console.error(error)
   }
