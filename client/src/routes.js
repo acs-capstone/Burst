@@ -7,11 +7,7 @@ import {
   Signup,
   UserHome,
   AllArticles,
-  SourcesContainer,
-<<<<<<< HEAD
-  Questions
-=======
->>>>>>> master
+  SourcesContainer
   //Quiz
 } from './components'
 import { me } from './store'
@@ -40,7 +36,7 @@ class Routes extends Component {
             {/* Routes placed here are only available after logging in */}
             <Route path="/home" component={UserHome} />
             <Route path="/news" component={AllArticles} />
-            <Route path='/topics' component={Topics} />
+            <Route path="/topics" component={Topics} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
@@ -79,6 +75,6 @@ export default withRouter(
   )(Routes)
 )
 
-  /**
-   * PROP TYPES
-   */
+/**
+ * PROP TYPES
+ */
