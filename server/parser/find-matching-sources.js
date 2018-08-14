@@ -8,4 +8,9 @@ allSidesSourcesObjects.map(obj => {
     .join('-'))
 })
 
+const intersection = allSidesSourcesObjects.filter(source => {
+  console.log(newsApiSources.includes(source.newsApiName))
+  console.log(source.newsApiName)
+})
+
 module.exports = allSidesSourcesObjects
