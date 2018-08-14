@@ -59,14 +59,18 @@ router.put('/:id', async (req, res, next) => {
       return oppPoliIds
     }
 
+    const oppIds = getOppAlgo(poliOriId)
+
     const oppSources = await Source.findAll({
       where: {
-        poliOriId: {
-          [Op.or]: [
-            { [Op.ed]: oppPoliIds[0] },
-            { [Op.ed]: oppPoliIds[1] }
-          ]
-        },
+        poliOriId: +2
+        // {
+        //   [Op.or]: [
+        //     { [Op.eq]: oppIds[0] },
+        //     { [Op.eq]: oppIds[1] }
+        //   ]
+        // }
+        ,
         newsApiId: {
           [Op.ne]: null
         }
