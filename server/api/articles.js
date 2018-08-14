@@ -13,7 +13,8 @@ router.put('/:id', async (req, res, next) => {
     const sources = req.body.sources
     const poliOriId = req.body.poliOriId
 
-    console.log('TOPICS ON USER', req.body)
+    // console.log('REQ BODY', req.body)
+
     const stringOfTopics = topics
       .map(topic => {
         return topic.name
@@ -63,19 +64,19 @@ router.put('/:id', async (req, res, next) => {
 
     const oppSources = await Source.findAll({
       where: {
-        poliOriId: +2
-        // {
-        //   [Op.or]: [
-        //     { [Op.eq]: oppIds[0] },
-        //     { [Op.eq]: oppIds[1] }
-        //   ]
-        // }
-        ,
+        poliOriId: {
+          [Op.or]: [
+            { [Op.eq]: oppIds[0] },
+            { [Op.eq]: oppIds[1] }
+          ]
+        },
         newsApiId: {
           [Op.ne]: null
         }
       }
     })
+
+    console.log('STRINGIFY', stringify(oppSources))
 
     const outOfBubble = await newsapi.v2.everything({
       q: stringOfTopics,
@@ -107,8 +108,8 @@ router.put('/:id', async (req, res, next) => {
     }
 
     const combinedArticleList = randomize(inAndOutArr)
-
     res.json(combinedArticleList) //sends array of randomized articles
+
   } catch (error) {
     console.error(error)
   }
