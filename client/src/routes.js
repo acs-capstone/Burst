@@ -7,7 +7,8 @@ import {
   Signup,
   UserHome,
   AllArticles,
-  SourcesContainer
+  SourcesContainer,
+  Questions
   //Quiz
 } from './components'
 import { me } from './store'
@@ -30,6 +31,7 @@ class Routes extends Component {
         <Route path="/signup" component={Signup} />
         {/* <Route exact path="/quiz" component={Quiz} /> */}
         <Route exact path="/sources" component={SourcesContainer} />
+        <Route path="/questions" component={Questions} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}

@@ -38,4 +38,4 @@ const questionsData = [
   }
 ]
 
-export default questions
+export default questionsData

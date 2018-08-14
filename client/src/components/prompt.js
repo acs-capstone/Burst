@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Prompt = ({ prompt }) => {
-  return <h2>{prompt}</h2>;
-};
+  return <h2 id={prompt.id}>{prompt}</h2>
+}
 
-export default Prompt;
+export default Prompt

@@ -3,7 +3,7 @@ import questionsData from './questionsData'
 import Answers from './answers'
 import Prompt from './prompt'
 import { updateUserThunk } from '../store/user'
-import connect from 'react-redux/lib/connect/connect'
+import { connect } from 'react-redux'
 
 class Questions extends Component {
   constructor() {
@@ -13,7 +13,7 @@ class Questions extends Component {
       currentQuestionIndex: 0,
       score: 0
     }
-    this.handleClick = this.handleClick.bind(TouchList)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   async componentDidMount() {
@@ -22,11 +22,12 @@ class Questions extends Component {
 
   async handleClick(evt) {
     try {
+      evt.preventDefault()
       //if there are still questions left in array, keep looping through and rendering questions
       if (this.state.currentQuestionIndex < this.state.questions.length) {
         this.setState({
           score: (this.state.score += +evt.target.value),
-          currentQuestionIndex: (currentQuestionIndex += 1)
+          currentQuestionIndex: (this.state.currentQuestionIndex += 1)
         })
       } else {
         //when all questions have been aswered, calculate score and dispatch update userThnk
@@ -40,13 +41,20 @@ class Questions extends Component {
   }
 
   render() {
-    const question = this.state.questions[this.state.currentQuestion]
-    return (
-      <div id={question.id}>
-        <Prompt prompt={question} />
-        <Answers answers={question.answers} handleClick={this.handleClick} />
-      </div>
-    )
+    if (this.state.questions && this.state.questions.length) {
+      const question = this.state.questions[this.state.currentQuestionIndex]
+      console.log('CURRENT Q', question.id)
+      return (
+        <div>
+          <Prompt id={question.id} prompt={question.prompt} />
+          <Answers
+            id={question.id}
+            answers={question.answers}
+            handleClick={this.handleClick}
+          />
+        </div>
+      )
+    } else return null
   }
 }
 
@@ -59,4 +67,4 @@ const mapDispatch = dispatch => {
 export default connect(
   null,
   mapDispatch
-)(Quiz)
+)(Questions)
