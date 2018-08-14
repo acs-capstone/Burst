@@ -1,5 +1,5 @@
 const oldSources = require('./parser/rankings.json')
-const { Source, PoliOri, Topic } = require('./db/models/')
+const { Source, PoliOri, Topic, User } = require('./db/models/')
 const db = require('./db')
 const sourcesObj = require('./parser/allSidesSourceIdParser')
 

@@ -23,10 +23,12 @@ class Quiz extends Component {
       topics: [],
       currentSource: 0,
       currentSourceName: '',
-      sourceNames: []
+      sourceNames: [],
+      currentId: 0
     }
     this.handleClick = this.handleClick.bind(this)
-    this.handleSelectChange = this.handleSelectChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   async componentDidMount() {
@@ -40,11 +42,20 @@ class Quiz extends Component {
     }
   }
 
-  handleSelectChange(evt) {
+  async handleSubmit(evt) {
+    try {
+      evt.preventDefault()
+      console.log('SUBMITTING', evt.target.name)
+    } catch (err) {
+      console.error(err.message)
+    }
+  }
+
+  handleChange(evt) {
     this.setState({
-      currentSource: evt.target.value,
-      currentSourceName: evt.target.name
+      currentSourceName: evt.target.value
     })
+    console.log('currentSourceName', this.state.currentSourceName)
 
     // console.log('currentSourceName', this.state.currentSource)
     // console.log('currentSourceName', this.state.currentSourceName)
@@ -83,15 +94,11 @@ class Quiz extends Component {
             })
       }
     } else if (!this.hasSubmittedSources && evt.target.name === 'add-source') {
+      console.log('currentSource', this.state.currentSourceName)
       await this.setState({
-        sources: [...this.state.sources, this.state.currentSource],
-        sourceNames: [...this.state.sourceNames, this.state.currentSourceName]
+        sourcesNames: [...this.state.sourceNames, this.state.currentSourceName]
       })
-      console.log(
-        'ADDED TO STAE__*!_',
-        this.state.sources,
-        this.state.sourceNames
-      )
+      console.log('sourceNAmes', this.state.sourceNames)
       await this.setState({ currentSource: 0 })
       //add current source on state to all sources array
     } else {
@@ -111,13 +118,17 @@ class Quiz extends Component {
   //update question on state, so view changes
 
   render() {
-    console.log('**', this.props.user)
+    // console.log('**', this.props.user)
     if (!this.state.hasSubmittedQuiz) {
       const question = this.state.question
       return (
         <div id={question.id}>
           <Prompt prompt={question.prompt} />
-          <Answers answers={question.answers} handleClick={this.handleClick} />
+          <Answers
+            answers={question.answers}
+            handleClick={this.handleClick}
+            handleSubmit={this.handleSubmit}
+          />
         </div>
       )
     } else if (this.state.hasSubmittedQuiz && this.state.hasSubmittedTopics) {

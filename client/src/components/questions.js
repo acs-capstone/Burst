@@ -1,38 +1,30 @@
-const questions = [
-  {
-    id: 1,
-    prompt:
-      'Which statement comes closer to your own views – even if neither is exactly right?',
-    answers: [
-      {
-        id: 1,
-        content: 'Business corporations make too much profit',
-        value: 1
-      },
-      {
-        id: 2,
-        content:
-          'Most corporations make a fair and reasonable amount of profit',
-        value: 5
-      }
-    ]
-  },
-  {
-    prompt:
-      'Which statement comes closer to your own views – even if neither is exactly right?',
-    answers: [
-      {
-        content:
-          'Problems in the world would be even worse without U.S. involvement',
-        value: 5
-      },
-      {
-        content:
-          'U.S. efforts to solve problems around the world usually end up making things worse',
-        value: 1
-      }
-    ]
-  }
-];
+import React, { Component } from 'react'
+import questionsData from './questionsData'
+import Answers from './answers'
+import Prompt from './prompt'
+import { updateUserThunk } from '../store/user'
 
-export default questions;
+class Questions extends Component {
+  constructor() {
+    super()
+    this.state = {
+      questions: [],
+      currentQuestion: 0
+    }
+  }
+
+  async componentDidMount() {}
+
+  render() {
+    return (
+      <div id={question.id}>
+        <Prompt prompt={question.prompt} />
+        <Answers
+          answers={question.answers}
+          handleClick={this.handleClick}
+          handleSubmit={this.handleSubmit}
+        />
+      </div>
+    )
+  }
+}
