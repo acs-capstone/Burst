@@ -1,65 +1,70 @@
 import React, { Component } from 'react'
-import { getSourcesList } from '../store/allSources'
+import { getAllSources } from '../store/sources'
 import { connect } from 'react-redux'
 
 class SourcesMenu extends Component {
-  constructor() {
-    super()
-    this.state = {
-      selected: ''
-    }
-  }
-  async componentDidMount(evt) {
-    try {
-      await this.props.getSourcesList()
-      console.log('STORE SOURCES', this.props.allSources)
-    } catch (err) {
-      console.error(err.message)
-    }
-  }
-
-  handleChange(evt) {
-    this.setState({ selected: evt.target.value })
-  }
-
-  render() {
-    console.log('PROPS_SOURCES', this.props.sourceNames)
-    return (
-      <div>
-        <div>
-          <form onSubmit={this.props.handleSubmit}>
-            <label htmlFor="sources-menu">Sources:</label>
-            <select onChange={this.handleChange}>
-              <option defaultValue="selected"> Please Select A Source </option>
-              {this.props.allSources.map(source => {
-                return (
-                  <option value={source.name} id={source.id}>
-                    {source.name}
-                  </option>
-                )
-              })}
-            </select>
-            <button
-              type="submit"
-              onClick={this.props.handleClick}
-              name="add-source"
-              value={this.state.selected}
-            >
-              Add Source
-            </button>
-          </form>
-        </div>
-        <div>
-          {this.props.sourceNames.map(source => {
-            return <h3>{source}</h3>
-          })}
-        </div>
-        <button onClick={this.props.handleClick} type="submit" name="submit">
-          Submit
-        </button>
-      </div>
-    )
-  }
+  // // constructor() {
+  // //   super()
+  // //   this.state = {
+  // //     currentSource: '',
+  // //     selectedSources: []
+  // //   }
+  // //   this.handleClick = this.handleClick.bind(this)
+  // //   this.handleChange = this.handleChange.bind(this)
+  // // }
+  // async componentDidMount(evt) {
+  //   try {
+  //     await this.props.getAllSources()
+  //     console.log('STORE SOURCES', this.props.allSources)
+  //   } catch (err) {
+  //     console.error(err.message)
+  //   }
+  // }
+  //
+  // // handleClick(evt) {
+  // //   this.setState({
+  // //     selectedSources: [...this.state.sources, this.state.currentSource]
+  // //   })
+  // // }
+  //
+  // // handleChange(evt) {
+  // //   this.setState({
+  // //     currentSource: evt.target.value,
+  // //     currentSourceName: evt.target.name
+  // //   })
+  // // }
+  //
+  // render() {
+  //   console.log('PROPS_SOURCES', this.props.sourceNames)
+  //   return (
+  //     <div>
+  //       <div>
+  //         <label htmlFor="sources-menu">Sources:</label>
+  //         <select onChange={this.props.handleSelectChange}>
+  //           <option defaultValue="selected"> Please Select A Source </option>
+  //           {this.props.allSources.map(source => {
+  //             return (
+  //               <option name={source.name} value={source.id}>
+  //                 {source.name}
+  //               </option>
+  //             )
+  //           })}
+  //         </select>
+  //         <button onClick={this.props.handleClick} name="add-source">
+  //           Add Source
+  //         </button>
+  //       </div>
+  //       <div>
+  //         {this.props.sourceNames.map(source => {
+  //           return <h3>{source}</h3>
+  //         })}
+  //       </div>
+  //       <button onClick={this.props.handleClick} type="submit" name="submit">
+  //         Submit
+  //       </button>
+  //     </div>
+  //   )
+  // }
 }
 
 const mapState = state => ({
@@ -68,7 +73,7 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => {
   return {
-    getSourcesList: () => dispatch(getSourcesList())
+    getSourcesList: () => dispatch(getAllSources())
   }
 }
 

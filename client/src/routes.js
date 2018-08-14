@@ -2,7 +2,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Route, Switch } from 'react-router-dom'
 
-import { Login, Signup, UserHome, AllArticles, Quiz } from './components'
+import {
+  Login,
+  Signup,
+  UserHome,
+  AllArticles,
+  SourcesContainer
+  //Quiz
+} from './components'
 import { me } from './store'
 
 /**
@@ -21,7 +28,8 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route exact path="/quiz" component={Quiz} />
+        {/* <Route exact path="/quiz" component={Quiz} /> */}
+        <Route exact path="/sources" component={SourcesContainer} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
