@@ -1,19 +1,10 @@
-const oldSources = require('./parser/rankings.json')
+const sources = require('./parser/intersection.js')
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
 const { Source, PoliOri, Topic, User } = require('./db/models/')
 const db = require('./db')
-const sourcesObj = require('./parser/allSidesSourceIdParser')
 
-const sources = oldSources.map(source => {
-  const split = source.name
-    .toLowerCase()
-    .replace(/-/g, '')
-    .split(' ')
-
-  const newsApiId = split.join('-')
-  source.newsApiId = newsApiId
-  return source
-})
-
+console.log(sources)
 const topics = [
   {
     name: 'Women’s Rights',
@@ -66,24 +57,34 @@ const poliOriSeed = async () => {
     console.log(err)
   }
 }
-
-const usersSeed = async () => {
-  await Promise.all([
-    User.create({ email: 'murphy@email.com', password: '123' }),
-    User.create({ email: 'cody@email.com', password: '123' })
-  ])
+const topicSeed = async () => {
+  await Promise.all(topics.map(topic => Topic.create(topic)))
+  console.log(`seeded ${topics.length} sources`)
 }
 
-const allSidesSeed = async () => {
-  for (let i = 0; i < sources.length; i++) {
-    try {
-      const source = await Source.create(sources[i])
-      //Source.setPoliOri({}) need syntax for this
-    } catch (err) {
-      console.log(err)
-    }
-  }
+const sourceSeed = async () => {
+  await Promise.all(sources.map(source => Source.create(source)))
   console.log(`seeded ${sources.length} sources`)
+}
+
+const userSeed = async () => {
+  const user = await User.create({
+    email: 'cody@email.com',
+    password: '123',
+    poliOriId: 2
+  })
+  const topics = await Topic.findAll({
+    where: { [Op.or]: [{ id: 1 }, { id: 3 }, { id: 5 }] }
+  })
+
+  const sources = await Source.findAll({
+    where: { [Op.or]: [{ id: 9 }, { id: 3 }, { id: 12 }] }
+  })
+  console.log(topics)
+  console.log(sources)
+  await user.addTopics(topics)
+  await user.addSources(sources)
+  console.log(`seeded user `)
 }
 
 async function runSeed() {
@@ -91,11 +92,7 @@ async function runSeed() {
   try {
     await db.sync({ force: true })
     console.log('db synced!')
-    await poliOriSeed()
-    await allSidesSeed()
-    await usersSeed()
-    await Promise.all(topics.map(topic => Topic.create(topic)))
-    // await topicsSeed()
+    await Promise.all([poliOriSeed(), topicSeed(), sourceSeed(), userSeed()])
   } catch (err) {
     console.error(err)
     process.exitCode = 1
@@ -106,8 +103,3 @@ async function runSeed() {
   }
 }
 runSeed()
-
-// const require './db/Source'urce = (require './db/Source')
-// sources.forEach(async source => {
-//   const source = await Source.create(source)
-// })
