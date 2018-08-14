@@ -13,7 +13,9 @@ class Questions extends Component {
     }
   }
 
-  async componentDidMount() {}
+  async componentDidMount() {
+    this.setState({ questions: questionsData })
+  }
 
   render() {
     return (
