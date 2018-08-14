@@ -46,9 +46,27 @@ router.put('/:id', async (req, res, next) => {
       from: createDate(0, -1, 0)
     })
 
+    //algorithm that determines what out of bubble sources you will get
+    const getOppAlgo = (num) => {
+      let oppPoliIds = []
+      if (num < 3) {
+        oppPoliIds.push(num + 1, num + 2)
+      } else if (num > 3) {
+        oppPoliIds.push(num - 1, num - 2)
+      } else if (num = 3) {
+        oppPoliIds.push(num + 1, num - 1)
+      }
+      return oppPoliIds
+    }
+
     const oppSources = await Source.findAll({
       where: {
-        poliOriId: +poliOriId + 2, // TODO: need to add bubble burst algo here
+        poliOriId: {
+          [Op.or]: [
+            { [Op.ed]: oppPoliIds[0] },
+            { [Op.ed]: oppPoliIds[1] }
+          ]
+        },
         newsApiId: {
           [Op.ne]: null
         }
