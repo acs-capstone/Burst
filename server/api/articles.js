@@ -47,14 +47,16 @@ router.put('/:id', async (req, res, next) => {
       from: createDate(0, -1, 0)
     })
 
+    console.log('server/api inBubble:', inBubble)
+
     //algorithm that determines what out of bubble sources you will get
-    const getOppAlgo = (num) => {
+    const getOppAlgo = num => {
       let oppPoliIds = []
       if (num < 3) {
         oppPoliIds.push(num + 1, num + 2)
       } else if (num > 3) {
         oppPoliIds.push(num - 1, num - 2)
-      } else if (num = 3) {
+      } else if ((num = 3)) {
         oppPoliIds.push(num + 1, num - 1)
       }
       return oppPoliIds
@@ -65,10 +67,7 @@ router.put('/:id', async (req, res, next) => {
     const oppSources = await Source.findAll({
       where: {
         poliOriId: {
-          [Op.or]: [
-            { [Op.eq]: oppIds[0] },
-            { [Op.eq]: oppIds[1] }
-          ]
+          [Op.or]: [{ [Op.eq]: oppIds[0] }, { [Op.eq]: oppIds[1] }]
         },
         newsApiId: {
           [Op.ne]: null
@@ -86,19 +85,21 @@ router.put('/:id', async (req, res, next) => {
       from: createDate(0, -1, 0)
     })
     //add key out:true key to denote out of bubble articles
-    const outWithKey = outOfBubble.articles.slice(0, 6).map(obj => { return { ...obj, out: true } })
+    const outWithKey = outOfBubble.articles.slice(0, 6).map(obj => {
+      return { ...obj, out: true }
+    })
     //join outOfBubble and inBubble arrays
     const inAndOutArr = inBubble.articles.slice(0, 14).concat(outWithKey)
 
     //randomize order of articles function
     function randomize(arr) {
       let currentIndex = arr.length
-      let tempVal;
-      let randomIdx;
+      let tempVal
+      let randomIdx
 
       while (0 !== currentIndex) {
-        randomIdx = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+        randomIdx = Math.floor(Math.random() * currentIndex)
+        currentIndex -= 1
 
         tempVal = arr[currentIndex]
         arr[currentIndex] = arr[randomIdx]
@@ -109,7 +110,6 @@ router.put('/:id', async (req, res, next) => {
 
     const combinedArticleList = randomize(inAndOutArr)
     res.json(combinedArticleList) //sends array of randomized articles
-
   } catch (error) {
     console.error(error)
   }
