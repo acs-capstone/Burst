@@ -7,7 +7,8 @@ import {
   Signup,
   UserHome,
   AllArticles,
-  SourcesContainer
+  SourcesContainer,
+  Questions
   //Quiz
 } from './components'
 import { me } from './store'

@@ -13,12 +13,15 @@ class Topics extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount(evt) {
+  async componentDidMount(evt) {
+    console.log('TOPICS', this.props.user.topics)
+    this.setState({
+      topics: this.props.user.topics
+    })
     this.props.fetchTopics() //gets all topics
   }
 
   async handleClickTopic(evt) {
-    console.log('CLICKING')
     //checks if topics is already on state, if so add its to state, otherwise it removes it
     !this.state.topics.includes(evt.target.value)
       ? await this.setState({
@@ -32,6 +35,7 @@ class Topics extends Component {
   }
 
   async handleSubmit(evt) {
+    evt.preventDefault()
     const userPrefObj = { userId: this.props.user.id, arrayOfTopics: this.state.topics }
     await this.props.updateUserThunk(userPrefObj)
   }
