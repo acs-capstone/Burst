@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Route, Switch } from 'react-router-dom'
-import Topics from './components/topics'
+
 import {
   Login,
   Signup,
   UserHome,
   AllArticles,
-  SourcesContainer
+  SourcesContainer,
+  Questions,
+  Topics
   //Quiz
 } from './components'
 import { me } from './store'

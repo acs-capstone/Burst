@@ -33,11 +33,27 @@ router.get('/:id', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id)
-    await user.update({ poliOriId: req.body.poliOriId })
-    await user.addSources(req.body.arrayOfSources)
-    await user.addTopics(req.body.arrayOfTopics)
-    res.json(user)
+    if (req.body.poliOriId) {
+      await user.update({ poliOriId: req.body.poliOriId })
+    }
+    if (req.body.arrayOfSources) {
+      await user.setSources(req.body.arrayOfSources)
+    }
+    if (req.body.arrayOfTopics) {
+      await user.setTopics(req.body.arrayOfTopics)
+    }
+    const updatedUser = await User.findById(req.params.id, {
+      include: [{ model: Source }, { model: Topic }]
+    })
+    res.json(updatedUser)
   } catch (err) {
     next(err)
   }
 })
+
+//userPrefObj = {
+//   userId: 0
+//   poliOriId: 0
+//   arrayOfSources: []
+//   arrayOfTopics: []
+// }
