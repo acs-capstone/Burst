@@ -3,30 +3,41 @@ import SourcesMenu from './sources-menu'
 import { connect } from 'react-redux'
 import { Redirect, Link } from 'react-router'
 import SourcesList from './SourcesList'
-import { getAllSources, setUserSources } from '../store'
+import { getAllSources, updateUserThunk } from '../store'
 
 class SourcesContainer extends Component {
   constructor() {
     super()
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentDidMount() {
-    console.log(this.props)
     this.props.fetchSources()
   }
 
   handleSubmit() {
-    const userSources = this.props.sources.filter(
-      source => source.selected === true
-    )
+    const userSources = this.props.sources
+      .filter(source => source.selected === true)
+      .map(source => {
+        return source.id
+      })
     console.log(userSources)
-    //this.props.setUserSources(userSources)
+    const userPrefObj = {
+      userId: this.props.user.id,
+      arrayOfSources: userSources
+    }
+
+    console.log(userPrefObj)
+    this.props.setUserSources(userPrefObj)
   }
   render() {
     return !this.props.sources ? (
       <div>loading</div>
     ) : (
-      <SourcesList sources={this.props.sources.slice(2, 10)} />
+      <SourcesList
+        handleSubmit={this.handleSubmit}
+        sources={this.props.sources.slice(2, 10)}
+      />
     )
   }
 }
@@ -41,8 +52,8 @@ const mapDispatch = dispatch => {
     fetchSources: () => {
       dispatch(getAllSources())
     },
-    setUserSources: userSources => {
-      console.log(userSources)
+    setUserSources: userPrefObj => {
+      dispatch(updateUserThunk(userPrefObj))
     }
   }
 }
