@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import { updateUserThunk, fetchTopics } from '../store';
 
 class Topics extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       topics: []
     }
@@ -15,10 +15,10 @@ class Topics extends Component {
 
   async componentDidMount(evt) {
     console.log('TOPICS', this.props.user.topics)
-    this.setState({
+    await this.setState({
       topics: this.props.user.topics
-    })
-    this.props.fetchTopics() //gets all topics
+    }) //sets users topics to state if they have any already - TO DO: these should be highlighted when navigating to the page
+    await this.props.fetchTopics() //gets all topics
   }
 
   async handleClickTopic(evt) {
@@ -45,7 +45,7 @@ class Topics extends Component {
       <div>
         {this.props.topics.map(topic => {
           return (
-            <ChoiceButton key={topic.id} topic={topic} handleClick={this.handleClickTopic} topics={this.state.topics} />
+            <ChoiceButton key={topic.id} topic={topic} handleClick={this.handleClickTopic} selectedTopics={this.state.topics} />
           )
         })}
         <button type="submit" name="submit" onClick={this.handleSubmit}>
