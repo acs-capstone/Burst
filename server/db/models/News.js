@@ -2,7 +2,7 @@ const NewsAPI = require('newsapi')
 const newsapi = new NewsAPI('cb968b25a11945c6a4056027b3a69002') //TODO: do we need to hide this?
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
-const { Source, User, Topic } = require('../db/models')
+const Source = require('./Source')
 
 const News = class {
   constructor(user) {
@@ -10,10 +10,9 @@ const News = class {
       this.sources = user.sources,
       this.poliOriId = user.poliOriId
   }
-
   //METHODS
   stringifyTopics() {
-    this.topics.map(topic => {
+    return this.topics.map(topic => {
       return topic.searchValue
     })
       .join(' OR ')
@@ -21,7 +20,7 @@ const News = class {
 
   //this will be used with both this.sources and oppSources
   stringifySources(sources) {
-    this.sources.map(source => {
+    return this.sources.map(source => {
       return source.newsApiId
     })
       .join(',')
@@ -37,33 +36,39 @@ const News = class {
   }
 
   getOppIds() {
-    let oppPoliIds = []
+    let oppIds = []
     if (this.poliOriId < 3) {
-      oppPoliIds.push(this.poliOriId + 1, this.poliOriId + 2)
+      oppIds.push(this.poliOriId + 1, this.poliOriId + 2)
     } else if (this.poliOriId > 3) {
-      oppPoliIds.push(this.poliOriId - 1, this.poliOriId - 2)
+      oppIds.push(this.poliOriId - 1, this.poliOriId - 2)
     } else if ((this.poliOriId = 3)) {
-      oppPoliIds.push(this.poliOriId + 1, this.poliOriId - 1)
+      oppIds.push(this.poliOriId + 1, this.poliOriId - 1)
     }
     return oppIds
   }
 
-  getOppSources(oppIds) {
-    await Source.findAll({
+  async getOppSources(oppIds) {
+    const oppSources = await Source.findAll({
       where: {
         poliOriId: {
-          [Op.or]: [{ [Op.eq]: oppIds[0] }, { [Op.eq]: oppIds[1] }]
+          [Op.or]: [{ [Op.eq]: oppIds[0] }, { [Op.eq]: oppIds[1] }],
         },
         newsApiId: {
           [Op.ne]: null
         }
+
       }
     })
+
+    //need to add logic to filter out sources that have your Opp Poli Id but are not in your current sources!
+
+    return oppSources
+
   }
 
-  InBubble() {
-    const stringOfTopics = this.stringifyTopics()
-    const stringOfSources = this.stringifySources(this.sources)
+  async inBubble() {
+    const stringOfTopics = await this.stringifyTopics()
+    const stringOfSources = await this.stringifySources(this.sources)
 
     const inBubble = await newsapi.v2.everything({
       q: stringOfTopics,
@@ -75,11 +80,11 @@ const News = class {
     return inBubble
   }
 
-  OutOfBubble() {
-    const stringOfTopics = this.stringifyTopics()
-    const oppIds = this.getOppIds()
-    const oppSources = this.getOppSources(oppIds)
-    const stringOfOppSources = this.stringifySources(oppSources)
+  async outOfBubble() {
+    const stringOfTopics = await this.stringifyTopics()
+    const oppIds = await this.getOppIds()
+    const oppSources = await this.getOppSources(oppIds)
+    const stringOfOppSources = await this.stringifySources(oppSources)
 
     const outOfBubble = await newsapi.v2.everything({
       q: stringOfTopics,
@@ -88,7 +93,6 @@ const News = class {
       language: 'en',
       from: this.createDate(0, -1, 0)
     })
-
     //add key out:true key to denote out of bubble articles
     const outofBubbleWithKey = outOfBubble.articles.slice(0, 6).map(obj => {
       return { ...obj, out: true }
@@ -97,12 +101,15 @@ const News = class {
     return outofBubbleWithKey
   }
 
-  get combinedArticleList() {
+  //This method calls the other methods above
+  async getCombinedArticleList() {
+    const outOfBubbleWithKey = await this.outOfBubble()
+    const inBubble = await this.inBubble()
+
     //join outOfBubble and inBubble arrays
-    const outOfBubbleWithKey = this.getOutOfBubble()
-    const inBubble = this.InBubble()
     const inAndOutArr = inBubble.articles.slice(0, 14).concat(outOfBubbleWithKey)
 
+    //randomize the array of articles
     function randomize(arr) {
       let currentIndex = arr.length
       let tempVal
@@ -120,8 +127,10 @@ const News = class {
     }
 
     const combinedArticleList = randomize(inAndOutArr)
+    // console.log('IN NEWS ARTICLES', combinedArticleList)
     return combinedArticleList
   }
 
 }
 
+module.exports = News
