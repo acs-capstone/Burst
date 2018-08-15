@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../store'
+import { Quiz } from './Quiz'
 
 const Navbar = ({ id, handleClick, isLoggedIn }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -16,6 +17,11 @@ const Navbar = ({ id, handleClick, isLoggedIn }) => (
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/quiz">
+              Quiz
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/news">
               News Feed
             </Link>
@@ -27,21 +33,21 @@ const Navbar = ({ id, handleClick, isLoggedIn }) => (
           </li>
         </ul>
       ) : (
-          <ul className="navbar-nav ml-auto">
-            {/* The navbar will show these links before you log in */}
+        <ul className="navbar-nav ml-auto">
+          {/* The navbar will show these links before you log in */}
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                Login
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">
+              Login
             </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/signup">
-                Sign Up
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/signup">
+              Sign Up
             </Link>
-            </li>
-          </ul>
-        )}
+          </li>
+        </ul>
+      )}
     </div>
   </nav>
 )
