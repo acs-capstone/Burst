@@ -7,10 +7,10 @@ import {
   Signup,
   UserHome,
   AllArticles,
-  SourcesContainer,
+  Sources,
   Questions,
-  Topics
-  //Quiz
+  Topics,
+  Quiz
 } from './components'
 import { me } from './store'
 
@@ -30,8 +30,8 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        {/* <Route exact path="/quiz" component={Quiz} /> */}
-        <Route exact path="/sources" component={SourcesContainer} />
+        {<Route exact path="/quiz" component={Quiz} />}
+        <Route exact path="/sources" component={Sources} />
         <Route path="/questions" component={Questions} />
         {isLoggedIn && (
           <Switch>
