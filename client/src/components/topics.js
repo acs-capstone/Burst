@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import { updateUserThunk, fetchTopics } from '../store';
 
 class Topics extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       topics: []
     }
@@ -13,12 +13,15 @@ class Topics extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount(evt) {
-    this.props.fetchTopics() //gets all topics
+  async componentDidMount(evt) {
+    console.log('TOPICS', this.props.user.topics)
+    await this.setState({
+      topics: this.props.user.topics
+    }) //sets users topics to state if they have any already - TO DO: these should be highlighted when navigating to the page
+    await this.props.fetchTopics() //gets all topics
   }
 
   async handleClickTopic(evt) {
-    console.log('CLICKING')
     //checks if topics is already on state, if so add its to state, otherwise it removes it
     !this.state.topics.includes(evt.target.value)
       ? await this.setState({
@@ -32,6 +35,7 @@ class Topics extends Component {
   }
 
   async handleSubmit(evt) {
+    evt.preventDefault()
     const userPrefObj = { userId: this.props.user.id, arrayOfTopics: this.state.topics }
     await this.props.updateUserThunk(userPrefObj)
   }
@@ -41,7 +45,7 @@ class Topics extends Component {
       <div>
         {this.props.topics.map(topic => {
           return (
-            <ChoiceButton key={topic.id} topic={topic} handleClick={this.handleClickTopic} topics={this.state.topics} />
+            <ChoiceButton key={topic.id} topic={topic} handleClick={this.handleClickTopic} selectedTopics={this.state.topics} />
           )
         })}
         <button type="submit" name="submit" onClick={this.handleSubmit}>

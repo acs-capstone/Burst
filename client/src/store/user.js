@@ -37,6 +37,7 @@ export const auth = (email, password, method) => async dispatch => {
   let res
   try {
     res = await axios.post(`/auth/${method}`, { email, password })
+    dispatch(getUser(res.data))
   } catch (authError) {
     return dispatch(getUser({ error: authError }))
   }
@@ -85,7 +86,7 @@ export const updateUserThunk = userPrefObj => async dispatch => {
 /**
  * REDUCER
  */
-export default function(state = defaultUser, action) {
+export default function (state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
       return action.user
