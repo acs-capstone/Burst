@@ -3,21 +3,25 @@ const NewsAPI = require('newsapi')
 const newsapi = new NewsAPI('cb968b25a11945c6a4056027b3a69002') //TODO: do we need to hide this?
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
-const Source = require('../db/models/Source')
+const { Source, User, Topic } = require('../db/models')
 module.exports = router
 
 //this wil take a userid, needs user with topics & sources
-router.put('/:id', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
   try {
-    const topics = req.body.topics //may need to change to user.topics?
-    const sources = req.body.sources
-    const poliOriId = req.body.poliOriId
+    const user = await User.findById(req.params.id, {
+      include: [{ model: Source }, { model: Topic }]
+    })
+    console.log('USER', user)
+    const topics = user.topics //may need to change to user.topics?
+    const sources = user.sources
+    const poliOriId = user.poliOriId
 
     // console.log('REQ BODY', req.body)
 
     const stringOfTopics = topics
       .map(topic => {
-        return topic.name
+        return topic.searchValue
       })
       .join(' OR ')
 
@@ -39,6 +43,8 @@ router.put('/:id', async (req, res, next) => {
       return date.toISOString()
     }
 
+    console.log('InBubble Query, topics:', stringOfTopics, 'sources:', stringify(sources), 'InBubble END')
+
     const inBubble = await newsapi.v2.everything({
       q: stringOfTopics,
       sources: stringify(sources),
@@ -47,7 +53,7 @@ router.put('/:id', async (req, res, next) => {
       from: createDate(0, -1, 0)
     })
 
-    console.log('server/api inBubble:', inBubble)
+    console.log('server/api inBubble result:', inBubble)
 
     //algorithm that determines what out of bubble sources you will get
     const getOppAlgo = num => {
@@ -75,7 +81,7 @@ router.put('/:id', async (req, res, next) => {
       }
     })
 
-    console.log('STRINGIFY', stringify(oppSources))
+    // console.log('STRINGIFY OPP', stringify(oppSources))
 
     const outOfBubble = await newsapi.v2.everything({
       q: stringOfTopics,

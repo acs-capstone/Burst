@@ -20,11 +20,10 @@ const getArticles = articles => ({ type: GET_ARTICLES, articles })
  */
 //gets articles in bubble
 
-export const fetchArticles = user => async dispatch => {
+export const fetchArticles = (userId) => async dispatch => {
   try {
-    const { data } = await axios.put(
-      `http://localhost:8080/api/articles/${user.id}`,
-      user
+    const { data } = await axios.get(
+      `http://localhost:8080/api/articles/${userId}`
     )
     console.log('HERE!')
     dispatch(getArticles(data))
@@ -55,7 +54,7 @@ export const fetchArticles = user => async dispatch => {
 /**
  * REDUCER
  */
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case GET_ARTICLES:
       return action.articles

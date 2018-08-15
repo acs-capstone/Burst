@@ -23,9 +23,9 @@ class AllArticles extends Component {
   async componentDidMount() {
     try {
       const user = await this.props.getUserThunk(this.props.user.id)
-      const articles = await this.props.fetchArticles(this.props.user)
-      // console.log('*ARTICLES', this.props.articles)
-      // console.log('*USER', this.props.user)
+      const articles = await this.props.fetchArticles(this.props.user.id)
+      console.log('***ARTICLES', articles)
+
     } catch (err) {
       console.error(err.message)
     }
@@ -61,7 +61,7 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => {
   return {
-    fetchArticles: userObj => dispatch(fetchArticles(userObj)),
+    fetchArticles: userId => dispatch(fetchArticles(userId)),
     getUserThunk: userId => dispatch(getUserThunk(userId))
   }
 }
