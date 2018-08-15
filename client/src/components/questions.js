@@ -35,16 +35,17 @@ class Questions extends Component {
         //when all questions have been aswered, calculate score and dispatch update userThnk
         let finalScore = Math.round(this.state.score / 2)
         //TODO: Change to 11 once all Q's are added
-        console.log('USERID', this.props.userId)
+        console.log('USERID', this.props.user.id)
+        console.log('FINAL SCORE', finalScore)
         await this.props.updateUserThunk({
-          poliOriId: finalScore,
-          userId: this.props.userId
+          userId: this.props.user.id,
+          poliOriId: finalScore
         })
 
         console.log('DONE!')
       }
     } catch (err) {
-      console.err(err.message)
+      console.error(err.message)
     }
   }
 
@@ -72,6 +73,6 @@ const mapDispatch = dispatch => {
 }
 
 export default connect(
-  null,
+  mapState,
   mapDispatch
 )(Questions)
