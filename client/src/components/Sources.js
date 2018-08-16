@@ -9,43 +9,55 @@ class SourcesContainer extends Component {
   constructor() {
     super()
     this.state = {
+      userSources: [],
       prevSources: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount() {
     this.props.fetchSources()
-    if (this.props.user.sources) {
-      this.setState({ prevSources: true })
+    if (this.props.user.sources.length) {
+      this.setState({
+        userSources: this.props.user.sources,
+        prevSources: true
+      })
     }
   }
 
-  handleSubmit() {
-    const userSources = this.props.sources
-      .filter(source => source.selected === true)
-      .map(source => {
-        return source.id
+  handleClick(source) {
+    console.log(source)
+    if (this.state.userSources.includes(source)) {
+      this.setState({
+        userSources: this.state.userSources.filter(src => src.id !== source.id)
       })
+    } else this.setState({ userSources: [...this.state.userSources, source] })
+    console.log(this.state.userSources)
+  }
 
+  handleSubmit() {
+    const userSources = this.state.userSources
     const userPrefObj = {
       userId: this.props.user.id,
       arrayOfSources: userSources
     }
 
-    console.log(userPrefObj)
     this.props.setUserSources(userPrefObj)
     if (this.state.prevSources) {
       this.props.history.push('/home')
     }
   }
+
   render() {
     return !this.props.sources ? (
       <div>loading</div>
     ) : (
       <SourcesList
+        handleClick={this.handleClick}
         handleSubmit={this.handleSubmit}
         sources={this.props.sources.slice(2, 10)}
+        userSources={this.props.user.sources.map(source => source.id) || []}
       />
     )
   }
@@ -53,7 +65,8 @@ class SourcesContainer extends Component {
 
 const mapState = state => ({
   user: state.user,
-  sources: state.sources
+  sources: state.sources,
+  userSources: state.user.sources
 })
 
 const mapDispatch = dispatch => {

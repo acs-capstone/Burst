@@ -8,13 +8,22 @@ import SourceCard from './SourceCard'
 // what feedly does)
 
 const SourcesList = props => {
-  const { sources, handleSubmit } = props
+  const { userSources, sources, handleClick, handleSubmit } = props
 
   return (
     <div className="col-lg-12">
       <h1 className="my-4">Sources</h1>
-      <div className="form-check">
-        {sources.map(source => <SourceCard key={source.id} source={source} />)}
+      <div className="card-columns">
+        {sources.map(source => {
+          return (
+            <SourceCard
+              key={source.id}
+              source={source}
+              handleClick={handleClick}
+              selected={userSources.includes(source.id) ? true : false}
+            />
+          )
+        })}
         <button type="submit" onClick={handleSubmit}>
           Add Sources
         </button>

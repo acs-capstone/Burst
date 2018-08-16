@@ -8,21 +8,16 @@ import { toggleSource } from '../store'
 // what feedly does)
 
 const SourceCard = props => {
-  const { source, toggleSource } = props
+  const { selected, source, toggleSource, handleClick } = props
+
   return (
-    <div>
-      <input
-        className="form-check-input"
-        type="checkbox"
-        value={source.name}
-        id={source.id}
-        onChange={() => {
-          toggleSource(source.id)
-        }}
-      />
-      <label className="form-check-label" htmlFor={source.id}>
-        {source.name}
-      </label>
+    <div
+      className={selected ? 'card bg-primary' : 'card'}
+      onClick={() => handleClick(source)}
+    >
+      <div className="card-body selected">
+        <h6 className="card-title">{source.name}</h6>
+      </div>
     </div>
   )
 }
@@ -37,3 +32,17 @@ export default connect(
   null,
   mapDispatch
 )(SourceCard)
+
+//
+// <input
+//   className="form-check-input"
+//   type="checkbox"
+//   value={source.name}
+//   id={source.id}
+//   onChange={() => {
+//     toggleSource(source.id)
+//   }}
+// />
+// <label className="form-check-label" htmlFor={source.id}>
+//   {source.name}
+// </label>
