@@ -14,13 +14,12 @@ class Topics extends Component {
   }
 
   async componentDidMount(evt) {
-    console.log('TOPICS', this.props.user.topics)
     const topicIds = this.props.user.topics.map(topic => {
       return topic.id.toString()
     })
     await this.setState({
       topics: topicIds
-    }) //sets users topics to state if they have any already - TO DO: these should be highlighted when navigating to the page
+    }) //sets users topics to state if they have any already
     await this.props.fetchTopics() //gets all topics
   }
 
@@ -39,7 +38,6 @@ class Topics extends Component {
 
   async handleSubmit(evt) {
     evt.preventDefault()
-    console.log('PROPS', this.props)
     const userPrefObj = {
       userId: this.props.user.id,
       arrayOfTopics: this.state.topics
