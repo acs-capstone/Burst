@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { User, Source, Topic } = require('../db/models')
+const { User, Source, Topic, PoliOri } = require('../db/models')
 module.exports = router
 
 //Do we need this? when would we get all users?
@@ -16,7 +16,7 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id, {
-      include: [{ model: Source }, { model: Topic }]
+      include: [{ model: Source }, { model: Topic }, { model: PoliOri }]
     })
     //this gets us the 'bubble bursting' sources
     // const oppSources = await Source.findAll({
@@ -43,8 +43,9 @@ router.put('/:id', async (req, res, next) => {
       await user.setTopics(req.body.arrayOfTopics)
     }
     const updatedUser = await User.findById(req.params.id, {
-      include: [{ model: Source }, { model: Topic }]
+      include: [{ model: Source }, { model: Topic }, { model: PoliOri }]
     })
+
     res.json(updatedUser)
   } catch (err) {
     next(err)
