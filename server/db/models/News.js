@@ -56,10 +56,16 @@ const News = class {
         newsApiId: {
           [Op.ne]: null
         }
-
       }
     })
 
+    // const x = oppSources.forEach(oppSource => {
+    //   for (i = 0; i < this.sources.length; i++) {
+    //     if (oppSource.newsApiId === sources[i]){
+
+    //     }
+    //   }
+    // })
     //need to add logic to filter out sources that have your Opp Poli Id but are not in your current sources!
 
     return oppSources
