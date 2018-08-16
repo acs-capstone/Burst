@@ -15,8 +15,11 @@ class Topics extends Component {
 
   async componentDidMount(evt) {
     console.log('TOPICS', this.props.user.topics)
+    const topicIds = this.props.user.topics.map(topic => {
+      return topic.id.toString()
+    })
     await this.setState({
-      topics: this.props.user.topics
+      topics: topicIds
     }) //sets users topics to state if they have any already - TO DO: these should be highlighted when navigating to the page
     await this.props.fetchTopics() //gets all topics
   }
