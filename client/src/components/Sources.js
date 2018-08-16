@@ -21,7 +21,7 @@ class SourcesContainer extends Component {
       .map(source => {
         return source.id
       })
-    console.log(userSources)
+
     const userPrefObj = {
       userId: this.props.user.id,
       arrayOfSources: userSources

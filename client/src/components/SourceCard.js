@@ -29,7 +29,6 @@ const SourceCard = props => {
 
 const mapDispatch = dispatch => ({
   toggleSource: id => {
-    console.log(id)
     dispatch(toggleSource(id))
   }
 })
