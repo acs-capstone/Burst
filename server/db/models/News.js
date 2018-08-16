@@ -20,7 +20,7 @@ const News = class {
 
   //this will be used with both this.sources and oppSources
   stringifySources(sources) {
-    return this.sources.map(source => {
+    return sources.map(source => {
       return source.newsApiId
     })
       .join(',')
@@ -58,18 +58,11 @@ const News = class {
         }
       }
     })
-
-    // const x = oppSources.forEach(oppSource => {
-    //   for (i = 0; i < this.sources.length; i++) {
-    //     if (oppSource.newsApiId === sources[i]){
-
-    //     }
-    //   }
-    // })
-    //need to add logic to filter out sources that have your Opp Poli Id but are not in your current sources!
-
-    return oppSources
-
+    const filteredOppSources = oppSources.filter(oppSource => {
+      const userNewsApis = this.sources.map(source => source.newsApiId)
+      return !userNewsApis.includes(oppSource.newsApiId)
+    })
+    return filteredOppSources
   }
 
   async inBubble() {
@@ -99,6 +92,7 @@ const News = class {
       language: 'en',
       from: this.createDate(0, -1, 0)
     })
+
     //add key out:true key to denote out of bubble articles
     const outofBubbleWithKey = outOfBubble.articles.slice(0, 6).map(obj => {
       return { ...obj, out: true }

@@ -44,11 +44,15 @@ router.post('/logout', (req, res) => {
 })
 
 router.get('/me', async (req, res) => {
-  if (req.user) {
-    const user = await User.findById(req.user.id, {
-      include: [{ model: Source }, { model: Topic }]
-    })
-    res.json(user)
+  try {
+    if (req.user) {
+      const user = await User.findById(req.user.id, {
+        include: [{ model: Source }, { model: Topic }]
+      })
+      res.json(user)
+    }
+  } catch (err) {
+    console.log(err)
   }
 })
 
