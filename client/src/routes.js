@@ -30,12 +30,13 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        {<Route exact path="/quiz" component={Quiz} />}
-        <Route exact path="/sources" component={Sources} />
-        <Route path="/questions" component={Questions} />
+
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
+            {<Route exact path="/quiz" component={Quiz} />}
+            <Route exact path="/sources" component={Sources} />
+            <Route path="/questions" component={Questions} />
             <Route path="/home" component={UserHome} />
             <Route path="/news" component={AllArticles} />
             <Route path="/topics" component={Topics} />
@@ -44,6 +45,7 @@ class Routes extends Component {
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
         {/* should we also have a fallback when you're logged in? */}
+        <Route component={Quiz} />
       </Switch>
     )
   }
