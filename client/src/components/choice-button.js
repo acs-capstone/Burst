@@ -3,6 +3,7 @@ import React from 'react'
 const ChoiceButton = props => {
   //returns true or false if the topic is selected on state
   const selected = props.selectedTopics.includes(props.topic.id.toString())
+
   //if array of topics on state contains specific topic, highlight it, otherwise don't
   if (selected) {
     return (
