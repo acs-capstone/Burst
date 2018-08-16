@@ -36,12 +36,13 @@ class Topics extends Component {
 
   async handleSubmit(evt) {
     evt.preventDefault()
+    console.log('PROPS', this.props)
     const userPrefObj = {
       userId: this.props.user.id,
       arrayOfTopics: this.state.topics
     }
-    await this.props.updateUserThunk(userPrefObj)
-    if (this.props.user.sources) {
+    this.props.updateUserThunk(userPrefObj)
+    if (this.props.user.sources && this.props.history) {
       this.props.history.push('/home')
     }
   }
