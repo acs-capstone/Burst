@@ -41,6 +41,9 @@ class Questions extends Component {
           userId: this.props.user.id,
           poliOriId: finalScore
         })
+        if (this.props.user.poliOriId) {
+          this.props.history.push('/home')
+        }
 
         console.log('DONE!')
       }

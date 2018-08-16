@@ -8,11 +8,17 @@ import { getAllSources, updateUserThunk } from '../store'
 class SourcesContainer extends Component {
   constructor() {
     super()
+    this.state = {
+      prevSources: false
+    }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentDidMount() {
     this.props.fetchSources()
+    if (this.props.user.sources) {
+      this.setState({ prevSources: true })
+    }
   }
 
   handleSubmit() {
@@ -29,6 +35,9 @@ class SourcesContainer extends Component {
 
     console.log(userPrefObj)
     this.props.setUserSources(userPrefObj)
+    if (this.state.prevSources) {
+      this.props.history.push('/home')
+    }
   }
   render() {
     return !this.props.sources ? (
