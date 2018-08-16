@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ChoiceButton from './choice-button'
 import { connect } from 'react-redux'
-import { updateUserThunk, fetchTopics } from '../store';
+import { updateUserThunk, fetchTopics } from '../store'
 
 class Topics extends Component {
   constructor(props) {
@@ -25,19 +25,25 @@ class Topics extends Component {
     //checks if topics is already on state, if so add its to state, otherwise it removes it
     !this.state.topics.includes(evt.target.value)
       ? await this.setState({
-        topics: [...this.state.topics, evt.target.value]
-      })
-      : await this.setState({
-        topics: this.state.topics.filter(topic => {
-          if (topic !== evt.target.value) return topic
+          topics: [...this.state.topics, evt.target.value]
         })
-      })
+      : await this.setState({
+          topics: this.state.topics.filter(topic => {
+            if (topic !== evt.target.value) return topic
+          })
+        })
   }
 
   async handleSubmit(evt) {
     evt.preventDefault()
-    const userPrefObj = { userId: this.props.user.id, arrayOfTopics: this.state.topics }
+    const userPrefObj = {
+      userId: this.props.user.id,
+      arrayOfTopics: this.state.topics
+    }
     await this.props.updateUserThunk(userPrefObj)
+    if (this.props.user.sources) {
+      this.props.history.push('/home')
+    }
   }
 
   render() {
@@ -45,7 +51,12 @@ class Topics extends Component {
       <div>
         {this.props.topics.map(topic => {
           return (
-            <ChoiceButton key={topic.id} topic={topic} handleClick={this.handleClickTopic} selectedTopics={this.state.topics} />
+            <ChoiceButton
+              key={topic.id}
+              topic={topic}
+              handleClick={this.handleClickTopic}
+              selectedTopics={this.state.topics}
+            />
           )
         })}
         <button type="submit" name="submit" onClick={this.handleSubmit}>
@@ -64,7 +75,7 @@ const mapState = state => ({
 const mapDispatch = dispatch => {
   return {
     fetchTopics: () => dispatch(fetchTopics()),
-    updateUserThunk: (user) => dispatch(updateUserThunk(user))
+    updateUserThunk: user => dispatch(updateUserThunk(user))
   }
 }
 
