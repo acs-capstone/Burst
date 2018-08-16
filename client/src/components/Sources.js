@@ -16,7 +16,7 @@ class SourcesContainer extends Component {
 
   componentDidMount() {
     this.props.fetchSources()
-    if (this.props.user.sources) {
+    if (this.props.user.sources.length) {
       this.setState({ prevSources: true })
     }
   }
