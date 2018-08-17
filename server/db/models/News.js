@@ -76,8 +76,6 @@ const News = class {
       language: 'en',
       from: this.createDate(-2, 0, 0)
     })
-    console.log('IB LENGTH', inBubble.totalResults)
-
     return inBubble
   }
 
@@ -129,7 +127,6 @@ const News = class {
     }
 
     const combinedArticleList = randomize(inAndOutArr)
-    // console.log('IN NEWS ARTICLES', combinedArticleList)
     return combinedArticleList
   }
 

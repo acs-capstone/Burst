@@ -23,15 +23,4 @@ router.get('/:id', async (req, res, next) => {
   }
 })
 
-router.get('/topic/:id', async (req, res, next) => {
-  try {
-    //get topic by Id
-    // const topic = await Topic.findById(req.params.id)
 
-    const immigration = await News.getArticleByTopic('immigration')
-    res.send(immigration)
-
-  } catch (error) {
-    console.error(error)
-  }
-})
