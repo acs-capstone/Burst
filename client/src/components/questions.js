@@ -33,7 +33,7 @@ class Questions extends Component {
         })
       } else {
         //when all questions have been aswered, calculate score and dispatch update userThnk
-        let finalScore = Math.round(this.state.score / 2)
+        let finalScore = Math.round(this.state.score / 11)
         //TODO: Change to 11 once all Q's are added
         console.log('USERID', this.props.user.id)
         console.log('FINAL SCORE', finalScore)
