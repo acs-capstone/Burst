@@ -1,92 +1,90 @@
 import React, { Component } from 'react'
-import SourcesMenu from './sources-menu'
+import ChoiceButton from './choice-button2'
 import { connect } from 'react-redux'
-import { Redirect, Link } from 'react-router'
-import SourcesList from './SourcesList'
-import { getAllSources, updateUserThunk } from '../store'
+import { updateUserThunk, getAllSources } from '../store'
 
-class SourcesContainer extends Component {
-  constructor() {
-    super()
+class Sources extends Component {
+  constructor(props) {
+    super(props)
     this.state = {
-      userSources: [],
-      prevSources: false
+      sources: []
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount() {
-    this.props.fetchSources()
-    if (this.props.user.sources.length) {
-      this.setState({
-        userSources: [],
-        prevSources: true
-      })
-    }
+  async componentDidMount(evt) {
+    const sourceIds = this.props.user.sources.map(source => {
+      return source.id.toString()
+    })
+    await this.setState({
+      sources: sourceIds
+    }) //sets users sources to state if they have any already
+    await this.props.fetchSources() //gets all sources
   }
 
-  // componentDidUpdate() {
-  //   this.setState({ userSources: this.props.user.sources })
-  // }
-
-  handleClick(source) {
-    if (this.state.userSources.includes(source)) {
-      this.setState({
-        userSources: this.state.userSources.filter(src => src.id !== source.id)
-      })
-    } else this.setState({ userSources: [...this.state.userSources, source] })
-
-    console.log(this.state.userSources)
+  async handleClick(evt) {
+    //checks if sources is already on state, if so add its to state, otherwise it removes it
+    console.log(evt.target.value)
+    !this.state.sources.includes(evt.target.value)
+      ? await this.setState({
+          sources: [...this.state.sources, evt.target.value]
+        })
+      : await this.setState({
+          sources: this.state.sources.filter(source => {
+            if (source !== evt.target.value) return source
+          })
+        })
   }
 
-  handleSubmit() {
-    const userSources = this.state.userSources
+  async handleSubmit(evt) {
+    evt.preventDefault()
     const userPrefObj = {
       userId: this.props.user.id,
-      arrayOfSources: userSources
+      arrayOfSources: this.state.sources
     }
-
-    this.props.setUserSources(userPrefObj)
-    if (this.state.prevSources) {
+    this.props.updateUserThunk(userPrefObj)
+    if (this.props.user.sources && this.props.history) {
       this.props.history.push('/home')
     }
   }
 
   render() {
-    return !this.props.sources ? (
-      <div>loading</div>
-    ) : (
-      <SourcesList
-        handleClick={this.handleClick}
-        handleSubmit={this.handleSubmit}
-        sources={this.props.sources}
-        userSources={this.state.userSources.map(source => source.id) || []}
-      />
+    return (
+      <div>
+        {this.props.sources.map(source => {
+          return (
+            <div className="card-deck">
+              <ChoiceButton
+                key={source.id}
+                source={source}
+                handleClick={this.handleClick}
+                selectedSources={this.state.sources}
+              />
+            </div>
+          )
+        })}
+        <button type="submit" name="submit" onClick={this.handleSubmit}>
+          Submit
+        </button>
+      </div>
     )
   }
 }
 
-const mapState = state => {
-  return {
-    user: state.user,
-    sources: state.sources,
-    userSources: state.user.sources
-  }
-}
+const mapState = state => ({
+  user: state.user,
+  sources: state.sources
+})
 
 const mapDispatch = dispatch => {
   return {
-    fetchSources: () => {
-      dispatch(getAllSources())
-    },
-    setUserSources: userPrefObj => {
-      dispatch(updateUserThunk(userPrefObj))
-    }
+    fetchSources: () => dispatch(getAllSources()),
+    updateUserThunk: user => dispatch(updateUserThunk(user))
   }
 }
 
 export default connect(
   mapState,
   mapDispatch
-)(SourcesContainer)
+)(Sources)
