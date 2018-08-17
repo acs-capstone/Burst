@@ -28,13 +28,13 @@ class Sources extends Component {
     console.log(evt.target.value)
     !this.state.sources.includes(evt.target.value)
       ? await this.setState({
-          sources: [...this.state.sources, evt.target.value]
-        })
+        sources: [...this.state.sources, evt.target.value]
+      })
       : await this.setState({
-          sources: this.state.sources.filter(source => {
-            if (source !== evt.target.value) return source
-          })
+        sources: this.state.sources.filter(source => {
+          if (source !== evt.target.value) return source
         })
+      })
   }
 
   async handleSubmit(evt) {
@@ -52,6 +52,7 @@ class Sources extends Component {
   render() {
     return (
       <div>
+        <h2>Which sources do you like to read?</h2>
         {this.props.sources.map(source => {
           return (
             <div className="card-deck">

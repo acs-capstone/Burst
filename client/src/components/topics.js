@@ -27,13 +27,13 @@ class Topics extends Component {
     //checks if topics is already on state, if so add its to state, otherwise it removes it
     !this.state.topics.includes(evt.target.value)
       ? await this.setState({
-          topics: [...this.state.topics, evt.target.value]
-        })
+        topics: [...this.state.topics, evt.target.value]
+      })
       : await this.setState({
-          topics: this.state.topics.filter(topic => {
-            if (topic !== evt.target.value) return topic
-          })
+        topics: this.state.topics.filter(topic => {
+          if (topic !== evt.target.value) return topic
         })
+      })
   }
 
   async handleSubmit(evt) {
@@ -51,6 +51,7 @@ class Topics extends Component {
   render() {
     return (
       <div>
+        <h2>Which topics would you like to read about?</h2>
         {this.props.topics.map(topic => {
           return (
             <ChoiceButton
