@@ -6,23 +6,25 @@ const Source = require('./Source')
 
 const News = class {
   constructor(user) {
-    this.topics = user.topics,
-      this.sources = user.sources,
-      this.poliOriId = user.poliOriId
+    ;(this.topics = user.topics),
+      (this.sources = user.sources),
+      (this.poliOriId = user.poliOriId)
   }
   //METHODS
   stringifyTopics() {
-    return this.topics.map(topic => {
-      return topic.searchValue
-    })
+    return this.topics
+      .map(topic => {
+        return topic.searchValue
+      })
       .join(' OR ')
   }
 
   //this will be used with both this.sources and oppSources
   stringifySources(sources) {
-    return sources.map(source => {
-      return source.newsApiId
-    })
+    return sources
+      .map(source => {
+        return source.newsApiId
+      })
       .join(',')
   }
 
@@ -51,7 +53,7 @@ const News = class {
     const oppSources = await Source.findAll({
       where: {
         poliOriId: {
-          [Op.or]: [{ [Op.eq]: oppIds[0] }, { [Op.eq]: oppIds[1] }],
+          [Op.or]: [{ [Op.eq]: oppIds[0] }, { [Op.eq]: oppIds[1] }]
         },
         newsApiId: {
           [Op.ne]: null
@@ -101,13 +103,28 @@ const News = class {
     return outofBubbleWithKey
   }
 
+  mostPopularByTopic = async () => {
+    const topics = await Topic.findAll()
+    const topicNames = topics.map(topic => topic.name)
+    console.log(topicNames)
+    // await newsapi.v2.everything({
+    //   q: stringOfTopics,
+    //   sources: stringOfSources,
+    //   sortBy: 'relevancy',
+    //   language: 'en',
+    //   from: this.createDate(0, -1, 0)
+    // })
+  }
+
   //This method calls the other methods above
   async getCombinedArticleList() {
     const outOfBubbleWithKey = await this.outOfBubble()
     const inBubble = await this.inBubble()
 
     //join outOfBubble and inBubble arrays
-    const inAndOutArr = inBubble.articles.slice(0, 14).concat(outOfBubbleWithKey)
+    const inAndOutArr = inBubble.articles
+      .slice(0, 14)
+      .concat(outOfBubbleWithKey)
 
     //randomize the array of articles
     function randomize(arr) {
@@ -130,7 +147,6 @@ const News = class {
     // console.log('IN NEWS ARTICLES', combinedArticleList)
     return combinedArticleList
   }
-
 }
 
 module.exports = News
