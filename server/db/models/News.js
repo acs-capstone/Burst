@@ -72,10 +72,12 @@ const News = class {
     const inBubble = await newsapi.v2.everything({
       q: stringOfTopics,
       sources: stringOfSources,
-      sortBy: 'relevancy',
+      sortBy: 'popularity',
       language: 'en',
-      from: this.createDate(0, -1, 0)
+      from: this.createDate(-2, 0, 0)
     })
+    console.log('IB LENGTH', inBubble.totalResults)
+
     return inBubble
   }
 
@@ -88,11 +90,11 @@ const News = class {
     const outOfBubble = await newsapi.v2.everything({
       q: stringOfTopics,
       sources: stringOfOppSources,
-      sortBy: 'relevancy',
+      sortBy: 'popularity',
       language: 'en',
-      from: this.createDate(0, -1, 0)
+      from: this.createDate(-2, 0, 0)
     })
-
+    console.log('OOB LENGTH', outOfBubble.totalResults)
     //add key out:true key to denote out of bubble articles
     const outofBubbleWithKey = outOfBubble.articles.slice(0, 6).map(obj => {
       return { ...obj, out: true }
