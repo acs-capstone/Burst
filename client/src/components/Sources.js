@@ -20,19 +20,23 @@ class SourcesContainer extends Component {
     this.props.fetchSources()
     if (this.props.user.sources.length) {
       this.setState({
-        userSources: this.props.user.sources,
+        userSources: [],
         prevSources: true
       })
     }
   }
 
+  // componentDidUpdate() {
+  //   this.setState({ userSources: this.props.user.sources })
+  // }
+
   handleClick(source) {
-    console.log(source)
     if (this.state.userSources.includes(source)) {
       this.setState({
         userSources: this.state.userSources.filter(src => src.id !== source.id)
       })
     } else this.setState({ userSources: [...this.state.userSources, source] })
+
     console.log(this.state.userSources)
   }
 
@@ -56,18 +60,20 @@ class SourcesContainer extends Component {
       <SourcesList
         handleClick={this.handleClick}
         handleSubmit={this.handleSubmit}
-        sources={this.props.sources.slice(2, 10)}
-        userSources={this.props.user.sources.map(source => source.id) || []}
+        sources={this.props.sources}
+        userSources={this.state.userSources.map(source => source.id) || []}
       />
     )
   }
 }
 
-const mapState = state => ({
-  user: state.user,
-  sources: state.sources,
-  userSources: state.user.sources
-})
+const mapState = state => {
+  return {
+    user: state.user,
+    sources: state.sources,
+    userSources: state.user.sources
+  }
+}
 
 const mapDispatch = dispatch => {
   return {
