@@ -51,7 +51,6 @@ export default function(sources = initialSources, action) {
     case TOGGLE_SOURCE: {
       const source = sources.find(srce => srce.id === action.id)
       source.selected = !source.selected
-      console.log(source)
 
       return [...sources]
     }
