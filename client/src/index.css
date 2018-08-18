@@ -12,3 +12,39 @@ body {
   padding: 50px;
 
 }
+footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  height: 20px;
+}
+
+.OTSubscriberContainer{
+  float: right;
+  position: absolute;
+  right: 20vw;
+  top: 200px;
+  z-index: -1;
+}
+
+.OTPublisherContainer{
+  float: right;
+  position: absolute;
+  right: 20vw;
+  top: 200px;
+  z-index: 1;
+
+}
+
+/* .OT_publisher {
+  z-index: 1;
+  float: right;
+  margin-right: 100px;
+}
+
+.OT_subscriber {
+  float: right;
+  margin-left: 1em;
+  background-color: magenta;
+} */
+
