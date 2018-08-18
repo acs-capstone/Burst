@@ -3,6 +3,7 @@ const Source = require('./Source')
 const Topic = require('./Topic')
 const PoliOri = require('./PoliOri')
 const News = require('./News')
+// const PopularArticles = require('./PopularArticles')
 
 User.belongsToMany(Source, { through: 'UserSource' })
 Source.belongsToMany(User, { through: 'UserSource' })

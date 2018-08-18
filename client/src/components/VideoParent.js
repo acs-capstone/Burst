@@ -20,7 +20,7 @@ export default class VideoParent extends Component {
   render() {
     return (
       <div>
-        <h3> Video chat!</h3>
+        <h3>Video chat </h3>
         <OpenTok apiKey={API_KEY} sessionId={SESSION_ID} token={TOKEN} />
       </div >
     )
