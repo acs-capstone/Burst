@@ -3,7 +3,11 @@ const Source = require('./Source')
 const Topic = require('./Topic')
 const PoliOri = require('./PoliOri')
 const News = require('./News')
+<<<<<<< HEAD
 // const PopularArticles = require('./PopularArticles')
+=======
+const Session = require('./Session')
+>>>>>>> master
 
 User.belongsToMany(Source, { through: 'UserSource' })
 Source.belongsToMany(User, { through: 'UserSource' })
@@ -17,4 +21,4 @@ Source.belongsTo(PoliOri)
 PoliOri.hasMany(Source)
 PoliOri.hasMany(User)
 
-module.exports = { User, Source, Topic, PoliOri, News }
+module.exports = { User, Source, Topic, PoliOri, News, Session }
