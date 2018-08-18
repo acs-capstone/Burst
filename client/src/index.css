@@ -33,7 +33,13 @@ footer{
   right: 20vw;
   top: 200px;
   z-index: 1;
+}
 
+#videoButton{
+  float: right;
+  position: absolute;
+  right: 20vw;
+  top: 175px;
 }
 
 /* .OT_publisher {
