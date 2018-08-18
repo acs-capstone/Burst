@@ -92,7 +92,6 @@ const News = class {
       language: 'en',
       from: this.createDate(-2, 0, 0)
     })
-    console.log('OOB LENGTH', outOfBubble.totalResults)
     //add key out:true key to denote out of bubble articles
     const outofBubbleWithKey = outOfBubble.articles.slice(0, 6).map(obj => {
       return { ...obj, out: true }
