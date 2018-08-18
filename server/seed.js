@@ -4,43 +4,42 @@ const Op = Sequelize.Op
 const { Source, PoliOri, Topic, User } = require('./db/models/')
 const db = require('./db')
 
-console.log(sources)
 const topics = [
   {
-    name: 'Women’s Rights',
-    searchValue: '(Women’s AND Rights)'
+    name: 'Human Rights',
+    searchValue: `((human AND rights) OR (women AND rights) OR (feminism) OR (LGBTQ AND rights) OR (gay AND rights) OR (transgender AND rights) OR (race AND rights) NOT sports NOT sport)`
   },
   {
     name: 'Finance & Tax',
-    searchValue: '(Finance AND Tax)'
+    searchValue: '(finance AND tax)'
   },
   {
     name: 'Gun Control',
-    searchValue: '(Gun AND Control)'
+    searchValue: `(gun AND control)`
   },
   {
     name: 'Immigration',
-    searchValue: 'Immigration'
+    searchValue: 'immigration'
   },
   {
     name: 'Elections',
-    searchValue: 'Elections'
+    searchValue: 'elections'
   },
   {
     name: 'Energy & Environment',
-    searchValue: '(Energy AND Enviornment)'
+    searchValue: `(enviornment OR (energy AND enviornment) OR (green AND energy) OR (sustainable AND energy))`
   },
   {
     name: 'International Relations',
-    searchValue: '(International AND Relations)'
+    searchValue: `(international AND relations)`
   },
   {
     name: 'Healthcare',
-    searchValue: 'Healthcare'
+    searchValue: 'healthcare'
   },
   {
     name: 'Trade',
-    searchValue: 'Trade'
+    searchValue: 'trade'
   }
 ]
 

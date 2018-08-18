@@ -1,5 +1,5 @@
 import React from 'react';
-import { OTSession, OTPublisher, OTStreams, OTSubscriber } from 'opentok-react';
+import { OT, OTSession, OTPublisher, OTStreams, OTSubscriber } from 'opentok-react';
 
 export default class OpenTok extends React.Component {
   constructor(props) {
@@ -14,6 +14,7 @@ export default class OpenTok extends React.Component {
     this.sessionEventHandlers = {
       sessionConnected: () => {
         this.setState({ connection: 'Connected' });
+        // OT.updateViews();
       },
       sessionDisconnected: () => {
         this.setState({ connection: 'Disconnected' });
@@ -95,18 +96,21 @@ export default class OpenTok extends React.Component {
           <button id="videoButton" onClick={this.toggleVideo}>
             {publishVideo ? 'Disable' : 'Enable'} Video
           </button>
-          <OTPublisher
-            properties={{ publishVideo, width: 50, height: 50, }}
+          <OTPublisher //shows your video
+            properties={{ publishVideo, insertMode: 'append', width: '15vw', height: '15vh' }}
             onPublish={this.onPublish}
             onError={this.onPublishError}
             eventHandlers={this.publisherEventHandlers}
+            id="publisherWindow"
           />
+
           <OTStreams>
-            <OTSubscriber
-              properties={{ width: 100, height: 100 }}
+            <OTSubscriber //shows other person's video
+              properties={{ insertMode: 'append', width: '75vw', height: '75vh' }}
               onSubscribe={this.onSubscribe}
               onError={this.onSubscribeError}
               eventHandlers={this.subscriberEventHandlers}
+              id="subscriberWindow"
             />
           </OTStreams>
         </OTSession>
