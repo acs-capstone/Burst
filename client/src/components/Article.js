@@ -9,14 +9,13 @@ const Article = props => {
           <img
             className="mr-3 .img-thumbnail img-small img-fluid"
             src={article.urlToImage}
-            //  || default imageURL?
             alt=""
           />
           <div className="media-body">
             {article.out ? (
               <span className="badge badge-danger">Burst Your Bubble!</span>
             ) : null}
-            <a href={article.url}>
+            <a href={article.url} target="_blank">
               <h6>{article.title}</h6>
             </a>
 

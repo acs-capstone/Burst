@@ -25,9 +25,7 @@ export const fetchArticles = (userId) => async dispatch => {
     const { data } = await axios.get(
       `http://localhost:8080/api/articles/${userId}`
     )
-    console.log('HERE!')
     dispatch(getArticles(data))
-    console.log('GET ART DATA', data)
   } catch (err) {
     console.error(err)
   }
