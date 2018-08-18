@@ -22,7 +22,9 @@ class AllArticles extends Component {
   }
   async componentDidMount() {
     try {
-      //DO WE NEED TO FETCH THE User? NOT CURRENTLY USING IT
+      //DO WE NEED THESE? WE ARENT CURRENTLY USING THEM,
+      //just getting user and article off state
+      //do we want to setState with the newly fetched user and articles?
       const user = await this.props.getUserThunk(this.props.user.id)
       const articles = await this.props.fetchArticles(this.props.user.id)
     } catch (err) {

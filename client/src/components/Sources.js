@@ -32,7 +32,7 @@ class Sources extends Component {
       })
       : await this.setState({
         sources: this.state.sources.filter(source => {
-          if (source !== evt.target.value) return source
+          return source !== evt.target.value
         })
       })
   }

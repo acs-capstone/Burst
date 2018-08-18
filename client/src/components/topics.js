@@ -31,7 +31,7 @@ class Topics extends Component {
       })
       : await this.setState({
         topics: this.state.topics.filter(topic => {
-          if (topic !== evt.target.value) { return topic }
+          return topic !== evt.target.value
         })
       })
   }
