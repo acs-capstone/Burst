@@ -3,7 +3,7 @@ const newsapi = new NewsAPI('cb968b25a11945c6a4056027b3a69002') //TODO: do we ne
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const Source = require('./Source')
-
+const Topic = require('./Topic')
 const News = class {
   constructor(user) {
     ;(this.topics = user.topics),
@@ -28,8 +28,17 @@ const News = class {
       .join(',')
   }
 
+  // //this will be used with both this.sources and oppSources
+  // static stringifySources(sources) {
+  //   return sources
+  //     .map(source => {
+  //       return source.newsApiId
+  //     })
+  //     .join(',')
+  // }
+
   //does this need to be a method?
-  createDate(days, months, years) {
+  static createDate(days, months, years) {
     var date = new Date()
     date.setDate(date.getDate() + days)
     date.setMonth(date.getMonth() + months)
@@ -103,17 +112,39 @@ const News = class {
     return outofBubbleWithKey
   }
 
-  mostPopularByTopic = async () => {
-    const topics = await Topic.findAll()
-    const topicNames = topics.map(topic => topic.name)
-    console.log(topicNames)
-    // await newsapi.v2.everything({
-    //   q: stringOfTopics,
-    //   sources: stringOfSources,
-    //   sortBy: 'relevancy',
-    //   language: 'en',
-    //   from: this.createDate(0, -1, 0)
-    // })
+  static async mostPopularByTopic() {
+    try {
+      const topics = await Topic.findAll()
+      const sources = await Source.findAll()
+      const topicNames = topics.slice(1).map(topic => topic.searchValue)
+      console.log(topicNames)
+      // GOAL: Return an array of objects that are articles, add additional key to each object that is the topic.
+
+      const popularTopics = []
+      const stringOfSources = sources.map(source => source.newsApiId).join(',')
+      topicNames.map(async topicName => {
+        try {
+          const topic = await newsapi.v2.everything({
+            q: topicName,
+            sources: stringOfSources,
+            sortBy: 'popularity',
+            language: 'en',
+            from: this.createDate(-1, 0, 0)
+          })
+          console.log(topicName)
+          //console.log('db/models:', topic)
+
+          const article = topic.articles[0]
+          article.topic = topicName
+          popularTopics.push(article)
+        } catch (e) {
+          console.log(e)
+        }
+      })
+      return popularTopics
+    } catch (e) {
+      console.log(e)
+    }
   }
 
   //This method calls the other methods above

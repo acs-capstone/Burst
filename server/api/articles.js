@@ -6,6 +6,15 @@ const Op = Sequelize.Op
 const { Source, User, Topic, News } = require('../db/models')
 module.exports = router
 
+router.get('/popular', async (req, res, next) => {
+  try {
+    const popularTopics = News.mostPopularByTopic()
+    console.log('api/article:', popularTopics)
+    res.json(popularTopics)
+  } catch (e) {
+    console.log(e)
+  }
+})
 //this wil take a userid, needs user with topics & sources
 router.get('/:id', async (req, res, next) => {
   try {
@@ -17,10 +26,7 @@ router.get('/:id', async (req, res, next) => {
     const articles = await news.getCombinedArticleList()
 
     res.json(articles)
-
   } catch (error) {
     console.error(error)
   }
 })
-
-
