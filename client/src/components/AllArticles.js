@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import { withRouter } from 'react-router-dom'
-import { me } from '../store'
+// import { me } from '../store'
 
 import ArticleList from './ArticleList'
 import { fetchArticles } from '../store/articles'
@@ -22,10 +22,9 @@ class AllArticles extends Component {
   }
   async componentDidMount() {
     try {
+      //DO WE NEED TO FETCH THE User? NOT CURRENTLY USING IT
       const user = await this.props.getUserThunk(this.props.user.id)
       const articles = await this.props.fetchArticles(this.props.user.id)
-      console.log('***ARTICLES', articles)
-
     } catch (err) {
       console.error(err.message)
     }

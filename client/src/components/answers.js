@@ -7,8 +7,8 @@ const Answers = props => {
 
   // console.log('handle', handleClick)
 
-  if (props.answers && props.answers.length) {
-    return props.answers.map(answer => {
+  if (answers && answers.length) {
+    return answers.map(answer => {
       return (
         <form key={answer.id}>
           <button

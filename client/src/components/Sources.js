@@ -25,7 +25,7 @@ class Sources extends Component {
 
   async handleClick(evt) {
     //checks if sources is already on state, if so add its to state, otherwise it removes it
-    console.log(evt.target.value)
+    // console.log(evt.target.value)
     !this.state.sources.includes(evt.target.value)
       ? await this.setState({
         sources: [...this.state.sources, evt.target.value]

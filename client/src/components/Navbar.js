@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../store'
-import { Quiz } from './Quiz'
 
 const Navbar = ({ id, handleClick, isLoggedIn }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
