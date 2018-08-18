@@ -27,22 +27,14 @@ class VideoParent extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    return (
-      <div>
-        <h3>Video chat </h3>
-        <OpenTok apiKey={API_KEY} sessionId={SESSION_ID} token={TOKEN} />
-      </div >
-=======
     const sessionId = this.props.session.sessionId
     const token = this.props.session.token
 
     return sessionId && token ? (
       <OpenTok apiKey={API_KEY} sessionId={sessionId} token={token} />
     ) : (
-      <h3>Loading...</h3>
->>>>>>> master
-    )
+        <h3>Loading...</h3>
+      )
     // return (
     //   <div>
     //     <h3>{sessionId}</h3>
