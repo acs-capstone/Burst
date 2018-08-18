@@ -79,7 +79,7 @@ const createApp = () => {
   // auth and api routes
   app.use('/auth', require('./auth'))
   app.use('/api', require('./api'))
-  app.use('/videochat', require('./tokbox')
+  app.use('/video', require('./tokbox'))
 
   // static file-serving middleware
   app.use(express.static(path.join(__dirname, '..', 'public')))
