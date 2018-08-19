@@ -6,6 +6,8 @@ import OpenTok from './OpenTok'
 // import './index.css';
 // import './polyfills';
 import { getSessionThunk } from '../store/session'
+import CountdownTimer from './countdown_timer'
+import ReactCountdownClock from 'react-countdown-clock'
 
 import {
   // SAMPLE_SERVER_BASE_URL,
@@ -15,48 +17,59 @@ import {
 } from '../secrets'
 
 class VideoParent extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
+    this.state = {
+      seconds: this.props.seconds ? this.props.seconds : 60
+    }
+
+    this.handleComplete = this.handleComplete.bind(this)
   }
 
   async componentDidMount(evt) {
-    console.log('hi d')
+    //thunk creator to dispatch and get session id from db
     await this.props.getSessionThunk()
     console.log('currentSession', this.props.session)
-    //thunk creator to dispatch and get session id from db
+    this.setState({ seconds: 5 })
   }
 
+  async handleComplete(evt) {
+    console.log('complete')
+    await this.setState({
+      seconds: this.getNewSeconds(5)
+    })
+    console.log(this.state.seconds)
+  }
+
+  getNewSeconds = sec => {
+    if (sec !== this.state.seconds) {
+      return sec
+    } else {
+      return sec + 0.0000001
+    }
+  }
   render() {
     const sessionId = this.props.session.sessionId
     const token = this.props.session.token
 
-    return sessionId && token ? (
-      <OpenTok apiKey={API_KEY} sessionId={sessionId} token={token} />
-    ) : (
-        <h3>Loading...</h3>
+    if (sessionId && token) {
+      return (
+        <div>
+          <OpenTok apiKey={API_KEY} sessionId={sessionId} token={token} />
+          <ReactCountdownClock
+            seconds={this.state.seconds}
+            color="#000"
+            alpha={0.9}
+            size={100}
+            pause={true}
+            onComplete={this.handleComplete}
+          />
+        </div>
       )
-    // return (
-    //   <div>
-    //     <h3>{sessionId}</h3>
-    //     <h5>{token}</h5>
-    //   </div>
-    // )
+    } else {
+      return <h3>Loading...</h3>
+    }
   }
-
-  //   if(API_KEY && TOKEN && SESSION_ID) {
-  //   renderApp({
-  //     apiKey: API_KEY,
-  //     sessionId: SESSION_ID,
-  //     token: TOKEN,
-  //   });
-  // } else {
-  //   fetch(SAMPLE_SERVER_BASE_URL + '/session')
-  //     .then(data => data.json())
-  //     .then(renderApp)
-  //     .catch((err) => {
-  //       console.error('Failed to get session credentials', err);
-  //       alert('Failed to get opentok sessionId and token. Make sure you have updated the config.js file.');
-  //     });
 }
 
 const mapState = state => ({
