@@ -4,8 +4,8 @@ import Answers from './answers'
 import Prompt from './prompt'
 import { updateUserThunk } from '../store/user'
 import { connect } from 'react-redux'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+// import Button from '@material-ui/core/Button'
+// import Typography from '@material-ui/core/Typography'
 
 class Questions extends Component {
   constructor() {
@@ -61,6 +61,8 @@ class Questions extends Component {
 
       return (
         <div>
+          <div id="counter">
+          </div>
           <div>
             <Prompt prompt={question.prompt} />
             <Answers

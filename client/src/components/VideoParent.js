@@ -1,23 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import ReactDOM from 'react-dom';
 import '@opentok/client'
 import OpenTok from './OpenTok'
-// import './index.css';
-// import './polyfills';
 import { getSessionThunk } from '../store/session'
 
 import {
   // SAMPLE_SERVER_BASE_URL,
   API_KEY,
-  SESSION_ID,
-  TOKEN
+  // SESSION_ID,
+  // TOKEN
 } from '../secrets'
 
 class VideoParent extends Component {
-  constructor() {
-    super()
-  }
+  // constructor() {
+  //   super()
+  // }
 
   async componentDidMount(evt) {
     console.log('hi d')
