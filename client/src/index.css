@@ -10,5 +10,22 @@ body {
 
 .content-div {
   padding: 50px;
-
 }
+
+.chip-container {
+  display: 'flex';
+  justify-content: center;
+  flex-wrap: 'wrap';
+  margin: 5px;
+}
+
+.top-card-container {
+  display: 'flex';
+}
+
+.MuiChip-root-1 {
+  margin: 5px;
+}
+/* .Chip {
+  margin: theme.spacing.unit;
+} */
