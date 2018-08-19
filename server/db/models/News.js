@@ -150,9 +150,9 @@ const News = class {
       // const topicNames = topics.map(topic => topic.searchValue)
       // GOAL: Return an array of objects that are articles, add additional key to each object that is the topic.
       // const popularTopics = []
-      const stringOfSources = sources.map(source => source.newsApiId).join(',')
+      const stringOfSources = await sources.map(source => source.newsApiId).join(',')
 
-      const popularArticles = topics.map(async topic => {
+      const popularArticles = await topics.map(async topic => {
         const topicArticle = await newsapi.v2.everything({
           q: topic.searchValue,
           sources: stringOfSources,
@@ -167,7 +167,7 @@ const News = class {
         return article
       })
 
-      // console.log('POP TOPS', popularArticles)
+      console.log('POP TOPS', popularArticles)
       return popularArticles
     } catch (e) {
       console.log(e)
