@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Chip from '@material-ui/core/Chip'
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
+// import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
+// import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
@@ -27,7 +27,7 @@ export const UserProfile = props => {
 
           <div className="chip-container">
             {user.topics.map(topic => {
-              return <Chip color="primary" label={topic.name} />
+              return <Chip color="primary" label={topic.name} key={topic.id} />
             })}
           </div>
           <Button>
@@ -42,7 +42,7 @@ export const UserProfile = props => {
 
           <div className="chip-container">
             {user.sources.map(source => {
-              return <Chip color="primary" label={source.name} />
+              return <Chip color="primary" label={source.name} key={source.id} />
             })}
           </div>
           <Button>

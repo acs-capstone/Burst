@@ -10,10 +10,12 @@ import {
   Sources,
   Questions,
   Topics,
-  Quiz
+  Quiz,
+  PopularArticles,
+  VideoParent,
+  About
 } from './components'
 import { me } from './store'
-import VideoParent from './components/VideoParent';
 
 /**
  * COMPONENT
@@ -31,6 +33,7 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route path="/about" component={About} />
 
         {isLoggedIn && (
           <Switch>
@@ -41,7 +44,8 @@ class Routes extends Component {
             <Route path="/home" component={UserHome} />
             <Route path="/news" component={AllArticles} />
             <Route path="/topics" component={Topics} />
-            <Route path='/videochat' component={VideoParent} />
+            <Route path="/videochat" component={VideoParent} />
+            <Route path="/popular" component={PopularArticles} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
