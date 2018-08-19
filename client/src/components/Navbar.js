@@ -36,14 +36,19 @@ const Navbar = ({ id, handleClick, isLoggedIn }) => (
             <ul className="navbar-nav ml-auto">
               <a className="navbar-brand">Burst</a>
               <li className="nav-item">
+                <Link className="nav-link" to="/about">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/login">
                   Login
-            </Link>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/signup">
                   Sign Up
-            </Link>
+                </Link>
               </li>
             </ul>
           </div>

@@ -10,6 +10,7 @@ export { default as Topics } from './topics'
 export { default as Questions } from './questions'
 export { default as VideoParent } from './VideoParent'
 export { default as PopularArticles } from './PopularArticles'
+export { default as About } from './About'
 
 
 export { default as Sources } from './Sources'

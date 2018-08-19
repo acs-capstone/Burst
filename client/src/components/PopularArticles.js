@@ -30,7 +30,7 @@ class PopularArticles extends Component {
     return (
       <div>
         <Grid container spacing={24}>
-          <h4>Todays Most Popular Articles</h4>
+          <h4>Today's Most Popular Articles By Topic</h4>
           <Grid item xs={3}>
             <UserProfile />
           </Grid>
