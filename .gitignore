@@ -43,6 +43,7 @@ public/bundle.js
 public/bundle.js.map
 secrets.js
 .DS_Store
+client/src/secrets.js
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies

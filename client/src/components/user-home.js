@@ -14,13 +14,9 @@ import Divider from '@material-ui/core/Divider'
 
 export const UserHome = props => {
   const { user } = props
-  console.log('user.topcs', user.topics)
   return (
     <div>
-      <h3>
-        Welcome, {user.email}
-        !!!!!!
-      </h3>
+      <h3>Welcome, {user.email}</h3>
       <div>
         <div>
           <Card>

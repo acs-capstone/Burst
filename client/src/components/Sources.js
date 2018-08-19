@@ -25,16 +25,16 @@ class Sources extends Component {
 
   async handleClick(evt) {
     //checks if sources is already on state, if so add its to state, otherwise it removes it
-    console.log(evt.target.value)
+    // console.log(evt.target.value)
     !this.state.sources.includes(evt.target.value)
       ? await this.setState({
-          sources: [...this.state.sources, evt.target.value]
-        })
+        sources: [...this.state.sources, evt.target.value]
+      })
       : await this.setState({
-          sources: this.state.sources.filter(source => {
-            if (source !== evt.target.value) return source
-          })
+        sources: this.state.sources.filter(source => {
+          return source !== evt.target.value
         })
+      })
   }
 
   async handleSubmit(evt) {
@@ -52,11 +52,11 @@ class Sources extends Component {
   render() {
     return (
       <div>
+        <h2>Which sources do you like to read?</h2>
         {this.props.sources.map(source => {
           return (
-            <div className="card-deck">
+            <div className="card-deck" key={source.id}>
               <ChoiceButton
-                key={source.id}
                 source={source}
                 handleClick={this.handleClick}
                 selectedSources={this.state.sources}
