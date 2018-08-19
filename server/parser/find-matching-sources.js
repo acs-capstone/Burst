@@ -1,5 +1,5 @@
 const fs = require('fs')
-const allSidesSourcesObjects = require('./all-sides-sources-and-rankings.json')
+const allSidesSourcesObjects = require('./allSides/all-sides-sources-and-rankings.json')
 const newsApiSources = require('../scraper/sources.js')
 
 allSidesSourcesObjects.map(obj => {

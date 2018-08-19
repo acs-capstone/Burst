@@ -33,8 +33,8 @@ class VideoParent extends Component {
     return sessionId && token ? (
       <OpenTok apiKey={API_KEY} sessionId={sessionId} token={token} />
     ) : (
-        <h3>Loading...</h3>
-      )
+      <h3>Loading...</h3>
+    )
     // return (
     //   <div>
     //     <h3>{sessionId}</h3>

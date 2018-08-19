@@ -10,3 +10,4 @@ export { default as Topics } from './topics'
 export { default as Questions } from './questions'
 
 export { default as Sources } from './Sources'
+export { default as Graph } from './data-vis'

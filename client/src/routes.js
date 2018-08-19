@@ -10,10 +10,11 @@ import {
   Sources,
   Questions,
   Topics,
-  Quiz
+  Quiz,
+  Graph
 } from './components'
 import { me } from './store'
-import VideoParent from './components/VideoParent';
+import VideoParent from './components/VideoParent'
 
 /**
  * COMPONENT
@@ -41,7 +42,8 @@ class Routes extends Component {
             <Route path="/home" component={UserHome} />
             <Route path="/news" component={AllArticles} />
             <Route path="/topics" component={Topics} />
-            <Route path='/videochat' component={VideoParent} />
+            <Route path="/videochat" component={VideoParent} />
+            {/* <Route path="/graph" component={Graph} /> */}
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}

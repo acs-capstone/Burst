@@ -20,7 +20,10 @@
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "d3": "^5.5.0",
+    "d3-force": "^1.1.0",
+    "react-force-graph": "^1.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
