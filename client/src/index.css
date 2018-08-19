@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 80px 0 0 0;
   font-family: sans-serif;
+  background-color: #efefef;
 }
 
 .img-small {
@@ -23,9 +24,62 @@ body {
   display: 'flex';
 }
 
-.MuiChip-root-1 {
+.MuiChip-root-200 {
   margin: 5px;
 }
-/* .Chip {
-  margin: theme.spacing.unit;
+
+#quiz-button {
+  height: 10vh;
+  width: 75vw;
+  /* margin: 10px; */
+  font-size: 1.1em;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#quiz-button:hover {
+  background-color: turquoise;
+  text-decoration: none;
+}
+
+#question-count {
+  justify-self: center;
+  margin: 10px;
+}
+#quiz-button:focus {
+  outline: none;
+}
+.MuiCardContent-root-138 {
+  border: 5px;
+  margin: 10px;
+}
+
+.MuiChip-root-188 {
+  background-color: #f9cf00;
+
+  margin: 5px;
+}
+
+/* .MuiChip-label-201 {
+  color: white;
 } */
+
+.MuiButton-label-30 {
+  background-color: red;
+  color: white;
+  padding: 2px;
+}
+.burst-button {
+  background-color: red;
+  color: white;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+.content-div {
+  justify-content: space-between;
+}

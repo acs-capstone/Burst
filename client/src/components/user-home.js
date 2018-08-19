@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
 
 /* COMPONENT */
 
@@ -22,40 +23,48 @@ export const UserHome = props => {
       </h3>
       <div>
         <div>
-          <h5>Update Preferences</h5>
-          <h4>{`Your Political Orientation Score is ${
-            user.poliOri.poliOri
-          }`}</h4>
-          <Link to="/questions">Retake Quiz</Link>
-        </div>
-        <div>
           <Card>
             <CardContent>
               <div className="top-card-container">
                 <Typography gutterBottom variant="headline" component="h2">
-                  Current Topics
+                  Your Political Orientation is {user.poliOri.poliOri}
                 </Typography>{' '}
                 <Button>
-                  <Link to="/topics">Update Topics</Link>
+                  <Link to="/questions">Retake Quiz</Link>
                 </Button>
               </div>
-              {/* <Link to="/topics">Update Topics</Link> */}
+              <Divider />
+              <div className="top-card-container">
+                <Typography gutterBottom variant="headline" component="h2">
+                  Your Topics
+                </Typography>{' '}
+              </div>
+
               <div className="chip-container">
                 {user.topics.map(topic => {
-                  return <Chip label={topic.name} />
+                  return <Chip color="primary" label={topic.name} />
                 })}
               </div>
+              <Button>
+                <Link to="/topics">Update Topics</Link>
+              </Button>
+              <Divider />
+              <div className="top-card-container">
+                <Typography gutterBottom variant="headline" component="h2">
+                  Your Sources
+                </Typography>{' '}
+              </div>
+
+              <div className="chip-container">
+                {user.sources.map(source => {
+                  return <Chip color="primary" label={source.name} />
+                })}
+              </div>
+              <Button>
+                <Link to="/sources">Update Sources</Link>
+              </Button>
             </CardContent>
           </Card>
-        </div>
-        <div>
-          <h4>Current Sources</h4>
-          <div className="chip-container">
-            {user.sources.map(source => {
-              return <Chip label={source.name} />
-            })}
-          </div>
-          <Link to="/sources">Update Sources</Link>
         </div>
       </div>
     </div>
