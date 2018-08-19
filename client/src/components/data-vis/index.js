@@ -1,1 +1,1 @@
-export { Graph as default } from './Graph'
+export { Graph as default } from './ReactVisGraph4'

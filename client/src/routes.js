@@ -32,6 +32,7 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route exact path="/graph" component={Graph} />
 
         {isLoggedIn && (
           <Switch>
@@ -43,7 +44,6 @@ class Routes extends Component {
             <Route path="/news" component={AllArticles} />
             <Route path="/topics" component={Topics} />
             <Route path="/videochat" component={VideoParent} />
-            {/* <Route path="/graph" component={Graph} /> */}
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
