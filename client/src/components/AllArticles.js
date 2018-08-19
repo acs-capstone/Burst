@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { withRouter } from 'react-router-dom'
-// import { me } from '../store'
-
 import ArticleList from './ArticleList'
 import { fetchArticles } from '../store/articles'
 import { getUserThunk } from '../store/user'
@@ -27,8 +24,8 @@ class AllArticles extends Component {
       //DO WE NEED THESE? WE ARENT CURRENTLY USING THEM,
       //just getting user and article off state
       //do we want to setState with the newly fetched user and articles?
-      const user = await this.props.getUserThunk(this.props.user.id)
-      const articles = await this.props.fetchArticles(this.props.user.id)
+      // const user = await this.props.getUserThunk(this.props.user.id)
+      // const articles = await this.props.fetchArticles(this.props.user.id)
     } catch (err) {
       console.error(err.message)
     }

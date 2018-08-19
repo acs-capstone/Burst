@@ -1,19 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import ReactDOM from 'react-dom';
 import '@opentok/client'
 import OpenTok from './OpenTok'
-// import './index.css';
-// import './polyfills';
 import { getSessionThunk } from '../store/session'
 import CountdownTimer from './countdown_timer'
 import ReactCountdownClock from 'react-countdown-clock'
 
 import {
   // SAMPLE_SERVER_BASE_URL,
-  API_KEY,
-  SESSION_ID,
-  TOKEN
+  API_KEY
+  // SESSION_ID,
+  // TOKEN
 } from '../secrets'
 
 class VideoParent extends Component {
