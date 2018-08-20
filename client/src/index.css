@@ -116,62 +116,9 @@ footer {
   z-index: 1;
 }
 
-#login-btn {
-  margin-top: 20px;
-  margin-left: 10%;
-}
-
-#login {
-  height: 50vh;
-  width: 50vw;
-  background-color: #f9cf00;
-  z-index: -1;
-  position: absolute;
-  margin-left: 25%;
-  margin-top: 10%;
-}
-.container-form-group {
-  margin-left: 25%;
-}
-.form-control {
-  padding: 5px;
-  width: 80%;
-  margin-left: 10%;
-}
-
-#login-form {
-  margin-left: 30vw;
-}
-
-#google {
-  margin-left: 10%;
-  margin-top: 20%;
-}
-form {
-  padding: 5px;
-}
-
-/* .auth-form {
-  background-color: aquamarine;
-  width: 50vw;
-  display: flex;
-  padding: 10px;
-} */
 #videoButton {
   float: right;
   position: absolute;
   right: 20vw;
   top: 175px;
 }
-
-/* .OT_publisher {
-  z-index: 1;
-  float: right;
-  margin-right: 100px;
-}
-
-.OT_subscriber {
-  float: right;
-  margin-left: 1em;
-  background-color: magenta;
-} */

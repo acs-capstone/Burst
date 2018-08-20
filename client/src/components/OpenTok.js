@@ -12,6 +12,8 @@ export default class OpenTok extends React.Component {
       publishAudio: this.props.audio || false
     }
 
+    this.handleChange = this.handleChange.bind(this)
+
     this.sessionEventHandlers = {
       sessionConnected: async () => {
         await this.setState({ connection: 'Connected' })
@@ -52,7 +54,10 @@ export default class OpenTok extends React.Component {
       }
     }
   }
-
+  async componentDidMount(evt) {
+    await this.setState({ publishAudio: this.props.audio })
+    console.log('publishing??', this.state.publishAudio)
+  }
   onSessionError = error => {
     this.setState({ error })
   }
@@ -82,6 +87,11 @@ export default class OpenTok extends React.Component {
     this.setState({ publishAudio: !this.state.publishAudio })
   }
 
+  handleChange(evt) {
+    console.log('CHANGING')
+    console.log(this.state.publishAudio)
+  }
+
   render() {
     const apiKey = this.props.apiKey
     const sessionId = this.props.sessionId
@@ -90,6 +100,7 @@ export default class OpenTok extends React.Component {
     return (
       <div>
         <div id="sessionStatus">Session Status: {connection}</div>
+        <div id="sessionStatus">Audio On: {this.state.publishAudio}</div>
         {error ? (
           <div className="error">
             <strong>Error:</strong> {error}
@@ -97,11 +108,11 @@ export default class OpenTok extends React.Component {
         ) : null}
         <OTSession
           apiKey={apiKey}
-          publishAudio={this.state.publishAudio}
           sessionId={sessionId}
           token={token}
           onError={this.onSessionError}
           eventHandlers={this.sessionEventHandlers}
+          onChange={this.handleChange}
         >
           <button id="videoButton" onClick={this.toggleVideo}>
             {publishVideo ? 'Disable' : 'Enable'} Video
@@ -118,9 +129,11 @@ export default class OpenTok extends React.Component {
               width: '15vw',
               height: '15vh'
             }}
+            publishAudio={this.state.publishAudio}
             onPublish={this.onPublish}
             onError={this.onPublishError}
             eventHandlers={this.publisherEventHandlers}
+            onChange={this.handleChange}
             id="publisherWindow"
           />
 
@@ -135,6 +148,7 @@ export default class OpenTok extends React.Component {
               onError={this.onSubscribeError}
               eventHandlers={this.subscriberEventHandlers}
               id="subscriberWindow"
+              onChange={this.handleChange}
             />
           </OTStreams>
         </OTSession>

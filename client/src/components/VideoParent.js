@@ -38,7 +38,7 @@ class VideoParent extends Component {
       console.log('sessionaslfjadsl', this.props.session.user)
       console.log('audioonstae', this.state.audioOn)
       await this.setState({ audioOn: true })
-      console.log('audioonstae****', this.state.audioOn)
+      console.log('audio ONNNN', this.state.audioOn)
     }
     this.setState({ seconds: 5 })
   }
@@ -46,16 +46,17 @@ class VideoParent extends Component {
   async handleComplete(evt) {
     console.log('complete')
     await this.setState({
-      seconds: this.getNewSeconds(30),
+      seconds: this.getNewSeconds(5),
       audioOn: !this.state.audioOn
     })
     console.log(this.state.seconds)
+    console.log('audio on state after time_________', this.state.audioOn)
   }
 
-  async toggleAudio() {
-    await this.setState({ audioOn: false })
-    console.log('audio off!!!')
-  }
+  // async toggleAudio() {
+  //   await this.setState({ audioOn: false })
+  //   console.log('audio off!!!')
+  // }
 
   getNewSeconds = sec => {
     if (sec !== this.state.seconds) {
