@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { withRouter } from 'react-router-dom'
-// import { me } from '../store'
-
 import ArticleList from './ArticleList'
 import { fetchArticles } from '../store/articles'
 import { getUserThunk } from '../store/user'
+import UserProfile from './user-profile'
+import Grid from '@material-ui/core/Grid'
 
 //const articlesObj = require('./bitcoin.json')
 //const articles = articlesObj.articles
@@ -22,11 +21,8 @@ class AllArticles extends Component {
   }
   async componentDidMount() {
     try {
-      //DO WE NEED THESE? WE ARENT CURRENTLY USING THEM,
-      //just getting user and article off state
-      //do we want to setState with the newly fetched user and articles?
-      const user = await this.props.getUserThunk(this.props.user.id)
-      const articles = await this.props.fetchArticles(this.props.user.id)
+      await this.props.getUserThunk(this.props.user.id)
+      await this.props.fetchArticles(this.props.user.id)
     } catch (err) {
       console.error(err.message)
     }
@@ -40,17 +36,25 @@ class AllArticles extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-11">
-            <h4>Your Articles</h4>
+      // <div className="container">
+      //   <div className="row">
+      //     <div className="col-lg-11">
+      <div>
+        <Grid container spacing={24}>
+          {/* <h4>Your Articles</h4> */}
+          <Grid item xs={3}>
+            <UserProfile />
+          </Grid>
+          <Grid item xs={8}>
             <ArticleList
               user={this.props.user}
               articles={this.props.articles}
             />
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </div>
+      //   </div>
+      // </div>
     )
   }
 }

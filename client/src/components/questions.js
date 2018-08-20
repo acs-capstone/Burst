@@ -4,6 +4,8 @@ import Answers from './answers'
 import Prompt from './prompt'
 import { updateUserThunk } from '../store/user'
 import { connect } from 'react-redux'
+// import Button from '@material-ui/core/Button'
+// import Typography from '@material-ui/core/Typography'
 
 class Questions extends Component {
   constructor() {
@@ -24,6 +26,7 @@ class Questions extends Component {
     try {
       const questions = this.state.questions
       const currentQuestionIndex = this.state.currentQuestionIndex
+      console.log('POINTSSS', evt.target.value)
       evt.preventDefault()
       //if there are still questions left in array, keep looping through and rendering questions
       if (currentQuestionIndex < questions.length - 1) {
@@ -58,8 +61,18 @@ class Questions extends Component {
 
       return (
         <div>
-          <Prompt prompt={question.prompt} />
-          <Answers answers={question.answers} handleClick={this.handleClick} />
+          <div id="counter">
+          </div>
+          <div>
+            <Prompt prompt={question.prompt} />
+            <Answers
+              answers={question.answers}
+              handleClick={this.handleClick}
+            />
+          </div>
+          <div id="question-count">
+            <h6>Question {+this.state.currentQuestionIndex + 1} of 11</h6>
+          </div>
         </div>
       )
     } else return null

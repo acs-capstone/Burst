@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding: 80px 0 0 0;
   font-family: sans-serif;
+  background-color: #efefef;
+  height: 100%;
+  position: relative;
 }
 
 .img-small {
@@ -10,16 +13,94 @@ body {
 
 .content-div {
   padding: 50px;
-
+  justify-content: space-between;
 }
-footer{
-  position: fixed;
+
+.main-container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+}
+
+footer {
+  position: absolute;
   bottom: 0px;
-  width: 100vw;
-  height: 20px;
+  width: 100%;
+  height: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.chip-container {
+  display: 'flex';
+  justify-content: center;
+  flex-wrap: 'wrap';
+  margin: 5px;
 }
 
-.OTSubscriberContainer{
+.top-card-container {
+  display: 'flex';
+}
+
+.MuiChip-root-200 {
+  margin: 5px;
+}
+
+#quiz-button {
+  height: 10vh;
+  width: 75vw;
+  /* margin: 10px; */
+  font-size: 1.1em;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#quiz-button:hover {
+  background-color: turquoise;
+  text-decoration: none;
+}
+
+#question-count {
+  justify-self: center;
+  margin: 10px;
+}
+#quiz-button:focus {
+  outline: none;
+}
+.MuiCardContent-root-138 {
+  border: 5px;
+  margin: 10px;
+}
+
+.MuiChip-root-188 {
+  background-color: #f9cf00;
+
+  margin: 5px;
+}
+
+/* .MuiChip-label-201 {
+  color: white;
+} */
+
+.MuiButton-label-30 {
+  background-color: red;
+  color: white;
+  padding: 2px;
+}
+.burst-button {
+  background-color: red;
+  color: white;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.OTSubscriberContainer {
   float: right;
   position: absolute;
   right: 20vw;
@@ -27,7 +108,7 @@ footer{
   z-index: -1;
 }
 
-.OTPublisherContainer{
+.OTPublisherContainer {
   float: right;
   position: absolute;
   right: 20vw;
@@ -35,7 +116,7 @@ footer{
   z-index: 1;
 }
 
-#videoButton{
+#videoButton {
   float: right;
   position: absolute;
   right: 20vw;
@@ -53,4 +134,3 @@ footer{
   margin-left: 1em;
   background-color: magenta;
 } */
-
