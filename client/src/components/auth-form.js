@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { auth } from '../store'
+import { Link } from 'react-router-dom'
 
 /**
  * COMPONENT
@@ -27,6 +28,13 @@ const AuthForm = props => {
         {error && error.response && <div> {error.response.data} </div>}
       </form>
       <a href="/auth/google">{displayName} with Google</a>
+      {displayName === "Login" ?
+        <div>New to Burst?
+        <Link to="/signup"> Sign Up</Link>
+        </div>
+        : <div>Already have an account?
+      <Link to="/login"> Login</Link>
+        </div>}
     </div>
   )
 }

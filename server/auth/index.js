@@ -2,6 +2,8 @@ const router = require('express').Router()
 const { User, Source, Topic, PoliOri } = require('../db/models')
 module.exports = router
 
+router.use('/google', require('./google'))
+
 router.post('/login', async (req, res, next) => {
   console.log(req.body)
   try {
@@ -56,4 +58,3 @@ router.get('/me', async (req, res) => {
   }
 })
 
-router.use('/google', require('./google'))
