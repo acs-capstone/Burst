@@ -22,6 +22,11 @@ const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
               <Link className="nav-link" to="/popular">Popular</Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                About
+                </Link>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="/" onClick={handleClick}>
                 Logout
             </a>

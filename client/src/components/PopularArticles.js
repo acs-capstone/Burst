@@ -28,17 +28,17 @@ class PopularArticles extends Component {
     return (
       <div>
         <h4>Today's Most Popular Articles By Topic</h4>
-        <Grid direction="row" justify="center">
+        <Grid container direction="row" justify="center">
           {this.state.articles.map(article => {
             return (
-              <Grid item xs={4}>
-                <div key={article.url}>
+              <Grid item xs={4} key={article.url}>
+                <div>
                   <h5>{article.topic}</h5>
                   <div>
                     <button type="button" className="badge badge-danger" name="start-chat" onClick={this.handleClick}>
                       Join Video Burst
                   </button>
-                    <ul className=".list-unstyled" key={article.url}>
+                    <ul className=".list-unstyled">
                       <Article article={article} />
                     </ul>
 

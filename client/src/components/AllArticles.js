@@ -40,7 +40,6 @@ class AllArticles extends Component {
           </Grid>
           <Grid item xs={8}>
             <ArticleList
-              // user={this.props.user}
               articles={this.props.articles}
             />
           </Grid>
