@@ -27,7 +27,7 @@ const AuthForm = props => {
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
-      <a href="/auth/google">{displayName} with Google</a>
+      <a href="/auth/google">{displayName} with Google!!!</a>
       {displayName === "Login" ?
         <div>New to Burst?
         <Link to="/signup"> Sign Up</Link>
@@ -69,6 +69,7 @@ const mapDispatch = dispatch => {
       const formName = evt.target.name
       const email = evt.target.email.value
       const password = evt.target.password.value
+      console.log("GONNA SUBMITTTT")
       dispatch(auth(email, password, formName))
     }
   }

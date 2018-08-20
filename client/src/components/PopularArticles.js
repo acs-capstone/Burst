@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchPopularArticles } from '../store/articles'
 import Grid from '@material-ui/core/Grid'
-import UserProfile from './user-profile'
 import Article from './Article'
 
 class PopularArticles extends Component {
@@ -39,7 +38,6 @@ class PopularArticles extends Component {
                     <button type="button" className="badge badge-danger" name="start-chat" onClick={this.handleClick}>
                       Join Video Burst
                   </button>
-
                     <ul className=".list-unstyled" key={article.url}>
                       <Article article={article} />
                     </ul>

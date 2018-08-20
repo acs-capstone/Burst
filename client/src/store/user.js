@@ -73,6 +73,7 @@ export const getUserThunk = userId => async dispatch => {
   }
 }
 
+//revise - dont need to send user id to backend
 export const updateUserThunk = userPrefObj => async dispatch => {
   try {
     const { data } = await axios.put(

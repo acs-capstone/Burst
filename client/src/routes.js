@@ -50,8 +50,6 @@ class Routes extends Component {
         )}
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
-        {/* should we also have a fallback when you're logged in? */}
-        <Route component={Quiz} />
       </Switch>
     )
   }
@@ -88,3 +86,4 @@ export default withRouter(
 /**
  * PROP TYPES
  */
+

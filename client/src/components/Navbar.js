@@ -3,10 +3,12 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../store'
 
-const Navbar = ({ id, handleClick, isLoggedIn, user }) => (
+const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
+
+
   <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div className="container ">
-      {isLoggedIn && user.sources.length ? (
+      {isLoggedIn && sources && sources.length ? (
         < div >
           < ul className="navbar-nav ml-auto">
             <Link className="navbar-brand" to="/news">Burst</Link>
@@ -17,46 +19,50 @@ const Navbar = ({ id, handleClick, isLoggedIn, user }) => (
               <Link className="nav-link" to="/news">News Feed</Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/popular">Popular</Link>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="/" onClick={handleClick}>
                 Logout
             </a>
             </li>
           </ul>
         </div>
-      ) : isLoggedIn && !user.sources.length ? (
-        < div >
-          < ul className="navbar-nav ml-auto">
+      ) : !isLoggedIn ? (
+        <div>
+          {/* The navbar will show these links before you log in */}
+          <ul className="navbar-nav ml-auto">
             <a className="navbar-brand">Burst</a>
             <li className="nav-item">
-              <a className="nav-link" href="/" onClick={handleClick}>
-                Logout
-          </a>
+              <Link className="nav-link" to="/about">
+                About
+                </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">
+                Login
+                </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/signup">
+                Sign Up
+                </Link>
             </li>
           </ul>
         </div>
       ) : (
-            <div>
-              {/* The navbar will show these links before you log in */}
-              <ul className="navbar-nav ml-auto">
+            < div >
+              < ul className="navbar-nav ml-auto">
                 <a className="navbar-brand">Burst</a>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">
-                    About
-                </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/login">
-                    Login
-                </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/signup">
-                    Sign Up
-                </Link>
+                  <a className="nav-link" href="/" onClick={handleClick}>
+                    Logout
+          </a>
                 </li>
               </ul>
             </div>
-          )}
+          )
+      }
     </div >
   </nav >
 )
@@ -68,7 +74,7 @@ const mapState = state => {
   return {
     isLoggedIn: !!state.user.id,
     id: state.user.id,
-    user: state.user
+    sources: state.user.sources
   }
 }
 
