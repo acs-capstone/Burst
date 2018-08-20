@@ -15,6 +15,11 @@ const Article = props => {
   if (article.description) {
     return (
       <Card>
+        <div>
+          {article.out ? (
+            <span className="badge badge-danger">Burst Your Bubble!</span>
+          ) : null}
+        </div>
         <CardHeader
           title={
             <a href={article.url} target="_blank">
@@ -34,10 +39,6 @@ const Article = props => {
           />
         ) : null}
         <CardContent>
-          {article.out ? (
-            <span className="badge badge-danger">Burst Your Bubble!</span>
-          ) : null}
-
           <Typography component="p">{article.description}</Typography>
         </CardContent>
       </Card>

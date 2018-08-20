@@ -15,10 +15,9 @@ class PopularArticles extends Component {
   }
 
   async componentDidMount() {
-    const articles = await this.props.fetchPopularArticles()
-    // console.log(articles)
+    await this.props.fetchPopularArticles()
     this.setState({
-      articles
+      articles: this.props.articles
     })
   }
 
@@ -29,43 +28,44 @@ class PopularArticles extends Component {
   render() {
     return (
       <div>
-        <Grid container spacing={24}>
-          <h4>Today's Most Popular Articles By Topic</h4>
-          <Grid item xs={3}>
-            <UserProfile />
-          </Grid>
-          <Grid item xs={8}>
-
-            {this.state.articles.map(article => {
-              return (
+        <h4>Today's Most Popular Articles By Topic</h4>
+        <Grid container direction="row" justify="center">
+          {this.state.articles.map(article => {
+            return (
+              <Grid item xs={4}>
                 <div key={article.url}>
-                  <h2>{article.topic}</h2>
+                  <h5>{article.topic}</h5>
                   <div>
-                    <button type="button" name="start-chat" onClick={this.handleClick}>
+                    <button
+                      type="button"
+                      className="badge badge-danger"
+                      name="start-chat"
+                      onClick={this.handleClick}
+                    >
                       Join Video Burst
-                  </button>
+                    </button>
+
                     <ul className=".list-unstyled" key={article.url}>
                       <Article article={article} />
                     </ul>
                   </div>
                 </div>
-              )
-            })}
-          </Grid>
+              </Grid>
+            )
+          })}
         </Grid>
       </div>
     )
   }
-
 }
 
 const mapState = state => ({
-  articles: state.articles,
+  articles: state.articles
 })
 
 const mapDispatch = dispatch => {
   return {
-    fetchPopularArticles: () => dispatch(fetchPopularArticles()),
+    fetchPopularArticles: () => dispatch(fetchPopularArticles())
   }
 }
 

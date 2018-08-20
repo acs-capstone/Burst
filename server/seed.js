@@ -11,7 +11,7 @@ const topics = [
   },
   {
     name: 'Finance & Tax',
-    searchValue: '(finance AND tax)'
+    searchValue: '((finance AND tax) OR finance OR (wall AND street) OR (U.S. AND taxes))'
   },
   {
     name: 'Gun Control',
@@ -19,15 +19,15 @@ const topics = [
   },
   {
     name: 'Immigration',
-    searchValue: 'immigration'
+    searchValue: '(immigration OR immigrants OR (border AND wall))'
   },
   {
     name: 'Elections',
-    searchValue: 'elections'
+    searchValue: '((U.S. AND election) OR (state AND election) (primary AND election) OR (international AND election) OR election)'
   },
   {
     name: 'Energy & Environment',
-    searchValue: `(enviornment OR (energy AND enviornment) OR (green AND energy) OR (sustainable AND energy))`
+    searchValue: `(enviornment OR (energy AND enviornment) OR (green AND energy) OR (sustainable AND energy) OR (renewable AND energy))`
   },
   {
     name: 'International Relations',
@@ -35,11 +35,11 @@ const topics = [
   },
   {
     name: 'Healthcare',
-    searchValue: 'healthcare'
+    searchValue: '(healthcare OR (health AND insurance))'
   },
   {
     name: 'Trade',
-    searchValue: 'trade'
+    searchValue: '((international AND trade) OR tariff)'
   }
 ]
 
