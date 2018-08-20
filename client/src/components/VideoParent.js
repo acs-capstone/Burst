@@ -34,6 +34,12 @@ class VideoParent extends Component {
     //token
     //user: first or user: second
     console.log('currentSession', this.props.session)
+    if (this.props.session.user === 'first') {
+      console.log('sessionaslfjadsl', this.props.session.user)
+      console.log('audioonstae', this.state.audioOn)
+      await this.setState({ audioOn: true })
+      console.log('audioonstae****', this.state.audioOn)
+    }
     this.setState({ seconds: 5 })
   }
 

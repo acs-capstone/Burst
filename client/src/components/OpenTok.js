@@ -16,9 +16,9 @@ export default class OpenTok extends React.Component {
       sessionConnected: async () => {
         await this.setState({ connection: 'Connected' })
         console.log('USER', this.props.user)
-        if (this.props.user === 'first') {
-          await this.setState({ publishAudio: true })
-        }
+        // if (this.props.user === 'first') {
+        //   await this.setState({ publishAudio: true })
+        // }
       },
       sessionDisconnected: () => {
         this.setState({ connection: 'Disconnected' })
@@ -97,6 +97,7 @@ export default class OpenTok extends React.Component {
         ) : null}
         <OTSession
           apiKey={apiKey}
+          publishAudio={this.state.publishAudio}
           sessionId={sessionId}
           token={token}
           onError={this.onSessionError}

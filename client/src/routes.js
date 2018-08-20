@@ -34,6 +34,7 @@ class Routes extends Component {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/about" component={About} />
+        <Route exact path="/videochat" component={VideoParent} />
 
         {isLoggedIn && (
           <Switch>
@@ -44,7 +45,7 @@ class Routes extends Component {
             <Route path="/home" component={UserHome} />
             <Route path="/news" component={AllArticles} />
             <Route path="/topics" component={Topics} />
-            <Route path="/videochat" component={VideoParent} />
+            <Route exact path="/videochat" component={VideoParent} />
             <Route path="/popular" component={PopularArticles} />
           </Switch>
         )}
