@@ -1,6 +1,8 @@
 import React from 'react'
 import { OTSession, OTPublisher, OTStreams, OTSubscriber } from 'opentok-react'
 import { connect } from 'react-router-dom'
+import ReactCountdownClock from 'react-countdown-clock'
+
 export default class OpenTok extends React.Component {
   constructor(props) {
     super(props)
@@ -9,18 +11,19 @@ export default class OpenTok extends React.Component {
       error: null,
       connection: 'Connecting',
       publishVideo: true,
-      publishAudio: this.props.audio || false
+      publishAudio: false,
+      seconds: this.props.seconds ? this.props.seconds : 5,
+      subscriber: false,
+      count: 0
     }
 
-    this.handleChange = this.handleChange.bind(this)
+    this.handleComplete = this.handleComplete.bind(this)
+    this.handleSubscribe = this.handleSubscribe.bind(this)
+    this.getNewSeconds = this.getNewSeconds.bind(this)
 
     this.sessionEventHandlers = {
       sessionConnected: async () => {
         await this.setState({ connection: 'Connected' })
-        console.log('USER', this.props.user)
-        // if (this.props.user === 'first') {
-        //   await this.setState({ publishAudio: true })
-        // }
       },
       sessionDisconnected: () => {
         this.setState({ connection: 'Disconnected' })
@@ -56,7 +59,15 @@ export default class OpenTok extends React.Component {
   }
   async componentDidMount(evt) {
     await this.setState({ publishAudio: this.props.audio })
-    console.log('publishing??', this.state.publishAudio)
+    if (this.props.user === 'first') {
+      await this.setState({ publishAudio: true })
+    }
+  }
+
+  async handleSubscribe(evt) {
+    await this.setState({ subscriber: true })
+    //set to true when someone has connected, which starts timer
+    console.log('subscriber is here!')
   }
   onSessionError = error => {
     this.setState({ error })
@@ -72,7 +83,7 @@ export default class OpenTok extends React.Component {
 
   onSubscribe = () => {
     console.log('Subscribe Success')
-    this.props.handleSubscribe()
+    this.handleSubscribe()
   }
 
   onSubscribeError = error => {
@@ -87,9 +98,23 @@ export default class OpenTok extends React.Component {
     this.setState({ publishAudio: !this.state.publishAudio })
   }
 
-  handleChange(evt) {
-    console.log('CHANGING')
-    console.log(this.state.publishAudio)
+  getNewSeconds = sec => {
+    if (sec !== this.state.seconds) {
+      return sec
+    } else {
+      return sec + 0.0000001
+    }
+  }
+  async handleComplete(evt) {
+    if (this.state.count > 0) {
+      await this.setState({
+        seconds: this.getNewSeconds(10),
+        publishAudio: !this.state.publishAudio,
+        count: +this.state.count++
+      })
+    } else {
+      this.setState({ count: 1, seconds: this.getNewSeconds(10) })
+    }
   }
 
   render() {
@@ -101,6 +126,19 @@ export default class OpenTok extends React.Component {
       <div>
         <div id="sessionStatus">Session Status: {connection}</div>
         <div id="sessionStatus">Audio On: {this.state.publishAudio}</div>
+        {this.state.subscriber ? (
+          <ReactCountdownClock
+            seconds={this.state.seconds}
+            color="#000"
+            alpha={0.9}
+            size={100}
+            pause={true}
+            onComplete={this.handleComplete}
+          />
+        ) : (
+          <h4>Waiting for your fellow Burster!</h4>
+        )}
+
         {error ? (
           <div className="error">
             <strong>Error:</strong> {error}
@@ -113,6 +151,8 @@ export default class OpenTok extends React.Component {
           onError={this.onSessionError}
           eventHandlers={this.sessionEventHandlers}
           onChange={this.handleChange}
+          onComplete={this.handleComplete}
+          publishAudio={this.state.publishAudio}
         >
           <button id="videoButton" onClick={this.toggleVideo}>
             {publishVideo ? 'Disable' : 'Enable'} Video
@@ -135,6 +175,7 @@ export default class OpenTok extends React.Component {
             eventHandlers={this.publisherEventHandlers}
             onChange={this.handleChange}
             id="publisherWindow"
+            onComplete={this.handleComplete}
           />
 
           <OTStreams>
@@ -149,6 +190,8 @@ export default class OpenTok extends React.Component {
               eventHandlers={this.subscriberEventHandlers}
               id="subscriberWindow"
               onChange={this.handleChange}
+              onComplete={this.handleComplete}
+              publishAudio={this.state.publishAudio}
             />
           </OTStreams>
         </OTSession>
