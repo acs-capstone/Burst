@@ -17,15 +17,22 @@ class VideoParent extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      seconds: this.props.seconds ? this.props.seconds : 60
+      seconds: this.props.seconds ? this.props.seconds : 5,
+      subscriber: false,
+      audioOn: false
     }
 
     this.handleComplete = this.handleComplete.bind(this)
+    this.handleSubscribe = this.handleSubscribe.bind(this)
   }
 
   async componentDidMount(evt) {
     //thunk creator to dispatch and get session id from db
     await this.props.getSessionThunk()
+    console.log('session info', this.props.session)
+    //sessionId
+    //token
+    //user: first or user: second
     console.log('currentSession', this.props.session)
     this.setState({ seconds: 5 })
   }
@@ -33,9 +40,15 @@ class VideoParent extends Component {
   async handleComplete(evt) {
     console.log('complete')
     await this.setState({
-      seconds: this.getNewSeconds(5)
+      seconds: this.getNewSeconds(30),
+      audioOn: !this.state.audioOn
     })
     console.log(this.state.seconds)
+  }
+
+  async toggleAudio() {
+    await this.setState({ audioOn: false })
+    console.log('audio off!!!')
   }
 
   getNewSeconds = sec => {
@@ -45,6 +58,12 @@ class VideoParent extends Component {
       return sec + 0.0000001
     }
   }
+
+  async handleSubscribe(evt) {
+    await this.setState({ subscriber: true })
+    //set audio here based on first or second user?
+    console.log('subscriber is here!')
+  }
   render() {
     const sessionId = this.props.session.sessionId
     const token = this.props.session.token
@@ -52,15 +71,26 @@ class VideoParent extends Component {
     if (sessionId && token) {
       return (
         <div>
-          <OpenTok apiKey={API_KEY} sessionId={sessionId} token={token} />
-          <ReactCountdownClock
-            seconds={this.state.seconds}
-            color="#000"
-            alpha={0.9}
-            size={100}
-            pause={true}
-            onComplete={this.handleComplete}
+          <OpenTok
+            apiKey={API_KEY}
+            sessionId={sessionId}
+            token={token}
+            handleSubscribe={this.handleSubscribe}
+            user={this.props.session.user}
+            audio={this.state.audioOn}
           />
+          {this.state.subscriber ? (
+            <ReactCountdownClock
+              seconds={this.state.seconds}
+              color="#000"
+              alpha={0.9}
+              size={100}
+              pause={true}
+              onComplete={this.handleComplete}
+            />
+          ) : (
+            <h4>Waiting for your fellow Burster!</h4>
+          )}
         </div>
       )
     } else {

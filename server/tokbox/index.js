@@ -27,13 +27,21 @@ router.get('/start', async (req, res, next) => {
         token1
       })
 
-      res.json({ sessionId: newSession.sessionId, token: token1 })
+      res.json({
+        sessionId: newSession.sessionId,
+        token: token1,
+        user: 'first'
+      })
     })
   } else {
     //otherwise create the second token for second participent to join existing session
     const token2 = await opentok.generateToken(openSession.sessionId)
     const fullSession = await openSession.update({ token2 })
-    res.json({ sessionId: fullSession.sessionId, token: token2 })
+    res.json({
+      sessionId: fullSession.sessionId,
+      token: token2,
+      user: 'second'
+    })
   }
 })
 

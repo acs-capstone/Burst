@@ -1,7 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { auth } from '../store'
-
+import Grid from '@material-ui/core/Grid'
+import Card from '@material-ui/core/Card'
+import { CardContent } from '@material-ui/core'
 /**
  * COMPONENT
  */
@@ -9,24 +11,46 @@ const AuthForm = props => {
   const { name, displayName, handleSubmit, error } = props
 
   return (
-    <div className="container form-group">
-      <form onSubmit={handleSubmit} name={name}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input className="form-control" name="email" type="text" />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input className="form-control" name="password" type="password" />
-        </div>
-        <div>
-          <button type="submit" className="btn btn-primary">
-            {displayName}
-          </button>
-        </div>
-        {error && error.response && <div> {error.response.data} </div>}
-      </form>
-      <a href="/auth/google">{displayName} with Google</a>
+    <div id="login-form">
+      <Grid item xs={6}>
+        <Card>
+          <div className="container form-group">
+            <form onSubmit={handleSubmit} name={name}>
+              <div>
+                <label htmlFor="email" />
+                <input
+                  className="form-control"
+                  placeholder="Email"
+                  name="email"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label htmlFor="password" />
+                <input
+                  className="form-control"
+                  placeholder="Password"
+                  name="password"
+                  type="password"
+                />
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  id="login-btn"
+                >
+                  {displayName}
+                </button>
+              </div>
+              {error && error.response && <div> {error.response.data} </div>}
+            </form>
+            <a id="google" href="/auth/google">
+              {displayName} with Google
+            </a>
+          </div>
+        </Card>
+      </Grid>
     </div>
   )
 }
