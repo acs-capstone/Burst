@@ -27,14 +27,14 @@ if (process.env.NODE_ENV === 'test') {
  */
 if (process.env.NODE_ENV !== 'production') require('./secrets')
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')))
-  // Handle React routing, return all requests to React app
-  app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
-  })
-}
+// if (process.env.NODE_ENV === 'production') {
+//   // Serve any static files
+//   app.use(express.static(path.join(__dirname, 'client/')))
+//   // Handle React routing, return all requests to React app
+//   app.get('*', function (req, res) {
+//     res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+//   })
+// }
 
 // passport registration
 passport.serializeUser((user, done) => done(null, user.id))
