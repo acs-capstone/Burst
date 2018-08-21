@@ -75,7 +75,7 @@ class Sources extends Component {
               <button type="submit" name="submit" onClick={this.handleSubmit} disabled>
                 Submit
               </button>
-              <p>Please choose at least one source.</p>
+              <p>Please select at least one source.</p>
             </div>
           )
         }

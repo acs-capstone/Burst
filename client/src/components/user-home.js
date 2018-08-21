@@ -38,7 +38,7 @@ export const UserHome = props => {
 
               <div className="chip-container">
                 {user.topics.map(topic => {
-                  return <Chip color="primary" label={topic.name} />
+                  return <Chip color="primary" label={topic.name} key={topic.id} />
                 })}
               </div>
               <Button>

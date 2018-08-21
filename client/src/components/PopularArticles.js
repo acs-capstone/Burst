@@ -8,15 +8,27 @@ class PopularArticles extends Component {
   constructor() {
     super()
     this.state = {
+      isMounted: false,
       articles: [],
       selectedTopic: ''
     }
   }
 
   async componentDidMount() {
-    await this.props.fetchPopularArticles()
     this.setState({
-      articles: this.props.articles
+      isMounted: true
+    })
+    await this.props.fetchPopularArticles()
+    if (this.state.isMounted) {
+      this.setState({
+        articles: this.props.articles
+      })
+    }
+  }
+
+  componentWillUnmount() {
+    this.setState({
+      isMounted: false
     })
   }
 
