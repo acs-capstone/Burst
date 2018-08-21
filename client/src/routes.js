@@ -14,8 +14,6 @@ import {
   PopularArticles,
   VideoParent,
   About,
-  Graph,
-  ForceGraph3D,
   FocusGraph
 } from './components'
 
@@ -51,8 +49,6 @@ class Routes extends Component {
             <Route path="/topics" component={Topics} />
             <Route path="/videochat" component={VideoParent} />
             <Route path="/popular" component={PopularArticles} />
-            <Route path="/graph" component={Graph} />
-            <Route path="/forceGraph3D" component={ForceGraph3D} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
