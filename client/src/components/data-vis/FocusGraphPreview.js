@@ -2,20 +2,31 @@ import React, { Component } from 'react'
 
 class FocusGraphPreview extends Component {
   componentDidMount() {
-    console.log(this)
+    console.log('focus graph preview this.el', this.el)
   }
   render() {
+    const { node } = this.props
     return (
       <div
         ref={el => {
-          this.fg = el
+          this.el = el
         }}
-        className="previewBaseClass"
+        id="graph-preview"
+        className="card"
       >
-        <a href="/">Click here!</a>
+        <div className="card-header">
+          <button type="button" onClick={() => console.log(node)}>
+            click
+          </button>
+          <p>{node.title}</p>
+        </div>
+        <div className="card-body">
+          <img src={node.imageUrl} />
+          <p>{node.desc}</p>
+          <p>{node.publishedAt}</p>
+        </div>
       </div>
     )
   }
 }
-
 export default FocusGraphPreview

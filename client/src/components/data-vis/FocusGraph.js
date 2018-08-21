@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { ForceGraph3D } from 'react-force-graph'
 import links from './links0.json'
 import nodes from './nodes0.json'
-//import ReactTooltip from 'react-tooltip'
-import FocusGraphPreview from './FocusGraphPreview'
+import ReactTooltip from 'react-tooltip'
+import FocusGraphPreview from './FocusGraphPreview.js'
 
 const data = {
   links,
@@ -16,18 +16,31 @@ class FocusGraph extends Component {
     super()
 
     this.state = {
-      activeNode: {},
-      showPreview: false
+      activeNode: {}
     }
   }
-  _handleHover = (node, prevNode) => {
-    console.log('HOVER: ', 'node:', node, 'prevNode: ', prevNode)
+
+  first = 0
+  _handleNodeHover = (node, prevNode) => {
+    if (this.first < 4) {
+      console.log(
+        'HOVER: ',
+        'state:',
+        this.state,
+        'node:',
+        node,
+        'prevNode: ',
+        prevNode
+      )
+      this.first++
+    }
   }
-  _handleClick = node => {
+  _handleNodeClick = node => {
+    console.log('CLICKED!\n', 'state:', this.state, '\n', 'node:', node)
+    if (node.nodeKey === this.state.activeNode.nodeKey) {
+      this.setState({ activeNode: {} })
+    }
     // Aim at node from outside it
-    if (node === null) {
-      this.setState({ showPreview: false })
-    }
     const distance = 40
     const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z)
     this.fg.cameraPosition(
@@ -39,7 +52,7 @@ class FocusGraph extends Component {
       node, // lookAt ({ x, y, z })
       3000 // ms transition duration
     )
-    this.setState({ activeNode: node, showPreview: true })
+    this.setState({ activeNode: node })
   }
 
   render() {
@@ -52,10 +65,16 @@ class FocusGraph extends Component {
           graphData={data}
           nodeLabel="title"
           nodeAutoColorBy="group"
-          onNodeClick={this._handleClick}
-          onNodeHover={this._handleHover}
+          onNodeClick={this._handleNodeClick}
+          onNodeHover={this._handleNodeHover}
         />
-        <FocusGraphPreview node={this.state.activeNode} />
+
+        {this.state.activeNode.id ? (
+          <FocusGraphPreview node={this.state.activeNode} />
+        ) : (
+          <div />
+        )}
+        <ReactTooltip />
       </div>
     )
   }
