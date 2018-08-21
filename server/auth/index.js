@@ -3,7 +3,6 @@ const { User, Source, Topic, PoliOri } = require('../db/models')
 module.exports = router
 
 router.post('/login', async (req, res, next) => {
-  console.log(req.body)
   try {
     const user = await User.findOne({
       where: { email: req.body.email },
