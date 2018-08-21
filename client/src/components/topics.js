@@ -62,9 +62,21 @@ class Topics extends Component {
             />
           )
         })}
-        <button type="submit" name="submit" onClick={this.handleSubmit}>
-          Submit
-        </button>
+        {this.state.topics.length ? (
+          <div>
+            <button type="submit" name="submit" onClick={this.handleSubmit}>
+              Submit
+      </button>
+          </div>
+        ) : (
+            <div>
+              <button type="submit" name="submit" onClick={this.handleSubmit} disabled>
+                Submit
+            </button>
+              <p>Please choose at least one topic.</p>
+            </div>
+          )
+        }
       </div>
     )
   }
