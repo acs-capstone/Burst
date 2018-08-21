@@ -34,9 +34,19 @@ class PopularArticles extends Component {
           type="button"
           className="badge badge-danger"
           name="start-chat"
+          value="1"
           onClick={this.handleClick}
         >
-          Join Video Burst
+          Join Video Burst - Human Rights
+        </button>
+        <button
+          type="button"
+          className="badge badge-danger"
+          name="start-chat"
+          value="2"
+          onClick={this.handleClick}
+        >
+          Join Video Burst - Finance & Tax
         </button>
 
         <Grid container direction="row" justify="center">

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { withRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { withRouter, Route, Switch } from 'react-router-dom'
 
 import {
   Login,
@@ -45,7 +45,7 @@ class Routes extends Component {
               <Route path="/home" component={UserHome} />
               <Route path="/news" component={AllArticles} />
               <Route path="/topics" component={Topics} />
-              <Route path="/videochat" component={VideoParent} />
+              <Route path="/video/:id" component={VideoParent} />
               <Route path="/popular" component={PopularArticles} />
             </Switch>
           )}

@@ -1,6 +1,5 @@
 import React from 'react'
 import { OTSession, OTPublisher, OTStreams, OTSubscriber } from 'opentok-react'
-import { connect } from 'react-router-dom'
 import ReactCountdownClock from 'react-countdown-clock'
 
 export default class OpenTok extends React.Component {
@@ -121,8 +120,8 @@ export default class OpenTok extends React.Component {
     const apiKey = this.props.apiKey
     const sessionId = this.props.sessionId
     const token = this.props.token
-    const { error, connection, publishVideo, publishAudio } = this.state
-    console.log('SUBSCRIBER?', this.state.subscriber)
+    const { error, connection, publishVideo } = this.state
+
     return (
       <div>
         <div id="sessionStatus">Session Status: {connection}</div>
@@ -159,9 +158,6 @@ export default class OpenTok extends React.Component {
             {publishVideo ? 'Disable' : 'Enable'} Video
           </button>
 
-          {/* <button id="audioButton" onClick={this.toggleAudio}>
-            {publishAudio ? 'Disable' : 'Enable'} Audio
-          </button> */}
           {this.state.publishAudio ? <h2> Audio On!</h2> : <h5>Audio Off!</h5>}
           <OTPublisher //shows your video
             properties={{
@@ -185,13 +181,10 @@ export default class OpenTok extends React.Component {
                 width: '75vw',
                 height: '75vh'
               }}
-              // onSubscribe={this.onSubscribe}
               onError={this.onSubscribeError}
               eventHandlers={this.subscriberEventHandlers}
               id="subscriberWindow"
               onChange={this.handleChange}
-              // onComplete={this.handleComplete}
-              // publishAudio={this.state.publishAudio}
             />
           </OTStreams>
         </OTSession>

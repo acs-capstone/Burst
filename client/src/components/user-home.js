@@ -9,7 +9,6 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
-import UserProfile from './user-profile'
 
 /* COMPONENT */
 
@@ -39,7 +38,9 @@ export const UserHome = props => {
 
               <div className="chip-container">
                 {user.topics.map(topic => {
-                  return <Chip color="primary" label={topic.name} />
+                  return (
+                    <Chip key={topic.id} color="primary" label={topic.name} />
+                  )
                 })}
               </div>
               <Button>
@@ -54,7 +55,9 @@ export const UserHome = props => {
 
               <div className="chip-container">
                 {user.sources.map(source => {
-                  return <Chip color="primary" label={source.name} key={source.id} />
+                  return (
+                    <Chip color="primary" label={source.name} key={source.id} />
+                  )
                 })}
               </div>
               <Button>
