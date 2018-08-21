@@ -154,7 +154,8 @@ const News = class {
           sources: stringOfSources,
           sortBy: 'popularity',
           language: 'en',
-          from: this.createDate(-1, 0, 0)
+          from: this.createDate(-1, 0, 0),
+          pageSize: 1
         })
 
         const article = topicArticle.articles[0]
