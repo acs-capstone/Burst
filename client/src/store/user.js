@@ -63,7 +63,7 @@ export const logout = () => async dispatch => {
 export const getUserThunk = userId => async dispatch => {
   try {
     const { data } = await axios.get(
-      `http://localhost:8080/api/users/${userId}`
+      `/api/users/${userId}`
     )
     dispatch(getUser(data))
   } catch (err) {
@@ -75,7 +75,7 @@ export const getUserThunk = userId => async dispatch => {
 export const updateUserThunk = userPrefObj => async dispatch => {
   try {
     const { data } = await axios.put(
-      `http://localhost:8080/api/users/${userPrefObj.userId}`,
+      `/api/users/${userPrefObj.userId}`,
       userPrefObj
     )
     dispatch(updateUser(data))
@@ -87,7 +87,7 @@ export const updateUserThunk = userPrefObj => async dispatch => {
 /**
  * REDUCER
  */
-export default function(state = defaultUser, action) {
+export default function (state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
       return action.user
