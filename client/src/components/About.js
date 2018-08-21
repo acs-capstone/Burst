@@ -6,7 +6,7 @@ const About = () => {
       <h1>Welcome to Burst</h1>
       <h3>About Us</h3>
       <p>
-        We are a  bipartisan app created for curious individuals who want to burst
+        We are a bipartisan app created for curious individuals who want to burst
        their political filter bubble and achieve a clearer view of the news.</p>
       <h3>Our Misson</h3>
       <p>

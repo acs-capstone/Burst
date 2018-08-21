@@ -22,7 +22,7 @@ const getArticles = articles => ({ type: GET_ARTICLES, articles })
 
 export const fetchArticles = (userId) => async dispatch => {
   try {
-    const { data } = await axios.get(`/api/articles/${userId}`)
+    const { data } = await axios.get(`api/articles/${userId}`)
     dispatch(getArticles(data))
   } catch (err) {
     console.error(err)
@@ -31,7 +31,7 @@ export const fetchArticles = (userId) => async dispatch => {
 
 export const fetchPopularArticles = () => async dispatch => {
   try {
-    const { data } = await axios.get('/api/articles/popular')
+    const { data } = await axios.get('api/articles/popular')
     dispatch(getArticles(data))
   } catch (err) {
     console.error(err)

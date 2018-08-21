@@ -22,7 +22,7 @@ const getTopics = topics => ({ type: GET_TOPICS, topics })
 
 export const fetchTopics = () => async dispatch => {
   try {
-    const { data } = await axios.get(`/api/topics`)
+    const { data } = await axios.get(`api/topics`)
     dispatch(getTopics(data))
   } catch (err) {
     console.error(err)
