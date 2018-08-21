@@ -30,6 +30,15 @@ class PopularArticles extends Component {
     return (
       <div>
         <h4>Today's Most Popular Articles By Topic</h4>
+        <button
+          type="button"
+          className="badge badge-danger"
+          name="start-chat"
+          onClick={this.handleClick}
+        >
+          Join Video Burst
+        </button>
+
         <Grid container direction="row" justify="center">
           {this.state.articles.map(article => {
             return (
