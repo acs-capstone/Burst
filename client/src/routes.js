@@ -29,28 +29,30 @@ class Routes extends Component {
     const { isLoggedIn } = this.props
 
     return (
-      <Switch>
-        {/* Routes placed here are available to all visitors */}
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/about" component={About} />
+      <div>
+        <Switch>
+          {/* Routes placed here are available to all visitors */}
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/about" component={About} />
 
-        {isLoggedIn && (
-          <Switch>
-            {/* Routes placed here are only available after logging in */}
-            {<Route exact path="/quiz" component={Quiz} />}
-            <Route exact path="/sources" component={Sources} />
-            <Route path="/questions" component={Questions} />
-            <Route path="/home" component={UserHome} />
-            <Route path="/news" component={AllArticles} />
-            <Route path="/topics" component={Topics} />
-            <Route path="/videochat" component={VideoParent} />
-            <Route path="/popular" component={PopularArticles} />
-          </Switch>
-        )}
-        {/* Displays our Login component as a fallback */}
-        <Route component={Login} />
-      </Switch>
+          {isLoggedIn && (
+            <Switch>
+              {/* Routes placed here are only available after logging in */}
+              {<Route exact path="/quiz" component={Quiz} />}
+              <Route exact path="/sources" component={Sources} />
+              <Route path="/questions" component={Questions} />
+              <Route path="/home" component={UserHome} />
+              <Route path="/news" component={AllArticles} />
+              <Route path="/topics" component={Topics} />
+              <Route path="/video/:id" component={VideoParent} />
+              <Route path="/popular" component={PopularArticles} />
+            </Switch>
+          )}
+          {/* Displays our Login component as a fallback */}
+          <Route component={Login} />
+        </Switch>
+      </div>
     )
   }
 }
@@ -86,4 +88,3 @@ export default withRouter(
 /**
  * PROP TYPES
  */
-
