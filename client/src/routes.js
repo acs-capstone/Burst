@@ -13,8 +13,12 @@ import {
   Quiz,
   PopularArticles,
   VideoParent,
-  About
+  About,
+  Graph,
+  ForceGraph3D,
+  FocusGraph
 } from './components'
+
 import { me } from './store'
 
 /**
@@ -38,7 +42,7 @@ class Routes extends Component {
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
-            {<Route exact path="/quiz" component={Quiz} />}
+            <Route exact path="/quiz" component={Quiz} />
             <Route exact path="/sources" component={Sources} />
             <Route path="/questions" component={Questions} />
             <Route path="/home" component={UserHome} />
@@ -46,6 +50,9 @@ class Routes extends Component {
             <Route path="/topics" component={Topics} />
             <Route path="/videochat" component={VideoParent} />
             <Route path="/popular" component={PopularArticles} />
+            <Route path="/graph" component={Graph} />
+            <Route path="/focusgraph" component={FocusGraph} />
+            <Route path="/forceGraph3D" component={ForceGraph3D} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
@@ -86,4 +93,3 @@ export default withRouter(
 /**
  * PROP TYPES
  */
-

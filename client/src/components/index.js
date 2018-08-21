@@ -12,6 +12,7 @@ export { default as VideoParent } from './VideoParent'
 export { default as PopularArticles } from './PopularArticles'
 export { default as About } from './About'
 
-
 export { default as Sources } from './Sources'
-export { default as Graph } from './data-vis'
+export { default as Graph } from './data-vis/Graph'
+export { default as ForceGraph3D } from './data-vis/ForceGraph3D'
+export { default as FocusGraph } from './data-vis/FocusGraph'
