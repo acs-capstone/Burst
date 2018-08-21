@@ -12,6 +12,7 @@ class PopularArticles extends Component {
       articles: [],
       selectedTopic: ''
     }
+    this.handleClick = this.handleClick.bind(this)
   }
 
   async componentDidMount() {
@@ -19,6 +20,7 @@ class PopularArticles extends Component {
       isMounted: true
     })
     await this.props.fetchPopularArticles()
+<<<<<<< HEAD
     if (this.state.isMounted) {
       this.setState({
         articles: this.props.articles
@@ -29,17 +31,41 @@ class PopularArticles extends Component {
   componentWillUnmount() {
     this.setState({
       isMounted: false
+=======
+    await this.setState({
+      articles: this.props.articles
+>>>>>>> master
     })
   }
 
-  handleClick() {
-    //start video chat goes here
+  handleClick(evt) {
+    evt.preventDefault()
+    this.props.history.push(`/video/${evt.target.value}`)
   }
 
   render() {
     return (
       <div>
         <h4>Today's Most Popular Articles By Topic</h4>
+        <button
+          type="button"
+          className="badge badge-danger"
+          name="start-chat"
+          value="1"
+          onClick={this.handleClick}
+        >
+          Join Video Burst - Human Rights
+        </button>
+        <button
+          type="button"
+          className="badge badge-danger"
+          name="start-chat"
+          value="2"
+          onClick={this.handleClick}
+        >
+          Join Video Burst - Finance & Tax
+        </button>
+
         <Grid container direction="row" justify="center">
           {this.state.articles.map(article => {
             return (
@@ -47,32 +73,35 @@ class PopularArticles extends Component {
                 <div>
                   <h5>{article.topic}</h5>
                   <div>
-                    <button type="button" className="badge badge-danger" name="start-chat" onClick={this.handleClick}>
+                    <button
+                      type="button"
+                      className="badge badge-danger"
+                      name="start-chat"
+                      onClick={this.handleClick}
+                    >
                       Join Video Burst
-                  </button>
+                    </button>
                     <ul className=".list-unstyled">
                       <Article article={article} />
                     </ul>
-
                   </div>
                 </div>
               </Grid>
             )
           })}
         </Grid>
-      </div >
+      </div>
     )
   }
-
 }
 
 const mapState = state => ({
-  articles: state.articles,
+  articles: state.articles
 })
 
 const mapDispatch = dispatch => {
   return {
-    fetchPopularArticles: () => dispatch(fetchPopularArticles()),
+    fetchPopularArticles: () => dispatch(fetchPopularArticles())
   }
 }
 
