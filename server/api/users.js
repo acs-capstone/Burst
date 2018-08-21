@@ -30,6 +30,7 @@ router.get('/:id', async (req, res, next) => {
 })
 
 //updates user instance after quiz - needs poliOriId, arrayOfSources, arrayOfTopics
+//TODO: make sure route is protected, using req.session for user Id
 router.put('/:id', async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id)

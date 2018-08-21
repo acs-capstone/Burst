@@ -43,6 +43,13 @@ router.post('/logout', (req, res) => {
   res.redirect('/')
 })
 
+
+router.use('/google', require('./google'))
+// router.use('/google', (req, res, next) => {
+//   console.log('****')
+//   next();
+// })
+
 router.get('/me', async (req, res) => {
   try {
     if (req.user) {
@@ -50,10 +57,12 @@ router.get('/me', async (req, res) => {
         include: [{ model: Source }, { model: Topic }, { model: PoliOri }]
       })
       res.json(user)
+    } else {
+      res.json(req.user);
     }
   } catch (err) {
     console.log(err)
   }
 })
 
-router.use('/google', require('./google'))
+
