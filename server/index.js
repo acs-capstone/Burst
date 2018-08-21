@@ -51,7 +51,7 @@ const createApp = () => {
   app.use(compression())
 
   //allows CORS
-  app.use(function(req, res, next) {
+  app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
     res.header(
       'Access-Control-Allow-Headers',
@@ -75,6 +75,7 @@ const createApp = () => {
   )
   app.use(passport.initialize())
   app.use(passport.session())
+
 
   // auth and api routes
   app.use('/auth', require('./auth'))
