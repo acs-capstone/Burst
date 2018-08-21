@@ -1,0 +1,258 @@
+{
+  "status": "ok",
+  "totalResults": 480,
+  "articles": [
+    {
+      "source": { "id": "techcrunch", "name": "TechCrunch" },
+      "author": "David Riggs",
+      "title": "Why the next CryptoKitties mania won’t be about collectables",
+      "description":
+        "The legacy of CryptoKitties is still in development, but most can agree that the project raised awareness (and attracted development talent) to new uses for blockchain tokens.",
+      "url":
+        "http://techcrunch.com/2018/08/21/why-the-next-cryptokitties-mania-wont-be-about-collectables/",
+      "urlToImage":
+        "https://techcrunch.com/wp-content/uploads/2018/08/kitties.png?w=495",
+      "publishedAt": "2018-08-21T21:00:03Z"
+    },
+    {
+      "source": { "id": "mashable", "name": "Mashable" },
+      "author": "Jack Morse",
+      "title":
+        "Venezuela just 'linked' the newly created sovereign bolivar to its terrible cryptocurrency",
+      "description":
+        "You know you're in trouble when your only hope for stability is something as notoriously unstable as cryptocurrency. And yes, Venezuela appears to be very much in trouble. According to Bloomberg, Venezuelan President Nicolas Maduro announced on Friday that he…",
+      "url":
+        "https://mashable.com/2018/08/20/venezuela-cryptocurrency-petro-linked-bolivar/",
+      "urlToImage":
+        "https://i.amz.mshcdn.com/6wb69vsvRCBESrIN50YvT2JoinA=/1200x630/2018%2F08%2F21%2F76%2F27014d9385174e88a4c6bf1cd7f3af68.b72d7.jpg",
+      "publishedAt": "2018-08-21T00:17:54Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Reuters Editorial",
+      "title":
+        "NAFTA talks between U.S., Mexico 'making good progress': Mexican official",
+      "description":
+        "Talks between U.S. and Mexican trade officials aimed at reaching an updated North American Free Trade Agreement (NAFTA) are \"making good progress (and) coming to the end,\" the designated NAFTA negotiator for Mexico's incoming president said on Tuesday.",
+      "url":
+        "https://www.reuters.com/article/us-trade-nafta-mexico-progress/nafta-talks-between-u-s-mexico-making-good-progress-mexican-official-idUSKCN1L6231",
+      "urlToImage":
+        "https://s2.reutersmedia.net/resources/r/?m=02&d=20180821&t=2&i=1296028863&w=1200&r=LYNXNPEE7K1B4",
+      "publishedAt": "2018-08-21T20:30:39Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Huw Jones",
+      "title": "Britain can't afford to close door to EU banks after Brexit",
+      "description":
+        "Britain is expected to keep the door open for European Union banks and investors after Brexit to try to preserve London's global financial clout, irrespective of whether it gets a good trade deal from the bloc, bankers and industry officials say.",
+      "url":
+        "https://www.reuters.com/article/us-britain-eu-banks-analysis/britain-cant-afford-to-close-door-to-eu-banks-after-brexit-idUSKCN1L610Z",
+      "urlToImage":
+        "https://s2.reutersmedia.net/resources/r/?m=02&d=20180821&t=2&i=1295898947&w=1200&r=LYNXNPEE7K0O4",
+      "publishedAt": "2018-08-21T11:43:46Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Claire Milhench",
+      "title":
+        "New sanctions leave Russia debt holders less sure of Trump's help",
+      "description":
+        "Loading up on Russian sovereign bonds was a consensus trade for emerging market investors once Donald Trump won the White House, but the U.S. President's failure to defuse the threat of ever-tighter sanctions has unnerved even the most bullish funds.",
+      "url":
+        "https://www.reuters.com/article/us-russia-sanctions-funds-analysis/new-sanctions-leave-russia-debt-holders-less-sure-of-trumps-help-idUSKCN1L612Y",
+      "urlToImage":
+        "https://s3.reutersmedia.net/resources/r/?m=02&d=20180821&t=2&i=1295897156&w=1200&r=LYNXNPEE7K0PL",
+      "publishedAt": "2018-08-21T11:35:18Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Ahmed Rasheed",
+      "title":
+        "Exclusive: Iraq to ask U.S. for exemptions on some Iran sanctions",
+      "description":
+        "Iraq's economy is so closely linked to Iran that Baghdad is going to ask Washington for permission to ignore some U.S. sanctions on its neighbor, Iraqi government and central bank officials said.",
+      "url":
+        "https://www.reuters.com/article/us-iran-nuclear-iraq-exclusive/exclusive-iraq-to-ask-u-s-for-exemptions-on-some-iran-sanctions-idUSKCN1L60Q7",
+      "urlToImage":
+        "https://s2.reutersmedia.net/resources/r/?m=02&d=20180821&t=2&i=1295851710&w=1200&r=LYNXNPEE7K0IC",
+      "publishedAt": "2018-08-21T08:40:43Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Jeff Mason",
+      "title":
+        "Exclusive: Trump says not thrilled with Fed's Powell for raising rates",
+      "description":
+        "U.S. President Donald Trump said on Monday he was \"not thrilled\" with Federal Reserve Chairman Jerome Powell for raising interest rates and accused China and Europe of manipulating their respective currencies.",
+      "url":
+        "https://www.reuters.com/article/us-usa-trump-fed-exclusive/exclusive-trump-says-not-thrilled-with-feds-powell-for-raising-rates-idUSKCN1L5207",
+      "urlToImage":
+        "https://s4.reutersmedia.net/resources/r/?m=02&d=20180820&t=2&i=1295679157&w=1200&r=LYNXNPEE7J1FV",
+      "publishedAt": "2018-08-20T22:07:41Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Gabriela Baczynska",
+      "title": "EU expects delay in Brexit deal beyond October target",
+      "description":
+        "European Union leaders are likely to have to hold an emergency summit in November to consider any Brexit agreement struck with Britain, missing an informal deadline the previous month, diplomats in Brussels said.",
+      "url":
+        "https://www.reuters.com/article/us-britain-eu-meeting/uk-hopes-to-pick-up-brexit-talks-pace-with-raab-barnier-meeting-on-tuesday-idUSKBN1L30QJ",
+      "urlToImage":
+        "https://s2.reutersmedia.net/resources/r/?m=02&d=20180818&t=2&i=1295047844&w=1200&r=LYNXMPEE7H0MH",
+      "publishedAt": "2018-08-21T17:34:09Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Reuters Editorial",
+      "title": "S&P 500 trades above January high at new record",
+      "description":
+        "The S&P 500  stock index rose as much as 0.57 percent on Tuesday to 2,873.23, putting it above its previous record high of 2,872.87 on Jan. 26. Bolstered by quarterly earnings reports and a rise in stock buybacks, the benchmark S&P 500 has gained over 2 perce…",
+      "url":
+        "https://www.reuters.com/article/us-usa-stocks-instantview/sp-500-trades-above-january-high-at-new-record-idUSKCN1L61U4",
+      "urlToImage":
+        "https://s4.reutersmedia.net/resources/r/?m=02&d=20180821&t=2&i=1295984660&w=1200&r=LYNXNPEE7K15Z",
+      "publishedAt": "2018-08-21T17:31:21Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Gabriela Baczynska",
+      "title": "EU diplomats expect delay in Brexit deal beyond October target",
+      "description":
+        "European Union leaders are likely to have to hold an emergency summit in November to consider any Brexit agreement struck with Britain, missing an informal deadline the previous month, diplomats in Brussels said.",
+      "url":
+        "https://www.reuters.com/article/uk-britain-eu/eu-diplomats-expect-delay-in-brexit-deal-beyond-october-target-idUSKCN1L611G",
+      "urlToImage":
+        "https://s2.reutersmedia.net/resources/r/?m=02&d=20180821&t=2&i=1295892597&w=1200&r=LYNXNPEE7K0OF",
+      "publishedAt": "2018-08-21T11:23:06Z"
+    },
+    {
+      "source": { "id": "reuters", "name": "Reuters" },
+      "author": "Sinéad Carew",
+      "title":
+        "U.S. buyback announcements slow, but on track for $1 trillion: TrimTabs",
+      "description":
+        "U.S. companies' taste for their own shares is set to push buybacks past the $1 trillion-a-year mark for the first time as soon as November, TrimTabs Investment Research said, even as its latest data showed the pace of new repurchase announcements slowing duri…",
+      "url":
+        "https://www.reuters.com/article/us-usa-stocks-buybacks/u-s-buyback-announcements-slow-but-on-track-for-1-trillion-trimtabs-idUSKCN1L61YT",
+      "urlToImage":
+        "https://s3.reutersmedia.net/resources/r/?m=02&d=20180821&t=2&i=1296003693&w=1200&r=LYNXNPEE7K18J",
+      "publishedAt": "2018-08-21T18:46:18Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "ejiang@businessinsider.com (Ethel Jiang), Ethel Jiang",
+      "title": "RBC: Victoria's Secret is trading at 'negative value' (LB)",
+      "description":
+        "Victoria's Secret is losing an estimated $800 million in profits, according to RBC Capital Markets analyst Brian Tunick. Wall Street appears to be assigning \"little to negative value\" to the franchise, he said. Bath & Body Works contributed over 70% of L Bran…",
+      "url":
+        "https://markets.businessinsider.com/news/stocks/victorias-secret-trading-at-negative-value-rbc-2018-8-1027474246",
+      "urlToImage":
+        "https://static1.businessinsider.com/image/5049f6bfecad04c956000004-1000/151533738.jpg",
+      "publishedAt": "2018-08-21T14:49:57Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Alexandra Ma",
+      "title":
+        "Malaysia has axed $22 billion of Chinese-backed projects, in a blow to China's grand plan to dominate world trade",
+      "description":
+        "Mahathir Mohamad has cancelled two major Chinese-funded projects to avoid his country going into further debt. The projects were a $20 billion rail link and two gas pipelines worth $2.3 billion. All three were part of China's Belt and Road Initiative (BRI), a…",
+      "url":
+        "https://www.businessinsider.com/malaysia-axes-22-billion-of-belt-and-road-projects-blow-to-china-2018-8",
+      "urlToImage":
+        "https://amp.businessinsider.com/images/5b7c12ee04f162fd2c8b475b-1136-568.jpg",
+      "publishedAt": "2018-08-21T13:40:16Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Akin Oyedele",
+      "title":
+        "Bank of America names 2 sectors investors should be buying into as the bull market makes history",
+      "description":
+        "Bank of America Merrill Lynch has moved to an overweight on the industrials and healthcare sectors. The bank's equity strategists don't see the bull market in stocks ending soon, mainly because earnings growth is still strong. This bull market will become the…",
+      "url":
+        "https://www.businessinsider.com/stock-bull-market-bank-of-america-overweights-2018-8",
+      "urlToImage":
+        "https://amp.businessinsider.com/images/5b7b1b538ea82ff2248b4700-2732-1366.jpg",
+      "publishedAt": "2018-08-21T10:02:00Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Ethel Jiang",
+      "title":
+        "TJX jumps after beating the Street and raising its full-year guidance (TJX)",
+      "description":
+        "TJX beat on both the top and bottom lines. The retailer raised its full-year guidance for earnings and comparable sales. Shares of TJX jumped as much as 5% in the Tuesday pre-market trading. Watch TJX trade in real-time here. TJX reported second-quarter resul…",
+      "url":
+        "https://markets.businessinsider.com/news/stocks/tjx-stock-price-earnings-top-wall-street-2018-8-1027473888",
+      "urlToImage":
+        "https://static2.businessinsider.com/image/582b175646e27a55008b6a18-2000/rtr4g0e2.jpg",
+      "publishedAt": "2018-08-21T13:21:00Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Rosie Perper",
+      "title": "The 10 most important things in the world right now",
+      "description":
+        "Hello! Here's what's happening on Tuesday. 1. US President Donald Trump says there's \"no timeframe\" for the end to the US-China trade war. The second set of Trump's tariffs — this time on $16 billion worth of Chinese imports to the US — are set to go live on …",
+      "url":
+        "http://uk.businessinsider.com/the-10-most-important-things-in-the-world-right-now-august-21-2018-8",
+      "urlToImage":
+        "https://static.businessinsider.com/image/5b7bbc9c42e1cc0ec53b7a2c-750.jpg",
+      "publishedAt": "2018-08-21T07:14:41Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Ethel Jiang",
+      "title": "ANALYST: Victoria's Secret is trading at 'negative value' (LB)",
+      "description":
+        "Victoria's Secret is losing an estimated $800 million in profits, according to RBC Capital Markets analyst Brian Tunick. Wall Street appears to be assigning \"little to negative value\" to the franchise, he said. Bath & Body Works contributed over 70% of L Bran…",
+      "url":
+        "https://www.businessinsider.com/victorias-secret-trading-at-negative-value-rbc-2018-8",
+      "urlToImage":
+        "https://amp.businessinsider.com/images/5b7c1c722154a33c008b526d-960-480.jpg",
+      "publishedAt": "2018-08-21T14:49:57Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Alan Dawson",
+      "title":
+        "One of the best UFC analysts in the fight game expects Conor McGregor to retire forever if he loses his comeback bout against Khabib Nurmagomedov",
+      "description":
+        "Conor McGregor will never fight again if he loses to Khabib Nurmagomedov. That is the opinion of UFC expert Robin Black, who says the stakes are incredibly high in a bout that has been billed as \"the biggest fight in UFC history.\" Black said the winner of UFC…",
+      "url":
+        "https://www.businessinsider.com/conor-mcgregor-will-retire-if-he-loses-to-khabib-nurmagomedov-2018-8",
+      "urlToImage":
+        "https://amp.businessinsider.com/images/5a3c3f044aa6b5a01a8b6771-1136-568.jpg",
+      "publishedAt": "2018-08-21T11:26:00Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Frank Chaparro",
+      "title":
+        "JPMorgan is quietly building what it calls a 'next-generation prediction platform' and it's betting eventually the whole world will use it (JPM)",
+      "description":
+        "JPMorgan's investment bank is quietly working on a new platform that would use crowdsourcing to accumulate massive amounts of data and help its clients make better business decisions. The platform, called Roar by JPMorgan, would allow clients to exchange and …",
+      "url":
+        "https://www.businessinsider.com/jpmorgan-launching-roar-platform-for-crowdsourced-data-2018-8",
+      "urlToImage":
+        "https://amp.businessinsider.com/images/5b75a08f8905f21b008b56c5-640-320.jpg",
+      "publishedAt": "2018-08-21T11:00:00Z"
+    },
+    {
+      "source": { "id": "business-insider", "name": "Business Insider" },
+      "author": "Tyler Lauletta",
+      "title":
+        "The Raptors' 1-year recruitment to keep Kawhi Leonard has already begun",
+      "description":
+        "The Toronto Raptors have already begun their year-long recruitment effort to convince Leonard to re-sign after the 2018-19 season. The team is reportedly set to add Jeremy Castleberry, a close friend of Leonard, to the coaching staff. Beyond whatever success …",
+      "url":
+        "https://www.businessinsider.com/kawhi-leonard-raptors-recruitment-2018-8",
+      "urlToImage":
+        "https://amp.businessinsider.com/images/5b7c16ef959f34ed318b4725-1536-768.jpg",
+      "publishedAt": "2018-08-21T15:55:34Z"
+    }
+  ]
+}
