@@ -38,6 +38,7 @@ class Routes extends Component {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/about" component={About} />
+        <Route path="/focusgraph" component={FocusGraph} />
 
         {isLoggedIn && (
           <Switch>
@@ -51,7 +52,6 @@ class Routes extends Component {
             <Route path="/videochat" component={VideoParent} />
             <Route path="/popular" component={PopularArticles} />
             <Route path="/graph" component={Graph} />
-            <Route path="/focusgraph" component={FocusGraph} />
             <Route path="/forceGraph3D" component={ForceGraph3D} />
           </Switch>
         )}
