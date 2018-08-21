@@ -4,15 +4,17 @@ const router = require('express').Router()
 const apiKey = process.env.API_KEY
 const apiSecret = process.env.API_SECRET
 const opentok = new OpenTok(apiKey, apiSecret)
-const { Session } = require('../db/models')
+const { VideoSession } = require('../db/models')
 
 module.exports = router
 
-router.get('/start', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
+  console.log('IN ROUTE')
   //see if session is open with one participent (will only have one token)
-  const openSession = await Session.findOne({
+  const openSession = await VideoSession.findOne({
     where: {
-      token2: null
+      token2: null,
+      topicId: req.params.id
     }
   })
 
@@ -22,8 +24,9 @@ router.get('/start', async (req, res, next) => {
       if (err) return console.log(err)
 
       const token1 = await opentok.generateToken(session.sessionId)
-      const newSession = await Session.create({
+      const newSession = await VideoSession.create({
         sessionId: session.sessionId,
+        topicId: req.params.id,
         token1
       })
 

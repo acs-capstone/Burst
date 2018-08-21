@@ -12,23 +12,28 @@ class PopularArticles extends Component {
       articles: [],
       selectedTopic: ''
     }
+    this.handleClick = this.handleClick.bind(this)
   }
 
   async componentDidMount() {
     await this.props.fetchPopularArticles()
-    this.setState({
+    await this.setState({
       articles: this.props.articles
     })
   }
 
-  handleClick() {
-    //start video chat goes here
+  handleClick(evt) {
+    evt.preventDefault()
+    this.props.history.push(`/video/${evt.target.value}`)
   }
 
   render() {
     return (
       <div>
         <h4>Today's Most Popular Articles By Topic</h4>
+        <button value={3} onClick={this.handleClick}>
+          VIDEO
+        </button>
         <Grid container direction="row" justify="center">
           {this.state.articles.map(article => {
             return (

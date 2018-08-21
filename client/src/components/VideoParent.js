@@ -2,28 +2,29 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import '@opentok/client'
 import OpenTok from './OpenTok'
-import { getSessionThunk } from '../store/session'
+import { getVideoSessionThunk } from '../store/videoSession'
 
 import { API_KEY } from '../secrets'
 
 class VideoParent extends Component {
   async componentDidMount(evt) {
     //thunk creator to dispatch and get session id from db
-    await this.props.getSessionThunk()
+    await this.props.getVideoSessionThunk(this.props.match.params.id)
   }
 
   render() {
-    const sessionId = this.props.session.sessionId
-    const token = this.props.session.token
+    if (this.props.videoSession && this.props.videoSession.sessionId) {
+      const sessionId = this.props.videoSession.sessionId
+      const token = this.props.videoSession.token
+      const user = this.props.videoSession.user
 
-    if (sessionId && token) {
       return (
         <div>
           <OpenTok
             apiKey={API_KEY}
             sessionId={sessionId}
             token={token}
-            user={this.props.session.user}
+            user={user}
           />
         </div>
       )
@@ -34,12 +35,12 @@ class VideoParent extends Component {
 }
 
 const mapState = state => ({
-  session: state.session
+  videoSession: state.videoSession
 })
 
 const mapDispatch = dispatch => {
   return {
-    getSessionThunk: () => dispatch(getSessionThunk())
+    getVideoSessionThunk: id => dispatch(getVideoSessionThunk(id))
   }
 }
 

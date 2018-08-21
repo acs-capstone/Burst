@@ -25,7 +25,7 @@ const updateUser = user => ({ type: UPDATE_USER, user })
  */
 export const me = () => async dispatch => {
   try {
-    const { data } = await axios.get(`http://localhost:8080/auth/me`)
+    const { data } = await axios.get(`/auth/me`)
 
     dispatch(getUser(data || defaultUser))
   } catch (err) {
@@ -37,7 +37,6 @@ export const auth = (email, password, method) => async dispatch => {
   let res
   try {
     res = await axios.post(`/auth/${method}`, { email, password })
-    dispatch(getUser(res.data))
   } catch (authError) {
     return dispatch(getUser({ error: authError }))
   }

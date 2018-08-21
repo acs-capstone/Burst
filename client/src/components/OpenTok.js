@@ -122,6 +122,7 @@ export default class OpenTok extends React.Component {
     const sessionId = this.props.sessionId
     const token = this.props.token
     const { error, connection, publishVideo, publishAudio } = this.state
+    console.log('SUBSCRIBER?', this.state.subscriber)
     return (
       <div>
         <div id="sessionStatus">Session Status: {connection}</div>
@@ -150,9 +151,9 @@ export default class OpenTok extends React.Component {
           token={token}
           onError={this.onSessionError}
           eventHandlers={this.sessionEventHandlers}
-          onChange={this.handleChange}
           onComplete={this.handleComplete}
           publishAudio={this.state.publishAudio}
+          onSubscribe={this.state.subscriber}
         >
           <button id="videoButton" onClick={this.toggleVideo}>
             {publishVideo ? 'Disable' : 'Enable'} Video
@@ -173,7 +174,6 @@ export default class OpenTok extends React.Component {
             onPublish={this.onPublish}
             onError={this.onPublishError}
             eventHandlers={this.publisherEventHandlers}
-            onChange={this.handleChange}
             id="publisherWindow"
             onComplete={this.handleComplete}
           />
@@ -185,13 +185,13 @@ export default class OpenTok extends React.Component {
                 width: '75vw',
                 height: '75vh'
               }}
-              onSubscribe={this.onSubscribe}
+              // onSubscribe={this.onSubscribe}
               onError={this.onSubscribeError}
               eventHandlers={this.subscriberEventHandlers}
               id="subscriberWindow"
               onChange={this.handleChange}
-              onComplete={this.handleComplete}
-              publishAudio={this.state.publishAudio}
+              // onComplete={this.handleComplete}
+              // publishAudio={this.state.publishAudio}
             />
           </OTStreams>
         </OTSession>
