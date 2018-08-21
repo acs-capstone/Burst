@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchPopularArticles } from '../store/articles'
 import Grid from '@material-ui/core/Grid'
-import UserProfile from './user-profile'
 import Article from './Article'
 
 class PopularArticles extends Component {
@@ -31,14 +30,11 @@ class PopularArticles extends Component {
     return (
       <div>
         <h4>Today's Most Popular Articles By Topic</h4>
-        <button value={3} onClick={this.handleClick}>
-          VIDEO
-        </button>
         <Grid container direction="row" justify="center">
           {this.state.articles.map(article => {
             return (
-              <Grid item xs={4}>
-                <div key={article.url}>
+              <Grid item xs={4} key={article.url}>
+                <div>
                   <h5>{article.topic}</h5>
                   <div>
                     <button
@@ -49,8 +45,7 @@ class PopularArticles extends Component {
                     >
                       Join Video Burst
                     </button>
-
-                    <ul className=".list-unstyled" key={article.url}>
+                    <ul className=".list-unstyled">
                       <Article article={article} />
                     </ul>
                   </div>

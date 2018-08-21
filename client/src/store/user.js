@@ -25,7 +25,7 @@ const updateUser = user => ({ type: UPDATE_USER, user })
  */
 export const me = () => async dispatch => {
   try {
-    const { data } = await axios.get(`/auth/me`)
+    const { data } = await axios.get(`http://localhost:8080/auth/me`)
 
     dispatch(getUser(data || defaultUser))
   } catch (err) {
@@ -35,6 +35,8 @@ export const me = () => async dispatch => {
 
 export const auth = (email, password, method) => async dispatch => {
   let res
+  console.log('METHOD IN THUNK', method)
+
   try {
     res = await axios.post(`/auth/${method}`, { email, password })
   } catch (authError) {
@@ -51,7 +53,7 @@ export const auth = (email, password, method) => async dispatch => {
 
 export const logout = () => async dispatch => {
   try {
-    await axios.post(`/auth/logout`)
+    await axios.post(`http://localhost:8080/auth/logout`)
     dispatch(removeUser())
     history.push('/login')
   } catch (err) {
@@ -70,6 +72,7 @@ export const getUserThunk = userId => async dispatch => {
   }
 }
 
+//revise - dont need to send user id to backend
 export const updateUserThunk = userPrefObj => async dispatch => {
   try {
     const { data } = await axios.put(

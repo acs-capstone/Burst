@@ -45,16 +45,12 @@ class Routes extends Component {
               <Route path="/home" component={UserHome} />
               <Route path="/news" component={AllArticles} />
               <Route path="/topics" component={Topics} />
-              <Route path="/video/:id" component={VideoParent} />
+              <Route path="/videochat" component={VideoParent} />
               <Route path="/popular" component={PopularArticles} />
             </Switch>
           )}
           {/* Displays our Login component as a fallback */}
-
           <Route component={Login} />
-
-          {/* should we also have a fallback when you're logged in? */}
-          <Route component={Quiz} />
         </Switch>
       </div>
     )

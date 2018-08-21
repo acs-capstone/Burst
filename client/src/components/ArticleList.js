@@ -1,6 +1,5 @@
 import React from 'react'
 import Article from './Article'
-// import Grid from '@material-ui/core/Grid'
 
 const ArticleList = props => {
   const articles = props.articles

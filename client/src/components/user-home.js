@@ -54,7 +54,7 @@ export const UserHome = props => {
 
               <div className="chip-container">
                 {user.sources.map(source => {
-                  return <Chip color="primary" label={source.name} />
+                  return <Chip color="primary" label={source.name} key={source.id} />
                 })}
               </div>
               <Button>
