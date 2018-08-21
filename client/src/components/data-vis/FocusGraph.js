@@ -15,6 +15,8 @@ class FocusGraph extends Component {
   constructor() {
     super()
 
+    this.containerRef = React.createRef()
+
     this.state = {
       activeNode: {}
     }
@@ -36,6 +38,8 @@ class FocusGraph extends Component {
     }
   }
   _handleNodeClick = node => {
+    const MAP_TIME = 3000
+
     console.log('CLICKED!\n', 'state:', this.state, '\n', 'node:', node)
     if (node.nodeKey === this.state.activeNode.nodeKey) {
       this.setState({ activeNode: {} })
@@ -50,14 +54,17 @@ class FocusGraph extends Component {
         z: node.z * distRatio
       }, // new position
       node, // lookAt ({ x, y, z })
-      3000 // ms transition duration
+      MAP_TIME // ms transition duration
     )
-    this.setState({ activeNode: node })
+
+    setTimeout(() => {
+      this.setState({ activeNode: node })
+    }, (2 * MAP_TIME) / 3)
   }
 
   render() {
     return (
-      <div className="focusGraph">
+      <div className="focus-graph">
         <ForceGraph3D
           ref={el => {
             this.fg = el
@@ -65,6 +72,8 @@ class FocusGraph extends Component {
           graphData={data}
           nodeLabel="title"
           nodeAutoColorBy="group"
+          // width={800}
+          // height={600}
           onNodeClick={this._handleNodeClick}
           onNodeHover={this._handleNodeHover}
         />
