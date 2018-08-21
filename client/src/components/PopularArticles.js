@@ -20,7 +20,6 @@ class PopularArticles extends Component {
       isMounted: true
     })
     await this.props.fetchPopularArticles()
-<<<<<<< HEAD
     if (this.state.isMounted) {
       this.setState({
         articles: this.props.articles
@@ -31,10 +30,6 @@ class PopularArticles extends Component {
   componentWillUnmount() {
     this.setState({
       isMounted: false
-=======
-    await this.setState({
-      articles: this.props.articles
->>>>>>> master
     })
   }
 
