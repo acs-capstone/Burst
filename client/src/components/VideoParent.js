@@ -4,7 +4,7 @@ import '@opentok/client'
 import OpenTok from './OpenTok'
 import { getVideoSessionThunk } from '../store/videoSession'
 
-const API_KEY = process.env.Video_API_KEY
+const API_KEY = process.env.VIDEO_API_KEY
 
 class VideoParent extends Component {
   async componentDidMount(evt) {
