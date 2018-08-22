@@ -16,6 +16,7 @@ import {
   About
 } from './components'
 import { me } from './store'
+import { UserProfile } from './components/user-profile';
 
 /**
  * COMPONENT

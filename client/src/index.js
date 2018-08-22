@@ -7,11 +7,16 @@ import store from './store'
 import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+
+const theme = createMuiTheme()
 
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <App />
+      <MuiThemeProvider theme={theme}>
+        <App />
+      </MuiThemeProvider>
     </Router>
   </Provider>,
   document.getElementById('root')

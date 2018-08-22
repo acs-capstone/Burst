@@ -19,7 +19,7 @@ class PopularArticles extends Component {
     this.setState({
       isMounted: true
     })
-    await this.props.fetchPopularArticles()
+    // await this.props.fetchPopularArticles()
     if (this.state.isMounted) {
       this.setState({
         articles: this.props.articles
@@ -42,7 +42,7 @@ class PopularArticles extends Component {
     return (
       <div>
         <h4>Today's Most Popular Articles By Topic</h4>
-        <button
+        {/* <button
           type="button"
           className="badge badge-danger"
           name="start-chat"
@@ -59,7 +59,7 @@ class PopularArticles extends Component {
           onClick={this.handleClick}
         >
           Join Video Burst - Finance & Tax
-        </button>
+        </button> */}
 
         <Grid container direction="row" justify="center">
           {this.state.articles.map(article => {

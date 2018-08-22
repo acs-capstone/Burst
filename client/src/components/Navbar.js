@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 import { logout } from '../store'
 
 const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav className="navbar navbar-expand-lg fixed-top">
     <div className="container ">
       {isLoggedIn && sources && sources.length ? (
         <div>
           <ul className="navbar-nav ml-auto">
             <Link className="navbar-brand" to="/news">
-              Burst
+              BURST
             </Link>
             <li className="nav-item">
               <Link className="nav-link" to="/home">
@@ -43,7 +43,7 @@ const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
         <div>
           {/* The navbar will show these links before you log in */}
           <ul className="navbar-nav ml-auto">
-            <a className="navbar-brand">Burst</a>
+            <a className="navbar-brand">BURST</a>
             <li className="nav-item">
               <Link className="nav-link" to="/about">
                 About
@@ -62,17 +62,17 @@ const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
           </ul>
         </div>
       ) : (
-        <div>
-          <ul className="navbar-nav ml-auto">
-            <a className="navbar-brand">Burst</a>
-            <li className="nav-item">
-              <a className="nav-link" href="/" onClick={handleClick}>
-                Logout
+            <div>
+              <ul className="navbar-nav ml-auto">
+                <a className="navbar-brand">Burst</a>
+                <li className="nav-item">
+                  <a className="nav-link" href="/" onClick={handleClick}>
+                    Logout
               </a>
-            </li>
-          </ul>
-        </div>
-      )}
+                </li>
+              </ul>
+            </div>
+          )}
     </div>
   </nav>
 )
