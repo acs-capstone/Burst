@@ -29,16 +29,15 @@ class FocusGraph extends Component {
     let distance = DEFAULT_DISTANCE
     this.fg.d3Force('center', null)
     this.fg.d3Force('charge', null)
-    this.fg
-      .d3Force(
-        'strength',
-        d3
-          .forceManyBody()
-          .strength(-30)
-          .distanceMax(30)
-          .distanceMin(10)
-      )
-      .d3Force('links', this.fg.links)
+    this.fg.d3Force(
+      'strength',
+      d3
+        .forceManyBody()
+        .strength(-30)
+        .distanceMax(30)
+        .distanceMin(10)
+    )
+
     //this.fg.forceLinks('links', this.state.topicNodes)
 
     this.fg.cameraPosition({ z: distance })
@@ -118,8 +117,8 @@ class FocusGraph extends Component {
           graphData={data}
           nodeLabel="title"
           nodeAutoColorBy="group"
-          // width={800}
-          // height={600}
+          width={1000}
+          height={600}
           onNodeClick={this._handleNodeClick}
           onNodeHover={this._handleNodeHover}
         />
