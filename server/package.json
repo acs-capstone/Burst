@@ -2,7 +2,7 @@
   "name": "burst-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "../server/index.js",
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",

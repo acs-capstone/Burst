@@ -12,5 +12,5 @@ export { default as VideoParent } from './VideoParent'
 export { default as PopularArticles } from './PopularArticles'
 export { default as About } from './About'
 
-
 export { default as Sources } from './Sources'
+export { default as FocusGraph } from './data-vis/FocusGraph'

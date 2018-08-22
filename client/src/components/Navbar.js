@@ -28,6 +28,11 @@ const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/explore">
+                Exlpore
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/about">
                 About
               </Link>
@@ -62,17 +67,17 @@ const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
           </ul>
         </div>
       ) : (
-            <div>
-              <ul className="navbar-nav ml-auto">
-                <a className="navbar-brand">Burst</a>
-                <li className="nav-item">
-                  <a className="nav-link" href="/" onClick={handleClick}>
-                    Logout
+        <div>
+          <ul className="navbar-nav ml-auto">
+            <a className="navbar-brand">Burst</a>
+            <li className="nav-item">
+              <a className="nav-link" href="/" onClick={handleClick}>
+                Logout
               </a>
-                </li>
-              </ul>
-            </div>
-          )}
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   </nav>
 )

@@ -13,8 +13,10 @@ import {
   Quiz,
   PopularArticles,
   VideoParent,
-  About
+  About,
+  FocusGraph
 } from './components'
+
 import { me } from './store'
 import Feedback from './components/Feedback'
 import { UserProfile } from './components/user-profile'
@@ -37,6 +39,7 @@ class Routes extends Component {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/about" component={About} />
+          <Route path="/explore" component={FocusGraph} />
 
           {isLoggedIn && (
             <Switch>

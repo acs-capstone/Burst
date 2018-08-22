@@ -4,11 +4,15 @@ const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const Source = require('./Source')
 const Topic = require('./Topic')
+const fs = require('fs')
+const path = require('path')
 
-
+const PAGINATE_RESULTS = false
 const News = class {
   constructor(user) {
-    (this.topics = user.topics),
+    //Does this need Super() ?
+
+    ;(this.topics = user.topics),
       (this.sources = user.sources),
       (this.poliOriId = user.poliOriId)
   }
@@ -148,20 +152,44 @@ const News = class {
       const sources = await Source.findAll()
       const stringOfSources = sources.map(source => source.newsApiId).join(',')
 
-      const popularArticles = Promise.all(topics.map(async topic => {
-        const topicArticle = await newsapi.v2.everything({
-          q: topic.searchValue,
-          sources: stringOfSources,
-          sortBy: 'popularity',
-          language: 'en',
-          from: this.createDate(-1, 0, 0),
-          pageSize: 1
-        })
+      const popularArticles = Promise.all(
+        topics.map(async topic => {
+          //this is the same as before, just separated for easier viewing
+          const query = {
+            q: topic.searchValue,
+            sources: stringOfSources,
+            sortBy: 'popularity',
+            language: 'en',
+            from: this.createDate(-1, 0, 0)
+          }
 
-        const article = topicArticle.articles[0]
-        article.topic = topic.name
-        return article
-      })
+          const topicArticle = await newsapi.v2.everything(query)
+
+          console.log(
+            '\n\n\n QUERY RESULTS\n',
+            topicArticle.totalResults,
+            '\n\n\n'
+          )
+
+          if (PAGINATE_RESULTS && topicArticle.totalResults) {
+            fs.writeFileSync(
+              path.join(
+                __dirname,
+                '/scraper' + topic.name + ' query' + '.json'
+              ),
+              JSON.stringify(topicArticle)
+            )
+            paginateAndWriteResults(
+              topic.name,
+              query,
+              topicArticle.totalResults
+            )
+          }
+
+          const article = topicArticle.articles[0]
+          article.topic = topic.searchValue
+          return article
+        })
       )
       return popularArticles
     } catch (e) {
@@ -170,4 +198,40 @@ const News = class {
   }
 }
 
+//topicArticle is newsApi result
+//topicArticle.totalResults should be the number of results returned from the query
+const paginateAndWriteResults = async (topicName, query, totalResults) => {
+  const pages = Math.floor(totalResults / 20)
+
+  console.log('\npaginating results...\n')
+
+  for (let i = 2; i <= pages; i++) {
+    try {
+      query.page = i
+      console.log('\nsending query', query.q)
+      const queryResult = await newsapi.v2.everything(query)
+      console.log(
+        '\nquery results received for ',
+        query.q,
+        ', page: ',
+        query.page,
+        '\n'
+      )
+      console.log('writing query results...')
+
+      fs.writeFileSync(
+        path.join(__dirname, '/scraper' + topicName + ' query' + i + '.json'),
+        JSON.stringify(queryResult)
+      )
+      console.log(
+        'wrote ',
+
+        __dirname,
+        '/scraper' + topicName + ' query' + i + '.json'
+      )
+    } catch (e) {
+      console.log('error paginating results!', e.name)
+    }
+  }
+}
 module.exports = News
