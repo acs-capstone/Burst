@@ -7,16 +7,16 @@ body {
   position: relative;
 }
 
-.navbar{
+.navbar {
   background-color: #1f2833;
   font: bold;
   color: white;
 }
-.nav-link{
-  color:  white;
+.nav-link {
+  color: white;
 }
-.navbar-brand{
-  color:  white;
+.navbar-brand {
+  color: white;
 }
 
 .img-small {
@@ -42,7 +42,7 @@ body {
 
 footer {
   position: absolute;
-  background-color:  #c5c6c7;
+  background-color: #c5c6c7;
   bottom: 0px;
   width: 100%;
   height: 5px;
@@ -65,8 +65,8 @@ footer {
 }
 
 .MuiCardHeader-root-209 {
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 #quiz-button {
@@ -120,10 +120,10 @@ footer {
   color: white;
 }
 
-.badge-pill{
-  padding: .5em;
-  font-size: .9em;
-  margin: .2em;
+.badge-pill {
+  padding: 0.5em;
+  font-size: 0.9em;
+  margin: 0.2em;
   background-color: ;
 }
 
@@ -144,8 +144,8 @@ footer {
 }
 
 #burst-bubble {
-  margin-top: .9em;
-  margin-left: .9em;
+  margin-top: 0.9em;
+  margin-left: 0.9em;
 }
 
 #videoButton {

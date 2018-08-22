@@ -24,7 +24,7 @@ const deleteSession = session => ({ type: DELETE_SESSION })
 export const getVideoSessionThunk = id => async dispatch => {
   try {
     console.log('IN THUNK!')
-    const { data } = await axios.get(`/video/3`)
+    const { data } = await axios.get(`/video/${id}`)
     console.log('**DATA', data)
     dispatch(getSession(data))
   } catch (err) {

@@ -205,6 +205,7 @@ class OpenTok extends React.Component {
             eventHandlers={this.publisherEventHandlers}
             id="publisherWindow"
             onComplete={this.handleComplete}
+            apiKey={apiKey}
           />
 
           <OTStreams>
@@ -219,6 +220,7 @@ class OpenTok extends React.Component {
               id="subscriberWindow"
               onChange={this.handleChange}
               onSubscribe={this.handleSubscribe}
+              apiKey={apiKey}
             />
           </OTStreams>
         </OTSession>
