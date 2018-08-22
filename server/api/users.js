@@ -3,7 +3,7 @@ const { User, Source, Topic, PoliOri } = require('../db/models')
 module.exports = router
 
 //Do we need this? when would we get all users?
-router.get('/', async (req, res, next) => {
+router.get('', async (req, res, next) => {
   try {
     const users = await User.findAll()
     res.json(users)
