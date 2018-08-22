@@ -187,3 +187,12 @@ footer {
   top: 2px;
   left: 15vw;
 }
+
+.thumbs {
+  position: absolute;
+  left: 35vw;
+}
+
+.thumbs-btn {
+  margin: 5px;
+}
