@@ -25,14 +25,6 @@ const files = allFiles
 
 const sources = require('../../parser/newsApi/intersection')
 
-const readFiles = files => {
-  files.map(file => {
-    const txt = fs.readFileSync('./popular/' + file, 'utf-8')
-    const articles = JSON.parse(txt).articles
-    return articles
-  })
-}
-
 const electionFiles = files.filter(file => file.includes('Election'))
 const energyFiles = files.filter(file => file.includes('Energy'))
 const financeFiles = files.filter(file => file.includes('Finance'))
@@ -42,20 +34,38 @@ const immigrationFiles = files.filter(file => file.includes('Immigration'))
 const intFiles = files.filter(file => file.includes('International'))
 const tradeFiles = files.filter(file => file.includes('Trade'))
 
-const createNodes = files => {
-  const articles = readFiles(files)
-  articles.map(article => createNode(article))
+const readFiles = files => {
+  const chunk = []
+  files.map(file => {
+    const txt = fs.readFileSync('./popular/' + file, 'utf-8')
+    console.log('reading files\n')
+    const articles = JSON.parse(txt).articles
+    console.log('read ' + articles.length + ' articles')
+    chunk.push(...articles)
+  })
+  return chunk
 }
 
+const electionArticles = readFiles(electionFiles)
+const energyArticles = readFiles(energyFiles)
+const financeArticles = readFiles(financeFiles)
+const gunArticles = readFiles(gunFiles)
+const humanArticles = readFiles(humanFiles)
+const immigrationArticles = readFiles(immigrationFiles)
+const intArticles = readFiles(intFiles)
+const tradeArticles = readFiles(tradeFiles)
+
+console.log('**** ELECTION ARTICLES***', electionArticles.length)
+
 const createNode = article => {
-  console.log(article)
+  console.log(article.topic)
   const poliOriId = sources.find(
     source => source.newsApiId === article.source.id
   ).poliOriId
   const node = {
     id: nodeKey, // might need to be string
     source: article.source.id,
-    topic: 'topic',
+    topic: article.topic,
     title: article.title,
     desc: article.description,
     color: colors[poliOriId],
@@ -65,25 +75,37 @@ const createNode = article => {
   }
   nodeKey++
   nodes.push(node)
-  console.log(node)
+  links.push({ source: node.topic, target: node.id })
+  //console.log(node)
 }
-createNodes(electionFiles)
+const createNodes = (chunk, topic) => {
+  console.log('creating nodes...\n')
+  chunk.map(article => {
+    article.topic = topic
+    createNode(article)
+  })
+  nodes.push({ id: topic })
+}
+createNodes(electionArticles, 'election')
+createNodes(energyArticles, 'energy')
+createNodes(financeArticles, 'finance')
+createNodes(gunArticles, 'gun')
+createNodes(humanArticles, 'human')
+createNodes(immigrationArticles, 'immgration')
+createNodes(intArticles, 'internatoinal')
+createNodes(tradeArticles, 'trade')
+
 console.log(nodes)
-//
-// const randInt = () => {
-//   return Math.floor(Math.random() * colors.length)
-// }
-//
+console.log(links)
 
-// allArticles is an array w/ each article, with article.source.id = newsApiId
-// so we can loop through sources to find the poliori
+const linkTrack = {}
 
-// const findPoliOri = sources => {
-//   sources.find(id => {
-//     return source.newsApiId === id
-//   })
-// }
-
-// const sources = Source.find({ include: PoliOri })
-
-//goal: make sure all of the results in the scrape are in our sources
+console.log(links)
+fs.writeFileSync(
+  '../../../client/src/components/data-vis/nodes.json',
+  JSON.stringify(nodes)
+)
+fs.writeFileSync(
+  '../../../client/src/components/data-vis/links.json',
+  JSON.stringify(links)
+)

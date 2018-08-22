@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ForceGraph3D } from 'react-force-graph'
-import links from './links0.json'
-import nodes from './nodes0.json'
+import links from './links.json'
+import nodes from './nodes.json'
 import ReactTooltip from 'react-tooltip'
 import FocusGraphPreview from './FocusGraphPreview.js'
 
