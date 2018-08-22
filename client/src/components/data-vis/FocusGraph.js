@@ -18,24 +18,22 @@ class FocusGraph extends Component {
     this.containerRef = React.createRef()
 
     this.state = {
-      activeNode: {}
+      activeNode: {},
+      topicNodes: []
     }
   }
 
   first = 0
   _handleNodeHover = (node, prevNode) => {
-    if (this.first < 4) {
-      console.log(
-        'HOVER: ',
-        'state:',
-        this.state,
-        'node:',
-        node,
-        'prevNode: ',
-        prevNode
-      )
-      this.first++
-    }
+    console.log(
+      'HOVER: ',
+      'state:',
+      this.state,
+      'node:',
+      node,
+      'prevNode: ',
+      prevNode
+    )
   }
   _handleNodeClick = node => {
     const MAP_TIME = 3000
@@ -62,7 +60,12 @@ class FocusGraph extends Component {
     }, (2 * MAP_TIME) / 3)
   }
 
+  handleClose = () => {
+    console.log('close this window!')
+  }
+
   render() {
+    console.log('this.state: ', this.state)
     return (
       <div className="focus-graph">
         <ForceGraph3D
@@ -76,14 +79,10 @@ class FocusGraph extends Component {
           // height={600}
           onNodeClick={this._handleNodeClick}
           onNodeHover={this._handleNodeHover}
+          onClose={this.handleClose}
         />
-
-        {this.state.activeNode.id ? (
-          <FocusGraphPreview node={this.state.activeNode} />
-        ) : (
-          <div />
+        <FocusGraphPreview node={this.state.activeNode} />
         )}
-        <ReactTooltip />
       </div>
     )
   }

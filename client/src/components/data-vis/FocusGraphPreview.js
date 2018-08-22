@@ -6,7 +6,9 @@ class FocusGraphPreview extends Component {
   }
   render() {
     const { node } = this.props
-    return (
+    return !node.id ? (
+      <div />
+    ) : (
       <div
         ref={el => {
           this.el = el
