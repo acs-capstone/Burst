@@ -2,7 +2,6 @@
   "name": "burst-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "process.env",
   "dependencies": {
     "@material-ui/core": "^1.5.0",
     "@opentok/client": "^2.14.8",
