@@ -7,8 +7,17 @@
     "@githubprimer/octicons-react": "^8.0.0",
     "@material-ui/core": "^1.5.0",
     "@opentok/client": "^2.14.8",
+    "aframe": "^0.8.2",
+    "ajv": "^6.5.3",
     "axios": "^0.18.0",
+    "babel-eslint": "^8.2.6",
     "cors": "^2.8.4",
+    "d3": "^5.5.0",
+    "d3-force": "^1.1.0",
+    "eslint-config-fullstack": "^6.0.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-react": "^7.11.1",
     "history": "^4.7.2",
     "newsapi": "^2.3.0",
     "opentok-react": "^0.7.0",
@@ -17,19 +26,27 @@
     "react": "^16.4.2",
     "react-countdown-clock": "^2.4.0",
     "react-dom": "^16.4.2",
+    "react-force-graph": "^1.11.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
+    "react-tooltip": "^3.6.1",
+    "react-vis-force": "^0.3.1",
     "reactstrap": "^6.4.0",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "three": "^0.95.0",
+    "three-trackballcontrols": "0.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0"
   }
 }
