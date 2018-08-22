@@ -32,9 +32,11 @@ export const getVideoSessionThunk = id => async dispatch => {
   }
 }
 
-export const deleteVideoSessionThunk = sessionId => async dispatch => {
+export const deleteVideoSessionThunk = session => async dispatch => {
   try {
-    const { data } = await axios.delete(`/video/disconnect/${sessionId}`)
+    const { data } = await axios.delete(
+      `/video/disconnect/${session.sessionId}`
+    )
     dispatch(deleteSession(data))
   } catch (err) {
     console.error(err)

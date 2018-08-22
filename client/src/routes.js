@@ -16,6 +16,7 @@ import {
   About
 } from './components'
 import { me } from './store'
+import Feedback from './components/Feedback'
 
 /**
  * COMPONENT
@@ -47,6 +48,7 @@ class Routes extends Component {
               <Route path="/topics" component={Topics} />
               <Route path="/video/:id" component={VideoParent} />
               <Route path="/popular" component={PopularArticles} />
+              <Route path="/feedback" component={Feedback} />
             </Switch>
           )}
           {/* Displays our Login component as a fallback */}
