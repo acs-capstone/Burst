@@ -21,24 +21,24 @@ const AuthForm = props => {
           <input className="form-control" name="password" type="text" />
         </div>
         <div>
-          <button type="submit" className="btn btn-primary" id="login-btn">
+          <button type="submit" id="login-button">
             {displayName}
           </button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
-      <a href="/auth/google">{displayName} with Google</a>
+      {/* <a href="/auth/google">{displayName} with Google</a> */}
       {displayName === 'Login' ? (
         <div>
           New to Burst?
           <Link to="/signup"> Sign Up</Link>
         </div>
       ) : (
-        <div>
-          Already have an account?
+          <div>
+            Already have an account?
           <Link to="/login"> Login</Link>
-        </div>
-      )}
+          </div>
+        )}
     </div>
   )
 }

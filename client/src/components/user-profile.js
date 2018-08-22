@@ -18,10 +18,7 @@ export const UserProfile = props => {
         <CardContent>
           <div className="top-card-container">
             <Typography gutterBottom variant="headline" component="h2">
-              Your Political Orientation is:
-              <div>
-                {user.poliOri.poliOri}
-              </div>
+              Your Political Orientation is: {user.poliOri.poliOri}
             </Typography>{' '}
             <Button>
               <Link to="/questions">Retake Quiz</Link>
@@ -36,7 +33,7 @@ export const UserProfile = props => {
 
           <div className="chip-container">
             {user.topics.map(topic => {
-              return <span className="badge badge-pill badge-primary" key={topic.id}>{topic.name}</span>
+              return <button className="profile-selections" key={topic.id}>{topic.name}</button>
             })}
           </div>
           <Button>
@@ -51,7 +48,7 @@ export const UserProfile = props => {
 
           <div className="chip-container">
             {user.sources.map(source => {
-              return <span className="badge badge-pill badge-primary" key={source.id}>{source.name}</span>
+              return <button className="profile-selections" key={source.id}>{source.name}</button>
             })}
           </div>
           <Button>

@@ -136,8 +136,8 @@ export default class OpenTok extends React.Component {
             onComplete={this.handleComplete}
           />
         ) : (
-          <h4>Waiting for your fellow Burster!</h4>
-        )}
+            <h4>Waiting for your fellow Burster!</h4>
+          )}
 
         {error ? (
           <div className="error">

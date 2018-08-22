@@ -70,7 +70,7 @@ class PopularArticles extends Component {
                   <div>
                     <button
                       type="button"
-                      className="badge badge-danger"
+                      className="video-burst"
                       name="start-chat"
                       onClick={this.handleClick}
                     >
