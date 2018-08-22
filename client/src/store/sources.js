@@ -25,7 +25,7 @@ export const toggleSource = id => ({
 //gets all sources from db
 export const getAllSources = () => async dispatch => {
   try {
-    const { data } = await axios.get('api/sources')
+    const { data } = await axios.get('/api/sources')
     dispatch(gotAllSources(data))
   } catch (err) {
     console.error(err)
