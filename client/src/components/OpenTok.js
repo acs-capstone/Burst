@@ -145,14 +145,18 @@ class OpenTok extends React.Component {
             ) : (
               <div>
                 {publishAudio ? (
-                  <div>
-                    <h2 className="bold">Your Turn</h2>
-                    <h2>Their Turn</h2>
+                  <div className="flex">
+                    <span className="padding">
+                      <h2 className="bold">Your Turn</h2>
+                    </span>
+                    <h2 className="ml-3"> Their Turn</h2>
                   </div>
                 ) : (
-                  <div>
+                  <div className="flex">
                     <h2>Your Turn</h2>
-                    <h2 className="bold">Their Turn</h2>
+                    <span className="padding">
+                      <h2 className="ml-3 bold"> Their Turn</h2>
+                    </span>
                   </div>
                 )}
               </div>
@@ -167,7 +171,7 @@ class OpenTok extends React.Component {
             />
           </div>
         ) : (
-          <div>
+          <div id="waiting-for-burster">
             <h4>Waiting for your fellow Burster!</h4>
           </div>
         )}
@@ -187,11 +191,11 @@ class OpenTok extends React.Component {
           publishAudio={this.state.publishAudio}
           onSubscribe={this.handleSubscribe}
         >
-          <button id="videoButton" onClick={this.toggleVideo}>
+          {/* <button id="videoButton" onClick={this.toggleVideo}>
             {publishVideo ? 'Disable' : 'Enable'} Video
-          </button>
+          </button> */}
 
-          {this.state.publishAudio ? <h2> Audio On!</h2> : <h5>Audio Off!</h5>}
+          {/* {this.state.publishAudio ? <h2> Audio On!</h2> : <h5>Audio Off!</h5>} */}
           <OTPublisher //shows your video
             properties={{
               publishVideo,
@@ -224,9 +228,11 @@ class OpenTok extends React.Component {
             />
           </OTStreams>
         </OTSession>
-        <Link to="/feedback" onClick={this.handleClick}>
-          Leave Session
-        </Link>
+        <button id="leave-session-btn">
+          <Link to="/feedback" onClick={this.handleClick}>
+            Leave Session
+          </Link>
+        </button>
       </div>
     )
   }

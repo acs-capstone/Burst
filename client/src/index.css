@@ -154,3 +154,36 @@ footer {
   right: 20vw;
   top: 175px;
 }
+
+.form-group {
+  background-color: white;
+  padding: 10px;
+  /* position: absolute;
+  left: 25px; */
+}
+
+#login-form {
+  width: 40vw;
+  margin-left: 25vw;
+}
+
+#login-input {
+  width: 95%;
+}
+
+#leave-session-btn {
+  position: absolute;
+  top: 5vh;
+  right: 15vw;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+#video-bar {
+  position: absolute;
+  top: 2px;
+  left: 15vw;
+}
