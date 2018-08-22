@@ -9,7 +9,9 @@ class FocusGraphPreview extends Component {
     console.log('PREVIEW NODE: ', node)
     console.log('HANDLE CLOSE:', handleClose)
     return !node.id ? (
-      <div />
+      <div className="preview-intro">
+        <h3> Choose a topic to explore</h3>
+      </div>
     ) : (
       <div
         ref={el => {

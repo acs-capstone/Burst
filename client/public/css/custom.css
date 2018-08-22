@@ -62,3 +62,9 @@ card.selected {
   padding: 5px 0;
   /* styles for the node hover */
 }
+
+.preview-intro {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
