@@ -37,7 +37,7 @@ export const UserHome = props => {
               <div className="chip-container">
                 {user.topics.map(topic => {
                   return (
-                    <Chip color="primary" label={topic.name} key={topic.id} />
+                    <span className="badge badge-pill badge-primary" key={topic.id}>{topic.name}</span>
                   )
                 })}
               </div>
@@ -54,7 +54,7 @@ export const UserHome = props => {
               <div className="chip-container">
                 {user.sources.map(source => {
                   return (
-                    <Chip color="primary" label={source.name} key={source.id} />
+                    <span className="badge badge-pill badge-primary" key={source.id}>{source.name}</span>
                   )
                 })}
               </div>

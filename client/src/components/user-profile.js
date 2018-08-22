@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Chip from '@material-ui/core/Chip'
 import Card from '@material-ui/core/Card'
-// import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
-// import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
@@ -14,11 +12,22 @@ import Divider from '@material-ui/core/Divider'
 
 export const UserProfile = props => {
   const { user } = props
-  console.log('user.topcs', user.topics)
   return (
     <div>
       <Card>
         <CardContent>
+          <div className="top-card-container">
+            <Typography gutterBottom variant="headline" component="h2">
+              Your Political Orientation is:
+              <div>
+                {user.poliOri.poliOri}
+              </div>
+            </Typography>{' '}
+            <Button>
+              <Link to="/questions">Retake Quiz</Link>
+            </Button>
+          </div>
+          <Divider />
           <div className="top-card-container">
             <Typography gutterBottom variant="headline" component="h2">
               Your Topics
@@ -27,7 +36,7 @@ export const UserProfile = props => {
 
           <div className="chip-container">
             {user.topics.map(topic => {
-              return <Chip color="primary" label={topic.name} key={topic.id} />
+              return <span className="badge badge-pill badge-primary" key={topic.id}>{topic.name}</span>
             })}
           </div>
           <Button>
@@ -42,7 +51,7 @@ export const UserProfile = props => {
 
           <div className="chip-container">
             {user.sources.map(source => {
-              return <Chip color="primary" label={source.name} key={source.id} />
+              return <span className="badge badge-pill badge-primary" key={source.id}>{source.name}</span>
             })}
           </div>
           <Button>

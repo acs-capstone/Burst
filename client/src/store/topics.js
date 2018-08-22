@@ -22,7 +22,7 @@ const getTopics = topics => ({ type: GET_TOPICS, topics })
 
 export const fetchTopics = () => async dispatch => {
   try {
-    const { data } = await axios.get(`http://localhost:8080/api/topics`)
+    const { data } = await axios.get(`/api/topics`)
     dispatch(getTopics(data))
   } catch (err) {
     console.error(err)
@@ -32,7 +32,7 @@ export const fetchTopics = () => async dispatch => {
 /**
  * REDUCER
  */
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case GET_TOPICS:
       return action.topics

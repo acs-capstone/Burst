@@ -16,7 +16,11 @@ import {
   About
 } from './components'
 import { me } from './store'
+<<<<<<< HEAD
 import Feedback from './components/Feedback'
+=======
+import { UserProfile } from './components/user-profile';
+>>>>>>> master
 
 /**
  * COMPONENT

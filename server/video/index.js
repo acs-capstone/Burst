@@ -1,8 +1,8 @@
 const OpenTok = require('opentok')
 
 const router = require('express').Router()
-const apiKey = process.env.API_KEY
-const apiSecret = process.env.API_SECRET
+const apiKey = process.env.VIDEO_API_KEY
+const apiSecret = process.env.VIDEO_API_SECRET
 const opentok = new OpenTok(apiKey, apiSecret)
 const { VideoSession } = require('../db/models')
 
@@ -20,7 +20,7 @@ router.get('/:id', async (req, res, next) => {
 
   //if there is no open session, create a new session and a token for first participant
   if (openSession === null) {
-    await opentok.createSession(async function(err, session) {
+    await opentok.createSession(async function (err, session) {
       if (err) return console.log(err)
 
       const token1 = await opentok.generateToken(session.sessionId)
