@@ -1,8 +1,12 @@
 import React from 'react'
 import { OTSession, OTPublisher, OTStreams, OTSubscriber } from 'opentok-react'
 import ReactCountdownClock from 'react-countdown-clock'
+import { deleteVideoSessionThunk } from '../store/videoSession'
+import { connect } from 'react-redux'
+import history from '../history'
+import { Link } from 'react-router-dom'
 
-export default class OpenTok extends React.Component {
+class OpenTok extends React.Component {
   constructor(props) {
     super(props)
 
@@ -19,6 +23,7 @@ export default class OpenTok extends React.Component {
     this.handleComplete = this.handleComplete.bind(this)
     this.handleSubscribe = this.handleSubscribe.bind(this)
     this.getNewSeconds = this.getNewSeconds.bind(this)
+    this.handleClick = this.handleClick.bind(this)
 
     this.sessionEventHandlers = {
       sessionConnected: async () => {
@@ -116,27 +121,59 @@ export default class OpenTok extends React.Component {
     }
   }
 
+  async handleClick(evt) {
+    await this.props.deleteVideoSessionThunk({
+      sessionId: this.props.sessionId,
+      token: this.props.token
+    })
+
+    history.push('/feedback')
+  }
+
   render() {
     const apiKey = this.props.apiKey
     const sessionId = this.props.sessionId
     const token = this.props.token
-    const { error, connection, publishVideo } = this.state
+    const { error, connection, publishVideo, count, publishAudio } = this.state
 
     return (
       <div>
-        <div id="sessionStatus">Session Status: {connection}</div>
-        <div id="sessionStatus">Audio On: {this.state.publishAudio}</div>
         {this.state.subscriber ? (
-          <ReactCountdownClock
-            seconds={this.state.seconds}
-            color="#000"
-            alpha={0.9}
-            size={100}
-            pause={true}
-            onComplete={this.handleComplete}
-          />
+          <div>
+            {count < 1 ? (
+              <h2>Starting in:</h2>
+            ) : (
+                <div>
+                  {publishAudio ? (
+                    <div className="flex">
+                      <span className="padding">
+                        <h2 className="bold">Your Turn</h2>
+                      </span>
+                      <h2 className="ml-3"> Their Turn</h2>
+                    </div>
+                  ) : (
+                      <div className="flex">
+                        <h2>Your Turn</h2>
+                        <span className="padding">
+                          <h2 className="ml-3 bold"> Their Turn</h2>
+                        </span>
+                      </div>
+                    )}
+                </div>
+              )}
+            <ReactCountdownClock
+              seconds={this.state.seconds}
+              color="#000"
+              alpha={0.9}
+              size={100}
+              pause={true}
+              onComplete={this.handleComplete}
+            />
+          </div>
         ) : (
-            <h4>Waiting for your fellow Burster!</h4>
+            <div id="waiting-for-burster">
+              <h4>Waiting for your fellow Burster!</h4>
+            </div>
           )}
 
         {error ? (
@@ -152,13 +189,13 @@ export default class OpenTok extends React.Component {
           eventHandlers={this.sessionEventHandlers}
           onComplete={this.handleComplete}
           publishAudio={this.state.publishAudio}
-          onSubscribe={this.state.subscriber}
+          onSubscribe={this.handleSubscribe}
         >
-          <button id="videoButton" onClick={this.toggleVideo}>
+          {/* <button id="videoButton" onClick={this.toggleVideo}>
             {publishVideo ? 'Disable' : 'Enable'} Video
-          </button>
+          </button> */}
 
-          {this.state.publishAudio ? <h2> Audio On!</h2> : <h5>Audio Off!</h5>}
+          {/* {this.state.publishAudio ? <h2> Audio On!</h2> : <h5>Audio Off!</h5>} */}
           <OTPublisher //shows your video
             properties={{
               publishVideo,
@@ -172,6 +209,7 @@ export default class OpenTok extends React.Component {
             eventHandlers={this.publisherEventHandlers}
             id="publisherWindow"
             onComplete={this.handleComplete}
+            apiKey={apiKey}
           />
 
           <OTStreams>
@@ -185,10 +223,29 @@ export default class OpenTok extends React.Component {
               eventHandlers={this.subscriberEventHandlers}
               id="subscriberWindow"
               onChange={this.handleChange}
+              onSubscribe={this.handleSubscribe}
+              apiKey={apiKey}
             />
           </OTStreams>
         </OTSession>
+        <button id="leave-session-btn">
+          <Link to="/feedback" onClick={this.handleClick}>
+            Leave Session
+          </Link>
+        </button>
       </div>
     )
   }
 }
+
+const mapDispatch = dispatch => {
+  return {
+    deleteVideoSessionThunk: session =>
+      dispatch(deleteVideoSessionThunk(session))
+  }
+}
+
+export default connect(
+  null,
+  mapDispatch
+)(OpenTok)

@@ -48,6 +48,12 @@ router.get('/:id', async (req, res, next) => {
   }
 })
 
-router.get('/disconnect', async (req, res, next) => {
-  opentok.forceDisconnect(sessionId, connectionId)
+router.delete('/disconnect/:sessionId', async (req, res, next) => {
+  const session = await VideoSession.findOne({
+    where: {
+      sessionId: req.params.sessionId
+    }
+  })
+  await session.destroy()
+  res.send('session destroyed')
 })

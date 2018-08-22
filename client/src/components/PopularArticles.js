@@ -46,13 +46,14 @@ class PopularArticles extends Component {
           {this.state.articles.map(article => {
             return (
               <Grid item xs={4} key={article.url}>
-                <div class="container">
+                <div className="container">
                   <h5>{article.topic}</h5>
                   <div>
                     <button
                       type="button"
                       id="video-burst"
                       name="start-chat"
+                      value={article.topicId}
                       onClick={this.handleClick}
                     >
                       Join Video Burst

@@ -10,7 +10,7 @@ module.exports = router
 router.get('/popular', async (req, res, next) => {
   try {
     const popularTopics = await News.mostPopularByTopic()
-    console.log('***api/article:', popularTopics)
+    //console.log('***api/article:', popularTopics)
     res.json(popularTopics)
   } catch (e) {
     console.log(e)
@@ -27,7 +27,6 @@ router.get('/:id', async (req, res, next) => {
     const articles = await news.getCombinedArticleList()
 
     res.json(articles)
-
   } catch (error) {
     console.error(error)
   }

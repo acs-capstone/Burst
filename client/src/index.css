@@ -8,17 +8,17 @@ body {
   position: relative;
 }
 
-.navbar{
+.navbar {
   background-color: #1f2833;
   font: bold;
   color: white;
   padding: 1em;
 }
-.nav-link{
-  color:  white;
+.nav-link {
+  color: white;
 }
-.navbar-brand{
-  color:  white;
+.navbar-brand {
+  color: white;
 }
 
 .img-small {
@@ -28,6 +28,10 @@ body {
 .content-div {
   padding: 50px;
   justify-content: space-between;
+}
+
+.bold {
+  color: fuchsia;
 }
 
 .main-container {
@@ -40,7 +44,7 @@ body {
 
 footer {
   position: absolute;
-  background-color:  #c5c6c7;
+  background-color: #c5c6c7;
   bottom: 0px;
   width: 100%;
   height: 5px;
@@ -63,8 +67,8 @@ footer {
 }
 
 .MuiCardHeader-root-209 {
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 #quiz-button {
@@ -265,4 +269,46 @@ position: sticky;
 
 #popular-articles{
 
+}
+
+.form-group {
+  background-color: white;
+  padding: 10px;
+  /* position: absolute;
+  left: 25px; */
+}
+
+#login-form {
+  width: 40vw;
+  margin-left: 25vw;
+}
+
+#login-input {
+  width: 95%;
+}
+
+#leave-session-btn {
+  position: absolute;
+  top: 5vh;
+  right: 15vw;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+#video-bar {
+  position: absolute;
+  top: 2px;
+  left: 15vw;
+}
+
+.thumbs {
+  position: absolute;
+  left: 35vw;
+}
+
+.thumbs-btn {
+  margin: 5px;
 }
