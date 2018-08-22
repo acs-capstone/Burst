@@ -13,28 +13,32 @@ const AuthForm = props => {
     <div className="container form-group">
       <form onSubmit={handleSubmit} name={name}>
         <div>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email"> Email</label>
           <input className="form-control" name="email" type="text" />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
-          <input className="form-control" name="password" type="password" />
+          <label htmlFor="password"> Password </label>
+          <input className="form-control" name="password" type="text" />
         </div>
         <div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" id="login-btn">
             {displayName}
           </button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
       <a href="/auth/google">{displayName} with Google</a>
-      {displayName === "Login" ?
-        <div>New to Burst?
-        <Link to="/signup"> Sign Up</Link>
+      {displayName === 'Login' ? (
+        <div>
+          New to Burst?
+          <Link to="/signup"> Sign Up</Link>
         </div>
-        : <div>Already have an account?
-      <Link to="/login"> Login</Link>
-        </div>}
+      ) : (
+        <div>
+          Already have an account?
+          <Link to="/login"> Login</Link>
+        </div>
+      )}
     </div>
   )
 }

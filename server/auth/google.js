@@ -4,7 +4,6 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
 const { User } = require('../db/models')
 module.exports = router
 
-
 if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
   console.log('Google client ID / secret not found. Skipping Google OAuth.')
 } else {
@@ -34,7 +33,7 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
   passport.use(strategy)
 
   router.get((req, res, next) => {
-    console.log("HIT MEEEEE")
+    console.log('HIT MEEEEE')
     passport.authenticate('google', { scope: 'email' })
   })
 

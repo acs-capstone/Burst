@@ -64,9 +64,21 @@ class Sources extends Component {
             </div>
           )
         })}
-        <button type="submit" name="submit" onClick={this.handleSubmit}>
-          Submit
-        </button>
+        {this.state.sources.length ? (
+          <div>
+            <button type="submit" name="submit" onClick={this.handleSubmit}>
+              Submit
+            </button>
+          </div>
+        ) : (
+            <div>
+              <button type="submit" name="submit" onClick={this.handleSubmit} disabled>
+                Submit
+              </button>
+              <p>Please select at least one source.</p>
+            </div>
+          )
+        }
       </div>
     )
   }
