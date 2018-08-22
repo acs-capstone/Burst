@@ -1,7 +1,8 @@
+
 body {
   margin: 0;
   padding: 150px 0 0 0;
-  font-family: 'StandardCT-Regular', Helvetica, Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #dfdce3;
   height: 100%;
   position: relative;
@@ -11,6 +12,7 @@ body {
   background-color: #1f2833;
   font: bold;
   color: white;
+  padding: 1em;
 }
 .nav-link {
   color: white;
@@ -74,58 +76,146 @@ footer {
   width: 75vw;
   /* margin: 10px; */
   font-size: 1.1em;
-  border-radius: 5px;
+  border-radius: 10px;
   color: black;
   background-color: white;
   text-decoration: none;
   text-align: center;
   padding: 5px;
   margin-top: 10px;
+  overflow-wrap: normal;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap;
+  overflow: hidden; */
+}
+
+#quiz-button:focus {
+  outline: none;
 }
 
 #quiz-button:hover {
-  background-color: turquoise;
+  background-color: #ADD8E6;
   text-decoration: none;
+}
+
+/* sources or topics selected in quiz */
+.choice-selected{
+  height: 5vh;
+  width: 20vw;
+  font-size: 1.1em;
+  border-radius: 10px;
+  color: black;
+  background-color:  #ADD8E6;;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin: 5px 5px 5px 5px;
+  text-overflow: ellipsis;
+  /* Need the below for text-overflow to work*/
+  white-space: nowrap;
+  overflow: hidden;
+}
+.choice-selected:focus{
+  outline:none;
+}
+
+/* sources or topics unselected in quiz */
+.choice-unselected{
+  height: 5vh;
+  width: 20vw;
+  font-size: 1.1em;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+ margin: 5px 5px 5px 5px;
+ text-overflow: ellipsis;
+  /* Need the below for text-overflow to work*/
+ white-space: nowrap;
+overflow: hidden;
+}
+.choice-unselected:focus{
+  outline:none;
+}
+
+/* selected sources or topics in your profile */
+.profile-selections{
+  font-size: .9;
+  margin-top: .2em;
+  margin-bottom: .2em;
+  margin-left: .2em;
+  margin-right: .2em;
+  padding-top: .2em;
+  padding-bottom: .2em;
+  padding-right: .5em;
+  padding-left: .5em;
+  border-radius: 9px;
+  color: black;
+  background-color:  #ADD8E6;;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  text-overflow: ellipsis;
+  /* Need the below for text-overflow to work*/
+  white-space: nowrap;
+  overflow: hidden;
+}
+.profile-selections:focus{
+  outline:none;
+}
+
+#login-button{
+  height: 5vh;
+  width: 20vw;
+  font-size: 1.1em;
+  border-radius: 10px;
+  color: black;
+  background-color:  #ADD8E6;;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin: 5px 5px 5px 5px;
+  text-overflow: ellipsis;
+  /* Need the below for text-overflow to work*/
+  white-space: nowrap;
+  overflow: hidden;
+}
+#login-button:focus{
+  outline:none;
 }
 
 #question-count {
   justify-self: center;
   margin: 10px;
 }
-#quiz-button:focus {
-  outline: none;
-}
+
 .MuiCardContent-root-138 {
   border: 5px;
   margin: 10px;
 }
 
+.MuiCardContent-root-126 {
+position: sticky;
+}
+
 .MuiChip-root-188 {
   background-color: #f9cf00;
-
   margin: 5px;
 }
 
-/* .MuiChip-label-201 {
-  color: white;
-} */
-
 .MuiButton-label-30 {
-  background-color: red;
+  background-color: #CD5C5C;
   color: white;
   padding: 2px;
 }
+
 .burst-button {
-  background-color: red;
+  background-color:	#CD5C5C;
   color: white;
 }
 
-.badge-pill {
-  padding: 0.5em;
-  font-size: 0.9em;
-  margin: 0.2em;
-  background-color: ;
-}
 
 .OTSubscriberContainer {
   float: right;
@@ -143,9 +233,30 @@ footer {
   z-index: 1;
 }
 
+/* burst your bubble flags in newsfeed */
 #burst-bubble {
-  margin-top: 0.9em;
-  margin-left: 0.9em;
+  margin-top: .9em;
+  margin-left: .9em;
+  background-color:	#CD5C5C;
+  color: white;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-right: .8em;
+  padding-left: .8em;
+  border-radius: 8px;
+}
+
+/* video burst flags in popular*/
+#video-burst {
+  margin-top: .9em;
+  margin-left: .9em;
+  background-color:	#CD5C5C;;
+  color: white;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-right: .5em;
+  padding-left: .5em;
+  border-radius: 8px;
 }
 
 #videoButton {
@@ -153,6 +264,11 @@ footer {
   position: absolute;
   right: 20vw;
   top: 175px;
+
+}
+
+#popular-articles{
+
 }
 
 .form-group {

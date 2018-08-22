@@ -7,27 +7,27 @@ const ChoiceButton = props => {
   //if array of sources on state contains specific source, highlight it, otherwise don't
   if (selected) {
     return (
-      <div className="card">
-        <button
-          className="btn btn-primary"
-          value={props.source.id}
-          onClick={props.handleClick}
-        >
-          {props.source.name}
-        </button>
-      </div>
+      // <div className="container row">
+      <button
+        className="choice-selected"
+        value={props.source.id}
+        onClick={props.handleClick}
+      >
+        {props.source.name}
+      </button>
+      // </div>
     )
   } else {
     return (
-      <div className="card">
-        <button
-          className="btn btn-secondary"
-          value={props.source.id}
-          onClick={props.handleClick}
-        >
-          {props.source.name}
-        </button>
-      </div>
+      // <div className="container row">
+      <button
+        className="choice-unselected"
+        value={props.source.id}
+        onClick={props.handleClick}
+      >
+        {props.source.name}
+      </button>
+      // </div>
     )
   }
 }

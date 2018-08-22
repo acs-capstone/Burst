@@ -8,7 +8,7 @@ const ChoiceButton = props => {
   if (selected) {
     return (
       <button
-        className="btn btn-primary"
+        className="choice-selected"
         value={props.topic.id}
         onClick={props.handleClick}
       >
@@ -18,7 +18,7 @@ const ChoiceButton = props => {
   } else {
     return (
       <button
-        className="btn btn-secondary"
+        className="choice-unselected"
         value={props.topic.id}
         onClick={props.handleClick}
       >

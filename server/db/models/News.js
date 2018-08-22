@@ -1,5 +1,5 @@
 const NewsAPI = require('newsapi')
-const newsapi = new NewsAPI('cb968b25a11945c6a4056027b3a69002') //TODO: do we need to hide this?
+const newsapi = new NewsAPI('f3c85f33665a41dbbad0823e3ae48c29')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const Source = require('./Source')
@@ -12,7 +12,7 @@ const News = class {
   constructor(user) {
     //Does this need Super() ?
 
-    ;(this.topics = user.topics),
+    ; (this.topics = user.topics),
       (this.sources = user.sources),
       (this.poliOriId = user.poliOriId)
   }
@@ -187,7 +187,8 @@ const News = class {
           }
 
           const article = topicArticle.articles[0]
-          article.topic = topic.searchValue
+          article.topic = topic.name
+          article.topicId = topic.id
           return article
         })
       )

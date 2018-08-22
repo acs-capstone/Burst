@@ -143,24 +143,24 @@ class OpenTok extends React.Component {
             {count < 1 ? (
               <h2>Starting in:</h2>
             ) : (
-              <div>
-                {publishAudio ? (
-                  <div className="flex">
-                    <span className="padding">
-                      <h2 className="bold">Your Turn</h2>
-                    </span>
-                    <h2 className="ml-3"> Their Turn</h2>
-                  </div>
-                ) : (
-                  <div className="flex">
-                    <h2>Your Turn</h2>
-                    <span className="padding">
-                      <h2 className="ml-3 bold"> Their Turn</h2>
-                    </span>
-                  </div>
-                )}
-              </div>
-            )}
+                <div>
+                  {publishAudio ? (
+                    <div className="flex">
+                      <span className="padding">
+                        <h2 className="bold">Your Turn</h2>
+                      </span>
+                      <h2 className="ml-3"> Their Turn</h2>
+                    </div>
+                  ) : (
+                      <div className="flex">
+                        <h2>Your Turn</h2>
+                        <span className="padding">
+                          <h2 className="ml-3 bold"> Their Turn</h2>
+                        </span>
+                      </div>
+                    )}
+                </div>
+              )}
             <ReactCountdownClock
               seconds={this.state.seconds}
               color="#000"
@@ -171,10 +171,10 @@ class OpenTok extends React.Component {
             />
           </div>
         ) : (
-          <div id="waiting-for-burster">
-            <h4>Waiting for your fellow Burster!</h4>
-          </div>
-        )}
+            <div id="waiting-for-burster">
+              <h4>Waiting for your fellow Burster!</h4>
+            </div>
+          )}
 
         {error ? (
           <div className="error">

@@ -9,8 +9,8 @@ import { VIDEO_API_KEY } from '../secrets'
 class VideoParent extends Component {
   async componentDidMount(evt) {
     //thunk creator to dispatch and get session id from db
-    console.log('IN COMPONENT DID MOUNT')
-    console.log('**VIDEO API KEY', VIDEO_API_KEY)
+    // console.log('IN COMPONENT DID MOUNT')
+    // console.log('**VIDEO API KEY', VIDEO_API_KEY)
     await this.props.getVideoSessionThunk(this.props.match.params.id)
   }
 
