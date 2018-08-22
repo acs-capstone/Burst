@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 // import logo from './logo.svg'
 import './App.css'
 import { Navbar } from './components'
-import { withTheme } from '@material-ui/core/styles'
 
 import Routes from './routes'
 
@@ -24,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default withTheme()(App)
+export default App
