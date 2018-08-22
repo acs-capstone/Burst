@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 150px 0 0 0;
-  font-family: 'StandardCT-Regular', Helvetica, Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #dfdce3;
   height: 100%;
   position: relative;
@@ -253,7 +253,6 @@ position: sticky;
   padding-right: .5em;
   padding-left: .5em;
   border-radius: 8px;
-
 }
 
 #videoButton {
@@ -261,5 +260,9 @@ position: sticky;
   position: absolute;
   right: 20vw;
   top: 175px;
+
+}
+
+#popular-articles{
 
 }
