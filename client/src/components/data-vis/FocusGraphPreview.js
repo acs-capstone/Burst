@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 
 class FocusGraphPreview extends Component {
-  componentDidMount() {
-    console.log('focus graph preview this.el', this.el)
-  }
+  componentDidMount() {}
+
   render() {
-    const { node } = this.props
+    const { node, handleClose } = this.props
+    console.log('THIS.PROPS:', this.props)
+    console.log('PREVIEW NODE: ', node)
+    console.log('HANDLE CLOSE:', handleClose)
     return !node.id ? (
       <div />
     ) : (
@@ -21,15 +23,21 @@ class FocusGraphPreview extends Component {
             alt={node.title}
             src={node.urlToImage}
           />
+
           <h4>{node.title}</h4>
         </div>
         <div className="card-body">
           <p>{node.desc}</p>
-          <p>Published: {node.publishedAt}</p>
+
+          <a href={node.url} target="_blank" rel="noopener noreferrer">
+            <button className="btn" type="button">
+              Read Article
+            </button>
+          </a>
           <button
-            className="btn btn-primary"
+            className="btn"
             type="button"
-            onClick={() => console.log(node)}
+            onClick={() => handleClose(node)}
           >
             close
           </button>

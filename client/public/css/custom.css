@@ -3,11 +3,11 @@ body {
   padding: 0;
   height: 100%;
 }
-a.card,
+/* a.card,
 a.card:hover {
   color: #212529;
   text-decoration: none;
-}
+} */
 
 card.selected {
   background-color: 'black' !important;
@@ -16,11 +16,11 @@ card.selected {
 }
 
 .graph-preview {
-  background-color: white;
+  background-color: gray;
   position: absolute;
   right: 24px;
-  bottom: 24px;
-  width: 20vw;
+  top: 24px;
+  width: 40vw;
   height: 80vh;
   overflow-y: scroll;
 }
@@ -30,6 +30,18 @@ card.selected {
 } */
 .graph-preview .active {
   display: inline-block;
+}
+
+.graph-preview a {
+  color: #fff;
+}
+
+.graph-preview a:link {
+  text-decoration: none;
+}
+
+.graph-preview a:hover {
+  text-decoration: underline;
 }
 
 /* .focusGraph {
@@ -43,6 +55,10 @@ card.selected {
   width: 150px;
 } */
 .focus-graph .scene-tooltip {
-  background: teal;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
   /* styles for the node hover */
 }
