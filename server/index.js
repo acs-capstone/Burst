@@ -7,7 +7,7 @@ const passport = require('passport')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const db = require('./db')
 const sessionStore = new SequelizeStore({ db })
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 8080
 const app = express()
 module.exports = app
 
@@ -31,9 +31,9 @@ if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '..', 'client/build')))
   // Handle React routing, return all requests to React app
-  app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, '..', 'client/build', 'index.html'))
-  })
+  // app.get('*', function (req, res) {
+  //   res.sendFile(path.join(__dirname, '..', 'client/build', 'index.html'))
+  // })
 }
 
 // passport registration
@@ -92,7 +92,7 @@ const createApp = () => {
   app.use('/video', require('./video'))
 
   // static file-serving middleware
-  app.use(express.static(path.join(__dirname, '..', 'public')))
+  app.use(express.static(path.join(__dirname, '..', 'client/public')))
 
   // any remaining requests with an extension (.js, .css, etc.) send 404
   app.use((req, res, next) => {
@@ -107,7 +107,7 @@ const createApp = () => {
 
   // sends index.html
   app.use('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+    res.sendFile(path.join(__dirname, '..', 'client/public/index.html'))
   })
 
   // error handling endware

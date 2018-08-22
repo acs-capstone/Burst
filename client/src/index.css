@@ -1,10 +1,22 @@
 body {
   margin: 0;
   padding: 150px 0 0 0;
-  font-family: sans-serif;
-  background-color: #efefef;
+  font-family: 'StandardCT-Regular', Helvetica, Arial, Helvetica, sans-serif;
+  background-color: #dfdce3;
   height: 100%;
   position: relative;
+}
+
+.navbar{
+  background-color: #1f2833;
+  font: bold;
+  color: white;
+}
+.nav-link{
+  color:  white;
+}
+.navbar-brand{
+  color:  white;
 }
 
 .img-small {
@@ -26,11 +38,12 @@ body {
 
 footer {
   position: absolute;
+  background-color:  #c5c6c7;
   bottom: 0px;
   width: 100%;
-  height: 10px;
-  padding: 20px;
-  margin-top: 20px;
+  height: 5px;
+  padding: 10px;
+  margin-top: 10px;
 }
 .chip-container {
   display: 'flex';
@@ -45,6 +58,11 @@ footer {
 
 .MuiChip-root-200 {
   margin: 5px;
+}
+
+.MuiCardHeader-root-209 {
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 
 #quiz-button {
@@ -96,8 +114,13 @@ footer {
 .burst-button {
   background-color: red;
   color: white;
-  margin-top: 2px;
-  margin-left: 2px;
+}
+
+.badge-pill{
+  padding: .5em;
+  font-size: .9em;
+  margin: .2em;
+  background-color: ;
 }
 
 .OTSubscriberContainer {
@@ -114,6 +137,11 @@ footer {
   right: 20vw;
   top: 200px;
   z-index: 1;
+}
+
+#burst-bubble {
+  margin-top: .9em;
+  margin-left: .9em;
 }
 
 #videoButton {
