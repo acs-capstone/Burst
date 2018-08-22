@@ -3,7 +3,6 @@ const { User, Source, Topic, PoliOri } = require('../db/models')
 module.exports = router
 
 router.post('/login', async (req, res, next) => {
-  console.log(req.body)
   try {
     const user = await User.findOne({
       where: { email: req.body.email },
@@ -16,7 +15,6 @@ router.post('/login', async (req, res, next) => {
       console.log('Incorrect password for user:', req.body.email)
       res.status(401).send('Wrong username and/or password')
     } else {
-      console.log('LOGGING IN', req.login)
       req.login(user, err => (err ? next(err) : res.json(user)))
     }
   } catch (err) {
@@ -31,7 +29,11 @@ router.post('/signup', async (req, res, next) => {
   } catch (err) {
     if (err.name === 'SequelizeUniqueConstraintError') {
       res.status(401).send('User already exists')
-    } else {
+    }
+    if (err.name === 'SequelizeValidationError') {
+      res.status(401).send('Please input a valid email address and password')
+    }
+    else {
       next(err)
     }
   }
@@ -58,7 +60,7 @@ router.get('/me', async (req, res) => {
       })
       res.json(user)
     } else {
-      res.json(req.user);
+      res.json(req.user)
     }
   } catch (err) {
     console.log(err)

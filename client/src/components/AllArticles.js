@@ -19,7 +19,7 @@ class AllArticles extends Component {
   async componentDidMount() {
     try {
       await this.props.getUserThunk(this.props.user.id)
-      await this.props.fetchArticles(this.props.user.id)
+      // await this.props.fetchArticles(this.props.user.id)
     } catch (err) {
       console.error(err.message)
     }
@@ -35,10 +35,10 @@ class AllArticles extends Component {
     return (
       <div>
         <Grid container spacing={24}>
-          <Grid item xs={3}>
+          <Grid item xs={4}>
             <UserProfile />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={6}>
             <ArticleList
               articles={this.props.articles}
             />

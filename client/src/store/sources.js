@@ -44,7 +44,7 @@ export const getAllSources = () => async dispatch => {
 /**
  * REDUCER
  */
-export default function(sources = initialSources, action) {
+export default function (sources = initialSources, action) {
   switch (action.type) {
     case GOT_ALL_SOURCES:
       return action.sources

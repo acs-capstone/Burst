@@ -13,7 +13,7 @@ const Article = props => {
       <Card>
         <div>
           {article.out ? (
-            <span className="badge badge-danger">Burst Your Bubble!</span>
+            <span className="badge badge-danger" id="burst-bubble">Burst Your Bubble!</span>
           ) : null}
         </div>
         <CardHeader
