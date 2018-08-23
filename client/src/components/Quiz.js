@@ -17,7 +17,7 @@ const Quiz = props => {
   } else if (!user.sources.length) {
     return <Sources />
   } else {
-    return <Redirect to="/news" />
+    return <Redirect to="/home" />
   }
 }
 

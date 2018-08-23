@@ -9,7 +9,7 @@ const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
       {isLoggedIn && sources && sources.length ? (
         <div>
           <ul className="navbar-nav ml-auto">
-            <Link className="navbar-brand" to="/news">
+            <Link className="navbar-brand" to="/home">
               BURST
             </Link>
             <li className="nav-item">
@@ -19,17 +19,17 @@ const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/news">
-                News Feed
+                Browse
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/popular">
-                Popular
+                Discuss
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/explore">
-                Explore
+                Visualize
               </Link>
             </li>
             <li className="nav-item">

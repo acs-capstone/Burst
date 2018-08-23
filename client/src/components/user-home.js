@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 
+
 /* COMPONENT */
 
 export const UserHome = props => {
@@ -15,13 +16,26 @@ export const UserHome = props => {
     <div>
       <h3>Welcome, {user.email}</h3>
       <div>
+        <h4>How would you like to burst your bubble?</h4>
+        <button className="home-burst-options">
+          <Link to="/news">Browse</Link>
+        </button>
+        <button className="home-burst-options">
+          <Link to="/popular">Discuss</Link>
+        </button>
+        <button className="home-burst-options">
+          <Link to="/explore">Visualize</Link>
+        </button>
         <div>
           <Card>
             <CardContent>
               <div className="top-card-container">
                 <Typography gutterBottom variant="headline" component="h2">
-                  Your Political Orientation is: {user.poliOri.poliOri}
+                  Your Political Orientation is:
                 </Typography>{' '}
+                <div className="chip-container">
+                  <button className="profile-selections" >{user.poliOri.poliOri}</button>
+                </div>
                 <Button>
                   <Link to="/questions">Retake Quiz</Link>
                 </Button>
@@ -64,7 +78,7 @@ export const UserHome = props => {
           </Card>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

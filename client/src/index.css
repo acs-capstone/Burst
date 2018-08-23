@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 150px 0 0 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Helvetica Neue",Helvetica,sans-serif;
   background-color: #dfdce3;
   height: 100%;
   position: relative;
@@ -13,6 +13,7 @@ body {
   font: bold;
   color: white;
   padding: 1em;
+  font: helvetica;
 }
 .nav-link {
   color: white;
@@ -163,6 +164,28 @@ overflow: hidden;
   overflow: hidden;
 }
 .profile-selections:focus{
+  outline:none;
+}
+
+/* Browse Discuss and Visualize options on homepage */
+.home-burst-options{
+  height: 5vh;
+  width: 20vw;
+  margin: 10px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  color: black;
+  background-color: #ADD8E6;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  overflow-wrap: normal;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap;
+  overflow: hidden; */
+}
+.home-burst-options:focus{
   outline:none;
 }
 

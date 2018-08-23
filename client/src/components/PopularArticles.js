@@ -41,7 +41,9 @@ class PopularArticles extends Component {
   render() {
     return (
       <div>
-        <span id="pop-top-header"><h4>Today's Most Popular Articles By Topic</h4></span>
+        <div className="page-header">
+          <h4>Discuss Today's Most Popular Articles</h4>
+        </div>
         <Grid container direction="row" justify="center">
           {this.state.articles.map(article => {
             return (

@@ -18,7 +18,7 @@ const AuthForm = props => {
             className="form-control"
             name="email"
             type="text"
-            id="login-input"
+            id="login-email"
           />
         </div>
         <div className="form-group">
