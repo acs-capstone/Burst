@@ -1,7 +1,4 @@
 const router = require('express').Router()
-const NewsAPI = require('newsapi')
-const Sequelize = require('sequelize')
-const Op = Sequelize.Op
 const { Source, User, Topic, News } = require('../db/models')
 module.exports = router
 
