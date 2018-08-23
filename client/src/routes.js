@@ -40,7 +40,6 @@ class Routes extends Component {
           <Route path="/signup" component={Signup} />
           <Route path="/about" component={About} />
           <Route path="/explore" component={FocusGraph} />
-
           {isLoggedIn && (
             <Switch>
               {/* Routes placed here are only available after logging in */}
@@ -53,8 +52,11 @@ class Routes extends Component {
               <Route path="/video/:id" component={VideoParent} />
               <Route path="/popular" component={PopularArticles} />
               <Route path="/feedback" component={Feedback} />
+              <Route path="/" component={About} />
+
             </Switch>
           )}
+          <Route path="/" component={About} />
           {/* Displays our Login component as a fallback */}
           <Route component={Login} />
         </Switch>
