@@ -1,5 +1,5 @@
 const NewsAPI = require('newsapi')
-const newsapi = new NewsAPI('f3c85f33665a41dbbad0823e3ae48c29')
+const newsapi = new NewsAPI('2670c683eb0344fd92f43c2d245efe31')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const Source = require('./Source')
@@ -10,11 +10,9 @@ const path = require('path')
 const PAGINATE_RESULTS = false
 const News = class {
   constructor(user) {
-    //Does this need Super() ?
-
-    ; (this.topics = user.topics),
-      (this.sources = user.sources),
-      (this.poliOriId = user.poliOriId)
+    this.topics = user.topics
+    this.sources = user.sources
+    this.poliOriId = user.poliOriId
   }
   //METHODS
   stringifyTopics() {
@@ -48,7 +46,7 @@ const News = class {
       oppIds.push(this.poliOriId + 1, this.poliOriId + 2)
     } else if (this.poliOriId > 3) {
       oppIds.push(this.poliOriId - 1, this.poliOriId - 2)
-    } else if ((this.poliOriId = 3)) {
+    } else if (this.poliOriId = 3) {
       oppIds.push(this.poliOriId + 1, this.poliOriId - 1)
     }
     return oppIds
@@ -193,8 +191,8 @@ const News = class {
         })
       )
       return popularArticles
-    } catch (e) {
-      console.log(e)
+    } catch (err) {
+      console.log(err)
     }
   }
 }

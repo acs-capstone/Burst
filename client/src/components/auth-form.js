@@ -26,7 +26,7 @@ const AuthForm = props => {
           <input
             className="form-control"
             name="password"
-            type="text"
+            type="password"
             id="login-input"
           />
         </div>
