@@ -19,7 +19,6 @@ import {
 
 import { me } from './store'
 import Feedback from './components/Feedback'
-import { UserProfile } from './components/user-profile'
 
 /**
  * COMPONENT
@@ -53,7 +52,6 @@ class Routes extends Component {
               <Route path="/popular" component={PopularArticles} />
               <Route path="/feedback" component={Feedback} />
               <Route path="/" component={About} />
-
             </Switch>
           )}
           <Route path="/" component={About} />
