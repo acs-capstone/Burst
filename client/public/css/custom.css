@@ -65,6 +65,6 @@ card.selected {
 
 .preview-intro {
   position: absolute;
-  right: 24px;
-  top: 24px;
+  left: 24px;
+  top: 10px;
 }

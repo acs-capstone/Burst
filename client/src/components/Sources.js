@@ -55,13 +55,14 @@ class Sources extends Component {
         <h2>Which sources do you like to read?</h2>
         {this.props.sources.map(source => {
           return (
-            <div className="card-deck" key={source.id}>
-              <ChoiceButton
-                source={source}
-                handleClick={this.handleClick}
-                selectedSources={this.state.sources}
-              />
-            </div>
+            // <div className="card-deck" >
+            <ChoiceButton
+              key={source.id}
+              source={source}
+              handleClick={this.handleClick}
+              selectedSources={this.state.sources}
+            />
+            // </div>
           )
         })}
         {this.state.sources.length ? (

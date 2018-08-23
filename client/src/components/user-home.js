@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import Chip from '@material-ui/core/Chip'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
@@ -21,7 +20,7 @@ export const UserHome = props => {
             <CardContent>
               <div className="top-card-container">
                 <Typography gutterBottom variant="headline" component="h2">
-                  Your Political Orientation is {user.poliOri.poliOri}
+                  Your Political Orientation is: {user.poliOri.poliOri}
                 </Typography>{' '}
                 <Button>
                   <Link to="/questions">Retake Quiz</Link>
@@ -37,7 +36,7 @@ export const UserHome = props => {
               <div className="chip-container">
                 {user.topics.map(topic => {
                   return (
-                    <span className="badge badge-pill badge-primary" key={topic.id}>{topic.name}</span>
+                    <button className="profile-selections" key={topic.id}>{topic.name}</button>
                   )
                 })}
               </div>
@@ -54,7 +53,7 @@ export const UserHome = props => {
               <div className="chip-container">
                 {user.sources.map(source => {
                   return (
-                    <span className="badge badge-pill badge-primary" key={source.id}>{source.name}</span>
+                    <button className="profile-selections" key={source.id}>{source.name}</button>
                   )
                 })}
               </div>

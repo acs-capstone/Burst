@@ -19,7 +19,7 @@ class AllArticles extends Component {
   async componentDidMount() {
     try {
       await this.props.getUserThunk(this.props.user.id)
-      // await this.props.fetchArticles(this.props.user.id)
+      await this.props.fetchArticles(this.props.user.id)
     } catch (err) {
       console.error(err.message)
     }

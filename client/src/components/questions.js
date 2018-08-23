@@ -26,7 +26,6 @@ class Questions extends Component {
     try {
       const questions = this.state.questions
       const currentQuestionIndex = this.state.currentQuestionIndex
-      console.log('POINTSSS', evt.target.value)
       evt.preventDefault()
       //if there are still questions left in array, keep looping through and rendering questions
       if (currentQuestionIndex < questions.length - 1) {
@@ -37,9 +36,7 @@ class Questions extends Component {
       } else {
         //when all questions have been aswered, calculate score and dispatch update userThnk
         let finalScore = Math.round(this.state.score / 11)
-        //TODO: Change to 11 once all Q's are added
-        console.log('USERID', this.props.user.id)
-        console.log('FINAL SCORE', finalScore)
+       
         await this.props.updateUserThunk({
           userId: this.props.user.id,
           poliOriId: finalScore
@@ -47,8 +44,6 @@ class Questions extends Component {
         if (this.props.user.poliOriId) {
           this.props.history.push('/home')
         }
-
-        console.log('DONE!')
       }
     } catch (err) {
       console.error(err.message)
