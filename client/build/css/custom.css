@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+/* a.card,
+a.card:hover {
+  color: #212529;
+  text-decoration: none;
+} */
+
+card.selected {
+  background-color: 'black' !important;
+  color: black;
+  text-decoration: none;
+}
+
+.graph-preview {
+  background-color: gray;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 40vw;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+/* #graph-preview {
+    display: none
+} */
+.graph-preview .active {
+  display: inline-block;
+}
+
+.graph-preview a {
+  color: #fff;
+}
+
+.graph-preview a:link {
+  text-decoration: none;
+}
+
+.graph-preview a:hover {
+  text-decoration: underline;
+}
+
+/* .focusGraph {
+  position: relative;
+  width: 1000px;
+  height: 800px;
+  margin: 0 auto;
+} */
+
+/* .graph-preview img {
+  width: 150px;
+} */
+.focus-graph .scene-tooltip {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* styles for the node hover */
+}
+
+.preview-intro {
+  position: absolute;
+  left: 24px;
+  top: 10px;
+}
