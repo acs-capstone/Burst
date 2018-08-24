@@ -5,12 +5,9 @@ class FocusGraphPreview extends Component {
 
   render() {
     const { node, handleClose } = this.props
-    console.log('THIS.PROPS:', this.props)
-    console.log('PREVIEW NODE: ', node)
-    console.log('HANDLE CLOSE:', handleClose)
     return !node.id ? (
-      <div className="page-header">
-        <h4>Visualize Articles By Topic</h4>
+      <div className="preview-intro">
+        <h4>Choose a topic to visualize</h4>
       </div>
     ) : (
         <div
