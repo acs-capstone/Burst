@@ -1,8 +1,4 @@
 const router = require('express').Router()
-const NewsAPI = require('newsapi')
-// const newsapi = new NewsAPI('cb968b25a11945c6a4056027b3a69002') //TODO: do we need to hide this?
-const Sequelize = require('sequelize')
-const Op = Sequelize.Op
 const { Source, User, Topic, News } = require('../db/models')
 module.exports = router
 

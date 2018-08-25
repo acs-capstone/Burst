@@ -1,22 +1,13 @@
 import React, { Component } from 'react'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import CardHeader from '@material-ui/core/CardHeader'
-import CardMedia from '@material-ui/core/CardMedia'
-import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid'
 
 class FocusGraphPreview extends Component {
   componentDidMount() {}
 
   render() {
     const { node, handleClose } = this.props
-    console.log('THIS.PROPS:', this.props)
-    console.log('PREVIEW NODE: ', node)
-    console.log('HANDLE CLOSE:', handleClose)
     return !node.id ? (
       <div className="preview-intro">
-        <h3> Choose a topic to explore</h3>
+        <h4>Choose a topic to visualize</h4>
       </div>
     ) : (
       <div
@@ -47,7 +38,7 @@ class FocusGraphPreview extends Component {
             type="button"
             onClick={() => handleClose(node)}
           >
-            lose
+            Close
           </button>
         </div>
       </div>

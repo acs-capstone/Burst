@@ -134,7 +134,7 @@ class OpenTok extends React.Component {
     const apiKey = this.props.apiKey
     const sessionId = this.props.sessionId
     const token = this.props.token
-    const { error, connection, publishVideo, count, publishAudio } = this.state
+    const { error, publishVideo, count, publishAudio } = this.state
 
     return (
       <div>

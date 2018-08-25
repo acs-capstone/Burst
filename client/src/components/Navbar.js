@@ -2,80 +2,93 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../store'
+import Burst_logo from '../Burst_logo.png'
+import Burst_title from '../Burst_title.png'
+
 
 const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
   <nav className="navbar navbar-expand-lg fixed-top">
+
     <div className="container ">
       {isLoggedIn && sources && sources.length ? (
+
         <div>
-          <ul className="navbar-nav ml-auto">
-            <Link className="navbar-brand" to="/news">
-              BURST
+          <nav className="navbar">
+
+            <Link className="navbar-brand" to="/home">
+              <img src={Burst_logo} id="nav-logo" alt="Burst" />
             </Link>
-            <li className="nav-item">
+
+            <a className="nav-item">
               <Link className="nav-link" to="/home">
                 Home
               </Link>
-            </li>
-            <li className="nav-item">
+            </a>
+
+            <a className="nav-item">
               <Link className="nav-link" to="/news">
-                News Feed
+                Browse
               </Link>
-            </li>
-            <li className="nav-item">
+            </a>
+
+            <a className="nav-item">
               <Link className="nav-link" to="/popular">
-                Popular
+                Discuss
               </Link>
-            </li>
-            <li className="nav-item">
+            </a>
+
+            <a className="nav-item">
               <Link className="nav-link" to="/explore">
-                Explore
+                Visualize
               </Link>
-            </li>
-            <li className="nav-item">
+            </a>
+
+            <a className="nav-item">
               <Link className="nav-link" to="/about">
                 About
               </Link>
-            </li>
-            <li className="nav-item">
+            </a>
+
+            <a className="nav-item">
               <a className="nav-link" href="/" onClick={handleClick}>
                 Logout
               </a>
-            </li>
-          </ul>
+            </a>
+
+          </nav>
         </div>
       ) : !isLoggedIn ? (
         <div>
           {/* The navbar will show these links before you log in */}
-          <ul className="navbar-nav ml-auto">
-            <a className="navbar-brand">BURST</a>
-            <li className="nav-item">
+          <nav className="navbar">
+            <img src={Burst_logo} id="nav-logo" alt="Burst" />
+            <a className="nav-item">
               <Link className="nav-link" to="/about">
                 About
               </Link>
-            </li>
-            <li className="nav-item">
+            </a>
+            <a className="nav-item">
               <Link className="nav-link" to="/login">
                 Login
               </Link>
-            </li>
-            <li className="nav-item">
+            </a>
+            <a className="nav-item">
               <Link className="nav-link" to="/signup">
                 Sign Up
               </Link>
-            </li>
-          </ul>
+            </a>
+          </nav>
         </div>
       ) : (
             <div>
-              <ul className="navbar-nav ml-auto">
-                <a className="navbar-brand">Burst</a>
-                <li className="nav-item">
+              <nav className="navbar">
+                <img src={Burst_logo} id="nav-logo" alt="Burst" />
+                <a className="nav-item">
                   <a className="nav-link" href="/" onClick={handleClick}>
                     Logout
               </a>
-                </li>
-              </ul>
+                </a>
+              </nav>
             </div>
           )}
     </div>

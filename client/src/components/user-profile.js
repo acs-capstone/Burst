@@ -17,8 +17,11 @@ export const UserProfile = props => {
         <CardContent>
           <div className="top-card-container">
             <Typography gutterBottom variant="headline" component="h2">
-              Your Political Orientation is: {user.poliOri.poliOri}
+              Your Political Orientation is:
             </Typography>{' '}
+            <div className="chip-container">
+              <button className="profile-selections" >{user.poliOri.poliOri}</button>
+            </div>
             <Button>
               <Link to="/questions">Retake Quiz</Link>
             </Button>
