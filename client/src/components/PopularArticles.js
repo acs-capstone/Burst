@@ -41,13 +41,17 @@ class PopularArticles extends Component {
   render() {
     return (
       <div>
-        <span id="pop-top-header"><h4>Today's Most Popular Articles By Topic</h4></span>
+        <div className="page-header-item">
+          <h4>Discuss Today's Most Popular Articles</h4>
+        </div>
         <Grid container direction="row" justify="center">
           {this.state.articles.map(article => {
             return (
-              <Grid item xs={4} key={article.url}>
-                <div className="container">
+              <Grid item xs={4} key={article.url} >
+                <div className="page-header-item-secondary">
+                  <div>
                   <h5>{article.topic}</h5>
+                  </div>
                   <div>
                     <button
                       type="button"
@@ -58,16 +62,16 @@ class PopularArticles extends Component {
                     >
                       Join Video Burst
                     </button>
-                    <ul className=".list-unstyled">
-                      <Article article={article} />
-                    </ul>
                   </div>
+                </div>
+                <div className=".list-unstyled">
+                  <Article article={article} />
                 </div>
               </Grid>
             )
           })}
         </Grid>
-      </div>
+      </div >
     )
   }
 }

@@ -4,8 +4,6 @@ import Answers from './answers'
 import Prompt from './prompt'
 import { updateUserThunk } from '../store/user'
 import { connect } from 'react-redux'
-// import Button from '@material-ui/core/Button'
-// import Typography from '@material-ui/core/Typography'
 
 class Questions extends Component {
   constructor() {
@@ -36,7 +34,7 @@ class Questions extends Component {
       } else {
         //when all questions have been aswered, calculate score and dispatch update userThnk
         let finalScore = Math.round(this.state.score / 11)
-       
+
         await this.props.updateUserThunk({
           userId: this.props.user.id,
           poliOriId: finalScore

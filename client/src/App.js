@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import logo from './logo.svg'
 import './App.css'
 import { Navbar } from './components'
 
@@ -13,10 +12,8 @@ class App extends Component {
         <div className="content-div main-container position-relative">
           <Routes />
         </div>
-        <footer className="py-5 bg-light">
-          <div className="container">
-            <p className="m-0 text-center">&copy; 2018 ACS Burst!</p>
-          </div>
+        <footer className="footer">
+          <p className="text-center">&copy; 2018 ACS Burst!</p>
         </footer>
       </div>
     )
