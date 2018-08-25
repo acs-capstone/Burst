@@ -24,10 +24,10 @@ class FocusGraphPreview extends Component {
             src={node.urlToImage}
           />
 
-          <h4>{node.title}</h4>
+          <h4 className="node-content">{node.title}</h4>
           {/* </div>
         <div className="card-body"> */}
-          <p>{node.desc}</p>
+          <p className="node-content">{node.desc}</p>
 
           <a href={node.url} target="_blank" rel="noopener noreferrer">
             <button className="btn ml-4" type="button">

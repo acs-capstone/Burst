@@ -121,13 +121,15 @@ class OpenTok extends React.Component {
     }
   }
 
-  async handleClick(evt) {
-    await this.props.deleteVideoSessionThunk({
-      sessionId: this.props.sessionId,
-      token: this.props.token
-    })
+  handleClick(evt) {
+    evt.preventDefault()
+    console.log('HERRREE')
+    // await this.props.deleteVideoSessionThunk({
+    //   sessionId: this.props.sessionId,
+    //   token: this.props.token
+    // })
 
-    history.push('/feedback')
+    // history.push('/feedback')
   }
 
   render() {
@@ -232,11 +234,14 @@ class OpenTok extends React.Component {
             />
           </OTStreams>
         </OTSession>
-        <button id="leave-session-btn" className="btn">
-          <Link to="/feedback" onClick={this.handleClick}>
+        <div>
+          <button className="leave-session-btn" onClick={this.handleClick}>
             Leave Session
-          </Link>
-        </button>
+          </button>
+        </div>
+        {/* <Link to="/feedback" onClick={this.handleClick}>
+          Leave Session
+        </Link> */}
       </div>
     )
   }

@@ -433,10 +433,29 @@ footer {
   width: 95%;
 }
 
-#leave-session-btn {
+.leave-session-btn {
   position: absolute;
   top: 10vh;
-  right: 10vw;
+  right: 7vw;
+  height: 5vh;
+  width: 15vw;
+  margin: 10px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: 2px solid #1f2833;
+  background-color: white;
+  color: #1f2833;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  overflow-wrap: normal;
+  z-index: 1;
+}
+
+.leave-session-btn:hover {
+  background-color: yellow;
+  color: white;
 }
 
 .flex {
@@ -476,7 +495,7 @@ footer {
   margin: 10px;
   font-size: 1.1em;
   border-radius: 10px;
-  border: 2px solid #1f2833;
+  border: 2px solid white;
   color: white;
   background-color: #1f2833;
   text-decoration: none;

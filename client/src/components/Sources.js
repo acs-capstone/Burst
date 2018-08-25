@@ -66,13 +66,19 @@ class Sources extends Component {
         </div>
         {this.state.sources.length ? (
           <div>
-            <button type="submit" name="submit" onClick={this.handleSubmit}>
+            <button
+              className="submit-btn"
+              type="submit"
+              name="submit"
+              onClick={this.handleSubmit}
+            >
               Submit
             </button>
           </div>
         ) : (
           <div>
             <button
+              className="submit-btn"
               type="submit"
               name="submit"
               onClick={this.handleSubmit}
