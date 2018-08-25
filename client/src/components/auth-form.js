@@ -13,7 +13,7 @@ const AuthForm = props => {
     <div className="container form-group" id="login-form">
       <form className="login-form" onSubmit={handleSubmit} name={name}>
         <div className="form-group">
-          <label htmlFor="email"> Email</label>
+          <label htmlFor="email" className="auth-label"> Email</label>
           <input
             className="form-control"
             name="email"
@@ -22,7 +22,7 @@ const AuthForm = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password"> Password </label>
+          <label htmlFor="password" className="auth-label"> Password </label>
           <input
             className="form-control"
             name="password"
@@ -36,19 +36,19 @@ const AuthForm = props => {
           </button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
-      </form>
-      {/* <a href="/auth/google">{displayName} with Google</a> */}
-      {displayName === 'Login' ? (
-        <div>
-          New to Burst?
+        {/* <a href="/auth/google">{displayName} with Google</a> */}
+        {displayName === 'Login' ? (
+          <div className="auth-label">
+            New to Burst?
           <Link to="/signup"> Sign Up</Link>
-        </div>
-      ) : (
-          <div>
-            Already have an account?
-          <Link to="/login"> Login</Link>
           </div>
-        )}
+        ) : (
+            <div className="auth-label">
+              Already have an account?
+          <Link to="/login"> Login</Link>
+            </div>
+          )}
+      </form>
     </div>
   )
 }

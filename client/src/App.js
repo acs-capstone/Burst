@@ -7,7 +7,7 @@ import Routes from './routes'
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
+      <div>
         <Navbar />
         <div className="content-div main-container position-relative">
           <Routes />

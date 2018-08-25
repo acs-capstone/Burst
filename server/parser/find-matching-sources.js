@@ -21,7 +21,7 @@ allSidesSourcesObjects.filter(source => {
 
 // console.log(nonIntersection.length)
 // console.log(intersection.length)
-console.log(intersection)
+// console.log(intersection)
 
 fs.writeFileSync('./intersection.js', JSON.stringify(intersection))
 fs.writeFileSync('./nonIntersection.js', JSON.stringify(nonIntersection))

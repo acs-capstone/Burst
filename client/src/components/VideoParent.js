@@ -17,7 +17,6 @@ class VideoParent extends Component {
       const sessionId = this.props.videoSession.sessionId
       const token = this.props.videoSession.token
       const user = this.props.videoSession.user
-      // console.log('apiKEYYY', apiKey)
 
       return (
         <div>

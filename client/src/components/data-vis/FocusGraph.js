@@ -12,7 +12,6 @@ const data = {
   links,
   nodes
 }
-console.log(data)
 
 class FocusGraph extends Component {
   constructor() {
@@ -66,7 +65,7 @@ class FocusGraph extends Component {
   }
 
   _handleNodeClick = node => {
-    console.log('CLICKED!\n', 'state:', this.state, '\n', 'node:', node)
+    // console.log('CLICKED!\n', 'state:', this.state, '\n', 'node:', node)
     if (node.nodeKey === this.state.activeNode.nodeKey) {
       this.setState({ activeNode: {} })
     }
@@ -89,7 +88,7 @@ class FocusGraph extends Component {
   }
 
   handleClose(node) {
-    console.log('close this window!')
+    // console.log('close this window!')
     const distance = DEFAULT_DISTANCE
     const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z)
     this.fg.cameraPosition(
@@ -106,7 +105,7 @@ class FocusGraph extends Component {
   }
 
   render() {
-    console.log('this.state: ', this.state)
+    // console.log('this.state: ', this.state)
 
     return (
       <div className="focus-graph">

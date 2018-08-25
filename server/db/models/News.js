@@ -1,5 +1,9 @@
 const NewsAPI = require('newsapi')
+<<<<<<< HEAD
 const newsapi = new NewsAPI('402a4a4a8ac64d22a20b179ead896d13')
+=======
+const newsapi = new NewsAPI('5a335ee0f79144b19f861a318dc5286e')
+>>>>>>> master
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const Source = require('./Source')

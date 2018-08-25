@@ -18,7 +18,7 @@ const Article = props => {
         </div>
         <CardHeader
           title={
-            <a href={article.url} target="_blank">
+            <a href={article.url} target="_blank" rel="noopener noreferrer">
               {' '}
               {article.title}{' '}
             </a>

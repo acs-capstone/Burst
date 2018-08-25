@@ -53,7 +53,7 @@ class Questions extends Component {
       const question = this.state.questions[this.state.currentQuestionIndex]
 
       return (
-        <div>
+        <div className="quiz-content-div">
           <div id="counter">
           </div>
           <div>
