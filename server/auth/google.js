@@ -33,7 +33,6 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
   passport.use(strategy)
 
   router.get((req, res, next) => {
-    console.log('HIT MEEEEE')
     passport.authenticate('google', { scope: 'email' })
   })
 
