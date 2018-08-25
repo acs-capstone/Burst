@@ -28,13 +28,13 @@ class Sources extends Component {
     // console.log(evt.target.value)
     !this.state.sources.includes(evt.target.value)
       ? await this.setState({
-        sources: [...this.state.sources, evt.target.value]
-      })
-      : await this.setState({
-        sources: this.state.sources.filter(source => {
-          return source !== evt.target.value
+          sources: [...this.state.sources, evt.target.value]
         })
-      })
+      : await this.setState({
+          sources: this.state.sources.filter(source => {
+            return source !== evt.target.value
+          })
+        })
   }
 
   async handleSubmit(evt) {
@@ -72,14 +72,18 @@ class Sources extends Component {
             </button>
           </div>
         ) : (
-            <div>
-              <button type="submit" name="submit" onClick={this.handleSubmit} disabled>
-                Submit
-              </button>
-              <p>Please select at least one source.</p>
-            </div>
-          )
-        }
+          <div>
+            <button
+              type="submit"
+              name="submit"
+              onClick={this.handleSubmit}
+              disabled
+            >
+              Submit
+            </button>
+            <p>Please select at least one source.</p>
+          </div>
+        )}
       </div>
     )
   }

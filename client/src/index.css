@@ -2,11 +2,11 @@ body {
   margin: 0;
   padding: 150px 0 0 0;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  background-color: #dfdce3;
+  background-color: #1f2833;
   height: 100%;
   position: relative;
 }
-
+/* old background color: #dfdce3;*/
 .navbar {
   background-color: #1f2833;
   font: bold;
@@ -54,8 +54,11 @@ body {
   justify-content: space-between;
 }
 
-.bold {
-  color: fuchsia;
+.turns {
+  position: absolute;
+  left: 20vw;
+  top: 12vh;
+  color: #66fcf1;
 }
 
 .main-container {
@@ -86,6 +89,7 @@ footer {
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 2em;
+  color: white;
 }
 
 .page-header-item-secondary {
@@ -228,11 +232,12 @@ footer {
   padding-left: 0.5em;
   border-radius: 9px;
   color: black;
-  background-color: #add8e6;
+  background-color: #c5c6c7;
   text-decoration: none;
   text-align: center;
   outline: none;
   text-overflow: ellipsis;
+  /*#add8e6;*/
   /* Need the below for text-overflow to work*/
   white-space: nowrap;
   overflow: hidden;
@@ -247,10 +252,13 @@ footer {
   height: 5vh;
   width: 20vw;
   margin: 10px;
-  font-size: 1.1em;
+  font-size: 1.5em;
   border-radius: 10px;
-  color: black;
-  background-color: #add8e6;
+  /* border: 2px solid #66fcf1; */
+  border: none;
+  color: white;
+
+  background-color: transparent;
   text-decoration: none;
   text-align: center;
   padding: 5px;
@@ -260,8 +268,14 @@ footer {
   /* white-space: nowrap;
   overflow: hidden; */
 }
+/* other color options: #a1ddd9 #a2e5e1*/
+
 .home-burst-options:focus {
   outline: none;
+}
+
+.home-burst-options:hover {
+  color: #66fcf1;
 }
 
 #login-button {
@@ -317,16 +331,18 @@ footer {
 .OTSubscriberContainer {
   float: right;
   position: absolute;
-  right: 20vw;
-  top: 200px;
+  /* right: 40px; */
+  top: 175px;
+  left: 92px;
   z-index: -1;
 }
 
 .OTPublisherContainer {
   float: right;
   position: absolute;
-  right: 20vw;
-  top: 200px;
+  /* right: 35px; */
+  right: 95px;
+  top: 175px;
   z-index: 1;
 }
 
@@ -386,8 +402,8 @@ footer {
 
 #leave-session-btn {
   position: absolute;
-  top: 5vh;
-  right: 15vw;
+  top: 10vh;
+  right: 10vw;
 }
 
 .flex {
@@ -419,4 +435,75 @@ footer {
   top: 50px;
   left: 950px;
   width: 400px;
+}
+
+.submit-btn {
+  height: 5vh;
+  width: 10vw;
+  margin: 10px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: 2px solid #1f2833;
+  color: white;
+  background-color: #1f2833;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  overflow-wrap: normal;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color: #1f2833;
+}
+
+.logo-btn {
+  text-align: center;
+}
+
+.burst-options {
+  color: #dde7f6;
+  font-weight: bold;
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
+}
+
+.chat-header {
+  display: flex;
+  width: 80vw;
+}
+
+#clock {
+  position: absolute;
+  left: 10vw;
+  top: 5vh;
+}
+
+#video-container {
+  position: relative;
+  height: 100vh;
+  width: 88vw;
+  background-color: white;
+  z-index: -5;
+}
+
+.btn {
+  height: 5vh;
+  width: 10vw;
+  margin: 10px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: 2px solid #66fcf1;
+  color: black;
+  background-color: #66fcf1;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  overflow-wrap: normal;
+  text-decoration: none;
 }

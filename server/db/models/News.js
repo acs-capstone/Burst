@@ -1,5 +1,5 @@
 const NewsAPI = require('newsapi')
-const newsapi = new NewsAPI('26810a1f509643389d539fbe895f1ceb')
+const newsapi = new NewsAPI('402a4a4a8ac64d22a20b179ead896d13')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const Source = require('./Source')
@@ -46,7 +46,7 @@ const News = class {
       oppIds.push(this.poliOriId + 1, this.poliOriId + 2)
     } else if (this.poliOriId > 3) {
       oppIds.push(this.poliOriId - 1, this.poliOriId - 2)
-    } else if (this.poliOriId = 3) {
+    } else if ((this.poliOriId = 3)) {
       oppIds.push(this.poliOriId + 1, this.poliOriId - 1)
     }
     return oppIds

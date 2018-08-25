@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from '@material-ui/core/Button'
 
 class FocusGraphPreview extends Component {
   componentDidMount() {}
@@ -29,16 +30,17 @@ class FocusGraphPreview extends Component {
           <p>{node.desc}</p>
 
           <a href={node.url} target="_blank" rel="noopener noreferrer">
-            <button className="btn" type="button">
-              Read Article
+            <button className="btn ml-4" type="button">
+              READ ARTICLE
             </button>
           </a>
+
           <button
-            className="btn"
+            className="btn ml-4"
             type="button"
             onClick={() => handleClose(node)}
           >
-            Close
+            CLOSE
           </button>
         </div>
       </div>
@@ -46,38 +48,3 @@ class FocusGraphPreview extends Component {
   }
 }
 export default FocusGraphPreview
-
-// <div className="preview-intro">
-// <h3> Choose a topic to explore</h3>
-// </div>
-// ) : (
-// <div id="data-pop-up">
-// <Grid container>
-//   <Grid item xs={4}>
-//     <Card>
-//       <CardHeader
-//         title={
-//           <a href={node.url} target="_blank">
-//             {' '}
-//             {node.title}{' '}
-//           </a>
-//         }
-//         subheader={`${node.source.name} | published at: ${
-//           node.publishedAt
-//         }`}
-//       />
-
-//       <CardContent>
-//         {node.urlToImage ? (
-//           <CardMedia
-//             style={{ height: 0, paddingTop: '56.25%' }}
-//             image={node.urlToImage}
-//             title={node.title}
-//           />
-//         ) : null}
-//         <Typography component="p">{node.desc}</Typography>
-//       </CardContent>
-//     </Card>
-//   </Grid>
-// </Grid>
-// </div>
