@@ -46,7 +46,7 @@ const News = class {
       oppIds.push(this.poliOriId + 1, this.poliOriId + 2)
     } else if (this.poliOriId > 3) {
       oppIds.push(this.poliOriId - 1, this.poliOriId - 2)
-    } else if (this.poliOriId = 3) {
+    } else if ((this.poliOriId = 3)) {
       oppIds.push(this.poliOriId + 1, this.poliOriId - 1)
     }
     return oppIds

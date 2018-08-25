@@ -16,13 +16,13 @@ card.selected {
 }
 
 .graph-preview {
-  background-color: gray;
+  background-color: whitesmoke;
   position: absolute;
-  right: 24px;
-  top: 24px;
-  width: 40vw;
-  height: 80vh;
-  overflow-y: scroll;
+  right: 50px;
+  top: 5px;
+  width: 30vw;
+  height: 600px;
+  /* overflow-y: scroll; */
 }
 
 /* #graph-preview {
@@ -55,16 +55,57 @@ card.selected {
   width: 150px;
 } */
 .focus-graph .scene-tooltip {
-  background-color: black;
-  color: #fff;
+  background-color: whitesmoke;
+  color: black;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px;
   /* styles for the node hover */
 }
 
 .preview-intro {
   position: absolute;
-  left: 24px;
-  top: 10px;
+  left: 12vw;
+  top: 25px;
+  z-index: 1;
+}
+
+.card-header {
+  background-color: whitesmoke;
+  position: absolute;
+  top: 5px;
+}
+
+.card-img-top {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  height: 5vh;
+  width: 10vw;
+  margin: 10px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: 2px solid #66fcf1;
+  color: black;
+  background-color: #66fcf1;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  overflow-wrap: normal;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #66fcf1;
+}
+
+.data-btn {
+  background: transparent;
+}
+
+.node-content {
+  color: black;
 }

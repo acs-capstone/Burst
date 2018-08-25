@@ -35,6 +35,7 @@ class PopularArticles extends Component {
 
   handleClick(evt) {
     evt.preventDefault()
+
     this.props.history.push(`/video/${evt.target.value}`)
   }
 
@@ -47,7 +48,12 @@ class PopularArticles extends Component {
         <Grid container direction="row" justify="center" spacing={24}>
           {this.state.articles.map(article => {
             return (
-              <Grid item xs={4} key={article.url} className="popular-article-card">
+              <Grid
+                item
+                xs={4}
+                key={article.url}
+                className="popular-article-card"
+              >
                 <div className="page-header-item-secondary">
                   {/* <div> */}
                   <h5>{article.topic}</h5>
@@ -61,7 +67,7 @@ class PopularArticles extends Component {
                     onClick={this.handleClick}
                   >
                     Join Video Burst
-                    </button>
+                  </button>
                   {/* </div> */}
                 </div>
                 <div className="popular-article">
@@ -71,7 +77,7 @@ class PopularArticles extends Component {
             )
           })}
         </Grid>
-      </div >
+      </div>
     )
   }
 }
