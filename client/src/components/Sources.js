@@ -71,7 +71,6 @@ class Sources extends Component {
             </button>
           </div>
         ) : (
-<<<<<<< HEAD
           <div>
             <button
               type="submit"
@@ -85,17 +84,6 @@ class Sources extends Component {
           </div>
         )}
       </div>
-=======
-            <div>
-              <button type="submit" name="submit" onClick={this.handleSubmit} disabled>
-                Submit
-              </button>
-              <p>Please select at least one source.</p>
-            </div>
-          )
-        }
-      </div >
->>>>>>> master
     )
   }
 }
