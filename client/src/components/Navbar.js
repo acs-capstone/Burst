@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../store'
 import Burst_logo from '../Burst_logo.png'
-import Burst_title from '../Burst_title.png'
 
 
 const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (

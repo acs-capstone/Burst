@@ -23,9 +23,7 @@ const deleteSession = session => ({ type: DELETE_SESSION })
 //gets all sources from db
 export const getVideoSessionThunk = id => async dispatch => {
   try {
-    console.log('IN THUNK!')
     const { data } = await axios.get(`/video/${id}`)
-    console.log('**DATA', data)
     dispatch(getSession(data))
   } catch (err) {
     console.error(err)
@@ -46,7 +44,7 @@ export const deleteVideoSessionThunk = session => async dispatch => {
 /**
  * REDUCER
  */
-export default function(session = initialSession, action) {
+export default function (session = initialSession, action) {
   switch (action.type) {
     case GET_SESSION:
       return action.session

@@ -38,7 +38,7 @@ class AllArticles extends Component {
           <Grid item xs={4}>
             <UserProfile />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={6} s={8}>
             <ArticleList
               articles={this.props.articles}
             />

@@ -50,18 +50,20 @@ class Topics extends Component {
 
   render() {
     return (
-      <div>
+      <div className="quiz-content-div">
         <h2>Which topics would you like to read about?</h2>
-        {this.props.topics.map(topic => {
-          return (
-            <ChoiceButton
-              key={topic.id}
-              topic={topic}
-              handleClick={this.handleClickTopic}
-              selectedTopics={this.state.topics}
-            />
-          )
-        })}
+        <div className="buttons-group">
+          {this.props.topics.map(topic => {
+            return (
+              <ChoiceButton
+                key={topic.id}
+                topic={topic}
+                handleClick={this.handleClickTopic}
+                selectedTopics={this.state.topics}
+              />
+            )
+          })}
+        </div>
         {this.state.topics.length ? (
           <div>
             <button type="submit" name="submit" onClick={this.handleSubmit}>

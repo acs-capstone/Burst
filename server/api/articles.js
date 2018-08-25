@@ -8,8 +8,8 @@ router.get('/popular', async (req, res, next) => {
     const popularTopics = await News.mostPopularByTopic()
     //console.log('***api/article:', popularTopics)
     res.json(popularTopics)
-  } catch (e) {
-    console.log(e)
+  } catch (error) {
+    console.error(error)
   }
 })
 
