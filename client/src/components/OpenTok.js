@@ -235,7 +235,11 @@ class OpenTok extends React.Component {
           </OTStreams>
         </OTSession>
         <div>
-          <button className="leave-session-btn" onClick={this.handleClick}>
+          <button
+            type="submit"
+            className="leave-session-btn"
+            onClick={this.handleClick}
+          >
             Leave Session
           </button>
         </div>
