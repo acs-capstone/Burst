@@ -121,7 +121,7 @@ class OpenTok extends React.Component {
     }
   }
 
-  handleClick(evt) {
+  async handleClick(evt) {
     evt.preventDefault()
     console.log('HERRREE')
     // await this.props.deleteVideoSessionThunk({

@@ -116,8 +116,9 @@ class FocusGraph extends Component {
           graphData={data}
           nodeLabel="title"
           nodeAutoColorBy="group"
-          width={1000}
+          width={1200}
           height={600}
+          backgroundColor={'#1f2833'}
           showNavInfo={false}
           onNodeClick={this._handleNodeClick}
           onNodeHover={this._handleNodeHover}
