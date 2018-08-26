@@ -24,7 +24,7 @@ export const UserHome = props => {
         <h4>How would you like to burst your bubble?</h4>
       </div>
 
-      <div className="page-header-item">
+      <div className="page-header-item" id="icon-headers">
         <div className="logo-btn">
           <Link to="/news">
             <img className="icon" src={Browse_icon} />

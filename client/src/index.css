@@ -559,3 +559,7 @@ footer {
   overflow-wrap: normal;
   text-decoration: none;
 }
+
+#icon-headers {
+  width: 80vw;
+}
