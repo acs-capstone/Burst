@@ -14,22 +14,22 @@ To run this app locally,
 1. cd server && npm install
 2. cd client && npm install
 3. cd ../ && npm install
-2. npm run dev
+4. npm run dev
 
 ##Built With
--Javascript
--HTML
--CSS & Flexbox
--React-Redux
--D3 - data visualization library
--WebGL - renders 3d graphics
--Node.js
--Express
--Webpack
--PostgreSQL
--Sequelize 
--NewsApi.org - news aggregation API
--OpenTok by tokbox - video chat
+Javascript
+HTML
+CSS & Flexbox
+React-Redux
+D3 - data visualization library
+WebGL - renders 3d graphics
+Node.js
+Express
+Webpack
+PostgreSQL
+Sequelize 
+NewsApi.org - news aggregation API
+OpenTok by tokbox - video chat API
 
 ##Authors
 Claire Watson
