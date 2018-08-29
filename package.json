@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "v8.11.1"
+  },
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
@@ -37,6 +40,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
     "cheerio-advanced-selectors": "^2.0.1",
     "compression": "^1.7.3",

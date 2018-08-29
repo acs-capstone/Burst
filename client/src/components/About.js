@@ -1,8 +1,12 @@
 import React from 'react'
+import Burst_title from '../Burst_title.png'
+
 
 const About = () => {
   return (
-    <div className="container d-flex align-items-start flex-column">
+
+    <div id="about-content">
+      <img src={Burst_title} alt="BURST" id="about-logo" />
       <h1>Welcome to Burst</h1>
       <h3>About Us</h3>
       <p>
@@ -24,6 +28,7 @@ const About = () => {
         of your bubble.
       </p>
     </div>
+
   )
 }
 

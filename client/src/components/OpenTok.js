@@ -122,59 +122,65 @@ class OpenTok extends React.Component {
   }
 
   async handleClick(evt) {
-    await this.props.deleteVideoSessionThunk({
-      sessionId: this.props.sessionId,
-      token: this.props.token
-    })
+    evt.preventDefault()
+    console.log('HERRREE')
+    // await this.props.deleteVideoSessionThunk({
+    //   sessionId: this.props.sessionId,
+    //   token: this.props.token
+    // })
 
-    history.push('/feedback')
+    // history.push('/feedback')
   }
 
   render() {
     const apiKey = this.props.apiKey
     const sessionId = this.props.sessionId
     const token = this.props.token
-    const { error, connection, publishVideo, count, publishAudio } = this.state
+    const { error, publishVideo, count, publishAudio } = this.state
 
     return (
-      <div>
-        {this.state.subscriber ? (
-          <div>
-            {count < 1 ? (
-              <h2>Starting in:</h2>
-            ) : (
+      <div id="video-container">
+        <div className="chat-header">
+          {this.state.subscriber ? (
+            <div>
+              {count < 1 ? (
+                <h2 className="turns">Chat Starting Soon! </h2>
+              ) : (
                 <div>
                   {publishAudio ? (
                     <div className="flex">
                       <span className="padding">
-                        <h2 className="bold">Your Turn</h2>
+                        <h2 className="turns ">SPEAK</h2>
                       </span>
-                      <h2 className="ml-3"> Their Turn</h2>
+                      {/* <h2 className="ml-3"> LISTEN</h2> */}
                     </div>
                   ) : (
-                      <div className="flex">
-                        <h2>Your Turn</h2>
-                        <span className="padding">
-                          <h2 className="ml-3 bold"> Their Turn</h2>
-                        </span>
-                      </div>
-                    )}
+                    <div className="flex">
+                      {/* <h3>SPEAK</h3> */}
+                      <span className="padding">
+                        <h3 className="ml-3 turns "> LISTEN</h3>
+                      </span>
+                    </div>
+                  )}
                 </div>
               )}
-            <ReactCountdownClock
-              seconds={this.state.seconds}
-              color="#000"
-              alpha={0.9}
-              size={100}
-              pause={true}
-              onComplete={this.handleComplete}
-            />
-          </div>
-        ) : (
+              <div id="clock">
+                <ReactCountdownClock
+                  seconds={this.state.seconds}
+                  color="#000"
+                  alpha={0.9}
+                  size={100}
+                  pause={true}
+                  onComplete={this.handleComplete}
+                />
+              </div>
+            </div>
+          ) : (
             <div id="waiting-for-burster">
-              <h4>Waiting for your fellow Burster!</h4>
+              <h4 className="turns">Waiting for your fellow Burster!</h4>
             </div>
           )}
+        </div>
 
         {error ? (
           <div className="error">
@@ -228,11 +234,18 @@ class OpenTok extends React.Component {
             />
           </OTStreams>
         </OTSession>
-        <button id="leave-session-btn">
-          <Link to="/feedback" onClick={this.handleClick}>
+        <div>
+          <button
+            type="submit"
+            className="leave-session-btn"
+            onClick={this.handleClick}
+          >
             Leave Session
-          </Link>
-        </button>
+          </button>
+        </div>
+        {/* <Link to="/feedback" onClick={this.handleClick}>
+          Leave Session
+        </Link> */}
       </div>
     )
   }

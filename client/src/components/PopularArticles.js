@@ -35,33 +35,43 @@ class PopularArticles extends Component {
 
   handleClick(evt) {
     evt.preventDefault()
+
     this.props.history.push(`/video/${evt.target.value}`)
   }
 
   render() {
     return (
       <div>
-        <span id="pop-top-header"><h4>Today's Most Popular Articles By Topic</h4></span>
-        <Grid container direction="row" justify="center">
+        <div className="page-header-item">
+          <h4>Discuss Today's Most Popular Articles</h4>
+        </div>
+        <Grid container direction="row" justify="center" spacing={24}>
           {this.state.articles.map(article => {
             return (
-              <Grid item xs={4} key={article.url}>
-                <div className="container">
+              <Grid
+                item
+                xs={4}
+                key={article.url}
+                className="popular-article-card"
+              >
+                <div className="page-header-item-secondary">
+                  {/* <div> */}
                   <h5>{article.topic}</h5>
-                  <div>
-                    <button
-                      type="button"
-                      id="video-burst"
-                      name="start-chat"
-                      value={article.topicId}
-                      onClick={this.handleClick}
-                    >
-                      Join Video Burst
-                    </button>
-                    <ul className=".list-unstyled">
-                      <Article article={article} />
-                    </ul>
-                  </div>
+                  {/* </div>
+                  <div> */}
+                  <button
+                    type="button"
+                    id="video-burst"
+                    name="start-chat"
+                    value={article.topicId}
+                    onClick={this.handleClick}
+                  >
+                    Join Video Burst
+                  </button>
+                  {/* </div> */}
+                </div>
+                <div className="popular-article">
+                  <Article article={article} />
                 </div>
               </Grid>
             )
