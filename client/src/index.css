@@ -277,7 +277,12 @@ footer {
   color: #66fcf1;
 }
 
+/* Login Form */
 .auth-label {
+  color: black;
+}
+
+#login-error{
   color: black;
 }
 
