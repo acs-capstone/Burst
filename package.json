@@ -20,7 +20,7 @@
     "start": "node server",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
-    "test": "NODE_ENV='test' mocha \"./server/**/*.spec.js\" \"./client/**/*.spec.js\" \"./script/**/*.spec.js\" --require @babel/polyfill --require @babel/register",
+    "test": "NODE_ENV='test' mocha \"tests/setup.js\" \"tests/*.spec.js\"  --watch",
     "client": "cd client && npm start",
     "server": "nodemon server/index.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
@@ -42,6 +42,8 @@
   "dependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.2",
     "cheerio-advanced-selectors": "^2.0.1",
     "compression": "^1.7.3",
@@ -58,8 +60,10 @@
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
+    "chai-things": "^0.2.0",
+    "concurrently": "^3.5.0",
     "nodemon": "^1.18.3",
-    "volleyball": "^1.5.1",
-    "concurrently": "^3.5.0"
+    "supertest": "^3.1.0",
+    "volleyball": "^1.5.1"
   }
 }

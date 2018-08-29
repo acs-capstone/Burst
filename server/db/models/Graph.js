@@ -76,15 +76,19 @@ const createNode = article => {
   nodeKey++
   nodes.push(node)
   links.push({ source: node.topic, target: node.id })
-  //console.log(node)
 }
 const createNodes = (chunk, topic) => {
-  console.log('creating nodes...\n')
+  console.log('creating nodes for', topic, '\n')
+
   chunk.map(article => {
     article.topic = topic
     createNode(article)
   })
+
+  //push a node for each topic for the center of each cluster
   nodes.push({ id: topic, title: topic, color: '#808080' })
+
+  console.log('created', chunk.length, 'nodes for', topic, '\n')
 }
 createNodes(electionArticles, 'Elections')
 createNodes(energyArticles, 'Energy and Environment')
@@ -95,12 +99,9 @@ createNodes(immigrationArticles, 'Immigration')
 createNodes(intArticles, 'International Relations')
 createNodes(tradeArticles, 'Trade')
 
-console.log(nodes)
-console.log(links)
+console.log(nodes.length, 'nodes were created.\n')
+console.log(links.length, 'links were created.\n')
 
-const linkTrack = {}
-
-console.log(links)
 fs.writeFileSync(
   '../../../client/src/components/data-vis/nodes.json',
   JSON.stringify(nodes)
