@@ -5,6 +5,7 @@ const allData = fs
   .slice(1) //remove first row variable names
   .map(row => row.split(','))
 
+// optionally set DATA_LENGTH to create a subset for testing
 const DATA_LENGTH = 5
 const FILE_PATH = '../../../client/src/components/data-vis/'
 
@@ -76,36 +77,3 @@ console.log('\n\n')
 
 fs.writeFileSync(FILE_PATH + 'links.json', JSON.stringify(links))
 fs.writeFileSync(FILE_PATH + 'nodes.json', JSON.stringify(nodes))
-// "links": [
-//     {
-//         "node": "id1",
-//         "target": "id2"
-//     },
-// ]
-
-// "nodes": [
-//     {
-//         "id": "id1",
-//         "name": "id1",
-//          "val": 1
-//     },
-// ]
-
-/*
-    source -> target
-    each doc has multiple topics (with multiple weights)
-    so doc -> topic = manytomany and viceversa
-
-    const articleId = 1
-    const topicId = 1
-
-
-     const link = {"source": 1, "target": 1, "weight": 0.35}
-     docId  topicId   weight topicId    weight  topicId weight  topicId weight
-     1		7	      0.336	  4	        0.18	8	    0.143	5	    0.085
-
-     so id, source (this will be from the file that was fed into the model (hopefully), so maybe I can make sure it's named after the news source or something)
-
-    and then a varying number of topicIds and weights. so for each document, I will need to loop through the rows (and they don't have column ids, how stupid!) and catch the topicIds.
-
-    */

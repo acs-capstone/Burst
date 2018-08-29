@@ -3,17 +3,15 @@ const pkg = require('../package.json')
 
 const databaseName = pkg.name + (process.env.NODE_ENV === 'test' ? '-test' : '')
 
-// const db = new Sequelize('burst', 'fsa', 'secretPassword123', {
-//   dialect: 'postgres',
-//   logging: false
-// })
-
 const createDatabase = () => {
   if (process.env.USER === 'notnull') {
-    const db = new Sequelize('burst-server', 'fsa', 'secretPassword123', {
-      dialect: 'postgres',
-      logging: false
-    })
+    const config = require('./config')
+    const db = new Sequelize(
+      config.database,
+      config.username,
+      config.password,
+      config.config
+    )
     return db
   } else {
     const db = new Sequelize(
