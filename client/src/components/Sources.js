@@ -25,16 +25,15 @@ class Sources extends Component {
 
   async handleClick(evt) {
     //checks if sources is already on state, if so add its to state, otherwise it removes it
-    // console.log(evt.target.value)
     !this.state.sources.includes(evt.target.value)
       ? await this.setState({
-        sources: [...this.state.sources, evt.target.value]
-      })
-      : await this.setState({
-        sources: this.state.sources.filter(source => {
-          return source !== evt.target.value
+          sources: [...this.state.sources, evt.target.value]
         })
-      })
+      : await this.setState({
+          sources: this.state.sources.filter(source => {
+            return source !== evt.target.value
+          })
+        })
   }
 
   async handleSubmit(evt) {
@@ -51,35 +50,45 @@ class Sources extends Component {
 
   render() {
     return (
-      <div>
+      <div className="quiz-content-div">
         <h2>Which sources do you like to read?</h2>
-        {this.props.sources.map(source => {
-          return (
-            // <div className="card-deck" >
-            <ChoiceButton
-              key={source.id}
-              source={source}
-              handleClick={this.handleClick}
-              selectedSources={this.state.sources}
-            />
-            // </div>
-          )
-        })}
+        <div className="buttons-group">
+          {this.props.sources.map(source => {
+            return (
+              <ChoiceButton
+                key={source.id}
+                source={source}
+                handleClick={this.handleClick}
+                selectedSources={this.state.sources}
+              />
+            )
+          })}
+        </div>
         {this.state.sources.length ? (
           <div>
-            <button type="submit" name="submit" onClick={this.handleSubmit}>
+            <button
+              className="submit-btn"
+              type="submit"
+              name="submit"
+              onClick={this.handleSubmit}
+            >
               Submit
             </button>
           </div>
         ) : (
-            <div>
-              <button type="submit" name="submit" onClick={this.handleSubmit} disabled>
-                Submit
-              </button>
-              <p>Please select at least one source.</p>
-            </div>
-          )
-        }
+          <div>
+            <button
+              className="submit-btn"
+              type="submit"
+              name="submit"
+              onClick={this.handleSubmit}
+              disabled
+            >
+              Submit
+            </button>
+            <p>Please select at least one source.</p>
+          </div>
+        )}
       </div>
     )
   }

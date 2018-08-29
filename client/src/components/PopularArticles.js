@@ -35,6 +35,7 @@ class PopularArticles extends Component {
 
   handleClick(evt) {
     evt.preventDefault()
+
     this.props.history.push(`/video/${evt.target.value}`)
   }
 
@@ -44,34 +45,39 @@ class PopularArticles extends Component {
         <div className="page-header-item">
           <h4>Discuss Today's Most Popular Articles</h4>
         </div>
-        <Grid container direction="row" justify="center">
+        <Grid container direction="row" justify="center" spacing={24}>
           {this.state.articles.map(article => {
             return (
-              <Grid item xs={4} key={article.url} >
+              <Grid
+                item
+                xs={4}
+                key={article.url}
+                className="popular-article-card"
+              >
                 <div className="page-header-item-secondary">
-                  <div>
+                  {/* <div> */}
                   <h5>{article.topic}</h5>
-                  </div>
-                  <div>
-                    <button
-                      type="button"
-                      id="video-burst"
-                      name="start-chat"
-                      value={article.topicId}
-                      onClick={this.handleClick}
-                    >
-                      Join Video Burst
-                    </button>
-                  </div>
+                  {/* </div>
+                  <div> */}
+                  <button
+                    type="button"
+                    id="video-burst"
+                    name="start-chat"
+                    value={article.topicId}
+                    onClick={this.handleClick}
+                  >
+                    Join Video Burst
+                  </button>
+                  {/* </div> */}
                 </div>
-                <div className=".list-unstyled">
+                <div className="popular-article">
                   <Article article={article} />
                 </div>
               </Grid>
             )
           })}
         </Grid>
-      </div >
+      </div>
     )
   }
 }

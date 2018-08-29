@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import Button from '@material-ui/core/Button'
 
 class FocusGraphPreview extends Component {
-  componentDidMount() { }
+  componentDidMount() {}
 
   render() {
     const { node, handleClose } = this.props
@@ -10,39 +11,40 @@ class FocusGraphPreview extends Component {
         <h4>Choose a topic to visualize</h4>
       </div>
     ) : (
-        <div
-          ref={el => {
-            this.el = el
-          }}
-          className="card graph-preview"
-        >
-          <div className="card-header">
-            <img
-              className="card-img-top"
-              alt={node.title}
-              src={node.urlToImage}
-            />
+      <div
+        ref={el => {
+          this.el = el
+        }}
+        className="graph-preview"
+      >
+        <div className="card-header">
+          <img
+            className="card-img-top"
+            alt={node.title}
+            src={node.urlToImage}
+          />
 
-            <h4>{node.title}</h4>
-          </div>
-          <div className="card-body">
-            <p>{node.desc}</p>
+          <h4 className="node-content">{node.title}</h4>
+          {/* </div>
+        <div className="card-body"> */}
+          <p className="node-content">{node.desc}</p>
 
-            <a href={node.url} target="_blank" rel="noopener noreferrer">
-              <button className="btn" type="button">
-                Read Article
+          <a href={node.url} target="_blank" rel="noopener noreferrer">
+            <button className="btn ml-4" type="button">
+              READ ARTICLE
             </button>
-            </a>
-            <button
-              className="btn"
-              type="button"
-              onClick={() => handleClose(node)}
-            >
-              close
+          </a>
+
+          <button
+            className="btn ml-4"
+            type="button"
+            onClick={() => handleClose(node)}
+          >
+            CLOSE
           </button>
-          </div>
         </div>
-      )
+      </div>
+    )
   }
 }
 export default FocusGraphPreview

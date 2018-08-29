@@ -6,7 +6,9 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
-
+import Browse_icon from '../browse_icon.png'
+import Visualize_icon from '../magnifying-glass.png'
+import Talk_icon from '../talk-icon.png'
 
 /* COMPONENT */
 
@@ -14,7 +16,6 @@ export const UserHome = props => {
   const { user } = props
   return (
     <div>
-
       <div className="page-header-item">
         <h3>Welcome, {user.email}</h3>
       </div>
@@ -23,29 +24,40 @@ export const UserHome = props => {
         <h4>How would you like to burst your bubble?</h4>
       </div>
 
-      <div className="page-header-item">
-        <button className="home-burst-options">
-          <Link to="/news">Browse</Link>
-        </button>
-        <button className="home-burst-options">
-          <Link to="/popular">Discuss</Link>
-        </button>
-        <button className="home-burst-options">
-          <Link to="/explore">Visualize</Link>
-        </button>
+      <div className="page-header-item" id="icon-headers">
+        <div className="logo-btn">
+          <Link to="/news">
+            <img className="icon" src={Browse_icon} />
+            <button className="home-burst-options">Browse</button>
+          </Link>
+        </div>
+        <div className="logo-btn">
+          <Link to="/popular">
+            <img className="icon" src={Talk_icon} />
+            <button className="home-burst-options">Discuss</button>
+          </Link>
+        </div>
+        <div className="logo-btn">
+          <Link to="/explore">
+            <img className="icon" src={Visualize_icon} />
+
+            <button className="home-burst-options">Visualize</button>
+          </Link>
+        </div>
       </div>
 
       <Card>
         <CardContent>
-
           <div className="top-card-container">
             <Typography gutterBottom variant="headline" component="h2">
               Your Political Orientation is:
-                </Typography>{' '}
+            </Typography>{' '}
           </div>
 
           <div className="chip-container">
-            <button className="profile-selections" >{user.poliOri.poliOri}</button>
+            <button className="profile-selections">
+              {user.poliOri.poliOri}
+            </button>
           </div>
 
           <Button>
@@ -53,7 +65,6 @@ export const UserHome = props => {
           </Button>
 
           <Divider />
-
 
           <div className="top-card-container">
             <Typography gutterBottom variant="headline" component="h2">
@@ -64,7 +75,9 @@ export const UserHome = props => {
           <div className="chip-container">
             {user.topics.map(topic => {
               return (
-                <button className="profile-selections" key={topic.id}>{topic.name}</button>
+                <button className="profile-selections" key={topic.id}>
+                  {topic.name}
+                </button>
               )
             })}
           </div>
@@ -75,17 +88,18 @@ export const UserHome = props => {
 
           <Divider />
 
-
           <div className="top-card-container">
             <Typography gutterBottom variant="headline" component="h2">
               Your Sources
-                </Typography>{' '}
+            </Typography>{' '}
           </div>
 
           <div className="chip-container">
             {user.sources.map(source => {
               return (
-                <button className="profile-selections" key={source.id}>{source.name}</button>
+                <button className="profile-selections" key={source.id}>
+                  {source.name}
+                </button>
               )
             })}
           </div>

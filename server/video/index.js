@@ -19,8 +19,12 @@ router.get('/:id', async (req, res, next) => {
 
   //if there is no open session, create a new session and a token for first participant
   if (openSession === null) {
+<<<<<<< HEAD
     console.log('API KEY IN GET ID!!!', apiKey)
     await opentok.createSession(async function (err, session) {
+=======
+    await opentok.createSession(async function(err, session) {
+>>>>>>> master
       if (err) return console.log(err)
 
       const token1 = await opentok.generateToken(session.sessionId)

@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import '@opentok/client'
 import OpenTok from './OpenTok'
 import { getVideoSessionThunk } from '../store/videoSession'
-// const apiKey = process.env.VIDEO_API_KEY
-// const VIDEO_API_KEY = process.env.VIDEO_API_KEY
+//const apiKey = process.env.VIDEO_API_KEY
+//const VIDEO_API_KEY = process.env.VIDEO_API_KEY
 import { VIDEO_API_KEY } from '../secrets'
 
 class VideoParent extends Component {
@@ -17,7 +17,6 @@ class VideoParent extends Component {
       const sessionId = this.props.videoSession.sessionId
       const token = this.props.videoSession.token
       const user = this.props.videoSession.user
-      // console.log('apiKEYYY', apiKey)
 
       return (
         <div>

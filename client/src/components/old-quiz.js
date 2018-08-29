@@ -44,7 +44,7 @@ class Quiz extends Component {
   async handleSubmit(evt) {
     try {
       evt.preventDefault()
-      console.log('SUBMITTING', evt.target.name)
+      // console.log('SUBMITTING', evt.target.name)
     } catch (err) {
       console.error(err.message)
     }
@@ -54,7 +54,7 @@ class Quiz extends Component {
     this.setState({
       currentSourceName: evt.target.value
     })
-    console.log('currentSourceName', this.state.currentSourceName)
+    // console.log('currentSourceName', this.state.currentSourceName)
   }
 
   async handleClick(evt) {
@@ -70,7 +70,7 @@ class Quiz extends Component {
       } else {
         //if question number is same as length, questions are finished and quiz is submitted
         let finalScore = Math.round(this.state.score / 2) //TODO: Change to 11 once all Q's are added
-        console.log('*FINAL SCORE*', finalScore)
+        // console.log('*FINAL SCORE*', finalScore)
         this.setState({ score: finalScore, hasSubmittedQuiz: true })
       }
       //if quiz is submitted, but topics haven't been submitted, show topics component

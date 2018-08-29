@@ -31,15 +31,6 @@ export const getAllSources = () => async dispatch => {
     console.error(err)
   }
 }
-//
-// export const setUserSources = () => async dispatch => {
-//   try {
-//     const user = User.findById(action.userId)
-//     user.addSources(action.userSources)
-//   } catch (e) {
-//     console.log(e)
-//   }
-// }
 
 /**
  * REDUCER
