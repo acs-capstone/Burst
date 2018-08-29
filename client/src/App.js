@@ -13,7 +13,7 @@ class App extends Component {
           <Routes />
         </div>
         <footer className="footer">
-          <p className="text-center">&copy; 2018 ACS Burst!</p>
+          <p className="text-center">&copy; 2018 Burst ACS</p>
         </footer>
       </div>
     )

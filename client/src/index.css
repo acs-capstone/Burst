@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 15vh 5vw 5vh 5vw;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  /* background-color: #dfdce3; */
   color: white;
   background-color: #1f2833;
   height: 100%;
@@ -12,19 +11,14 @@ body {
 }
 
 .main-container {
-  min-height: 80vh; /* will cover the 100% of viewport */
+  min-height: 80vh;
   width: 90vw;
   overflow: hidden;
-  /* display: block; */
-  /* position: relative; */
   padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* margin-left: 10vw;
-  margin-right: 10vw; */
-  /* margin-bottom: 10px; */
 }
 
 footer {
@@ -35,7 +29,7 @@ footer {
   margin-top: 5px;
   padding-top: 5px;
 }
-/* old background color: #dfdce3;*/
+
 .navbar {
   background-color: #1f2833;
   font: bold;
@@ -170,7 +164,6 @@ footer {
 #quiz-button {
   height: 10vh;
   width: 75vw;
-  /* margin: 10px; */
   font-size: 1.1em;
   border-radius: 10px;
   color: black;
@@ -180,9 +173,6 @@ footer {
   padding: 5px;
   margin-top: 10px;
   overflow-wrap: normal;
-  /* text-overflow: ellipsis; */
-  /* white-space: nowrap;
-  overflow: hidden; */
 }
 
 #quiz-button:focus {
@@ -254,7 +244,6 @@ footer {
   text-align: center;
   outline: none;
   text-overflow: ellipsis;
-  /*#add8e6;*/
   /* Need the below for text-overflow to work*/
   white-space: nowrap;
   overflow: hidden;
@@ -262,8 +251,6 @@ footer {
 .profile-selections:focus {
   outline: none;
 }
-/*
-#login-button { */
 /* Browse Discuss and Visualize options on homepage */
 .home-burst-options {
   height: 5vh;
@@ -271,23 +258,16 @@ footer {
   margin: 10px;
   font-size: 1.5em;
   border-radius: 10px;
-  /* border: 2px solid #66fcf1; */
   border: none;
   color: white;
 
   background-color: transparent;
-  /* color: black;
-  background-color: #dde7f6; */
   text-decoration: none;
   text-align: center;
   padding: 5px;
   margin-top: 10px;
   overflow-wrap: normal;
-  /* text-overflow: ellipsis; */
-  /* white-space: nowrap;
-  overflow: hidden; */
 }
-/* other color options: #a1ddd9 #a2e5e1*/
 
 .home-burst-options:focus {
   outline: none;
@@ -355,7 +335,6 @@ footer {
 .OTSubscriberContainer {
   float: right;
   position: absolute;
-  /* right: 40px; */
   top: 175px;
   left: 92px;
   z-index: -1;
@@ -364,7 +343,6 @@ footer {
 .OTPublisherContainer {
   float: right;
   position: absolute;
-  /* right: 35px; */
   right: 95px;
   top: 175px;
   z-index: 1;
@@ -417,13 +395,10 @@ footer {
 .form-group {
   background-color: white;
   padding: 10px;
-  /* position: absolute;
-  left: 25px; */
 }
 
 #login-form {
   width: 40vw;
-  /* margin-left: ; */
   display: flex;
   justify-content: center;
   border-radius: 10px;

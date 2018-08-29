@@ -44,7 +44,6 @@ class Quiz extends Component {
   async handleSubmit(evt) {
     try {
       evt.preventDefault()
-      // console.log('SUBMITTING', evt.target.name)
     } catch (err) {
       console.error(err.message)
     }
@@ -54,7 +53,6 @@ class Quiz extends Component {
     this.setState({
       currentSourceName: evt.target.value
     })
-    // console.log('currentSourceName', this.state.currentSourceName)
   }
 
   async handleClick(evt) {
@@ -69,8 +67,7 @@ class Quiz extends Component {
         this.setState({ question: questions[this.state.count] })
       } else {
         //if question number is same as length, questions are finished and quiz is submitted
-        let finalScore = Math.round(this.state.score / 2) //TODO: Change to 11 once all Q's are added
-        // console.log('*FINAL SCORE*', finalScore)
+        let finalScore = Math.round(this.state.score / 2)
         this.setState({ score: finalScore, hasSubmittedQuiz: true })
       }
       //if quiz is submitted, but topics haven't been submitted, show topics component
@@ -104,7 +101,6 @@ class Quiz extends Component {
       this.setState({ hasSubmittedSources: true })
       this.props.history.push(`/news/${this.props.user.id}`)
     }
-    //render the topics component or sources component?
   }
   //update question on state, so view changes
 
@@ -149,5 +145,3 @@ export default connect(
   mapState,
   mapDispatch
 )(Quiz)
-
-//have to make sure to send back userId with userPrefObj from quiz
