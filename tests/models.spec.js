@@ -6,7 +6,7 @@ const expect = chai.expect
 const chaiThings = require('chai-things')
 chai.use(chaiThings)
 
-// User Model
+// database
 const db = require('../server/db')
 
 // defined in ../server/db/models/User.js
