@@ -9,7 +9,6 @@ const { VideoSession } = require('../db/models')
 module.exports = router
 
 router.get('/:id', async (req, res, next) => {
-  console.log('IN ROUTE')
   //see if session is open with one participent (will only have one token)
   const openSession = await VideoSession.findOne({
     where: {
@@ -20,6 +19,7 @@ router.get('/:id', async (req, res, next) => {
 
   //if there is no open session, create a new session and a token for first participant
   if (openSession === null) {
+    console.log('API KEY IN GET ID!!!', apiKey)
     await opentok.createSession(async function (err, session) {
       if (err) return console.log(err)
 
