@@ -3,8 +3,8 @@ import { OTSession, OTPublisher, OTStreams, OTSubscriber } from 'opentok-react'
 import ReactCountdownClock from 'react-countdown-clock'
 import { deleteVideoSessionThunk } from '../store/videoSession'
 import { connect } from 'react-redux'
-import history from '../history'
-import { Link } from 'react-router-dom'
+// import history from '../history'
+// import { Link } from 'react-router-dom'
 
 class OpenTok extends React.Component {
   constructor(props) {
@@ -123,7 +123,6 @@ class OpenTok extends React.Component {
 
   async handleClick(evt) {
     evt.preventDefault()
-    console.log('HERRREE')
     // await this.props.deleteVideoSessionThunk({
     //   sessionId: this.props.sessionId,
     //   token: this.props.token
@@ -146,24 +145,22 @@ class OpenTok extends React.Component {
               {count < 1 ? (
                 <h2 className="turns">Chat Starting Soon! </h2>
               ) : (
-                <div>
-                  {publishAudio ? (
-                    <div className="flex">
-                      <span className="padding">
-                        <h2 className="turns ">SPEAK</h2>
-                      </span>
-                      {/* <h2 className="ml-3"> LISTEN</h2> */}
-                    </div>
-                  ) : (
-                    <div className="flex">
-                      {/* <h3>SPEAK</h3> */}
-                      <span className="padding">
-                        <h3 className="ml-3 turns "> LISTEN</h3>
-                      </span>
-                    </div>
-                  )}
-                </div>
-              )}
+                  <div>
+                    {publishAudio ? (
+                      <div className="flex">
+                        <span className="padding">
+                          <h2 className="turns ">SPEAK</h2>
+                        </span>
+                      </div>
+                    ) : (
+                        <div className="flex">
+                          <span className="padding">
+                            <h3 className="ml-3 turns "> LISTEN</h3>
+                          </span>
+                        </div>
+                      )}
+                  </div>
+                )}
               <div id="clock">
                 <ReactCountdownClock
                   seconds={this.state.seconds}
@@ -176,10 +173,10 @@ class OpenTok extends React.Component {
               </div>
             </div>
           ) : (
-            <div id="waiting-for-burster">
-              <h4 className="turns">Waiting for your fellow Burster!</h4>
-            </div>
-          )}
+              <div id="waiting-for-burster">
+                <h4 className="turns">Waiting for your fellow Burster!</h4>
+              </div>
+            )}
         </div>
 
         {error ? (
@@ -197,11 +194,6 @@ class OpenTok extends React.Component {
           publishAudio={this.state.publishAudio}
           onSubscribe={this.handleSubscribe}
         >
-          {/* <button id="videoButton" onClick={this.toggleVideo}>
-            {publishVideo ? 'Disable' : 'Enable'} Video
-          </button> */}
-
-          {/* {this.state.publishAudio ? <h2> Audio On!</h2> : <h5>Audio Off!</h5>} */}
           <OTPublisher //shows your video
             properties={{
               publishVideo,

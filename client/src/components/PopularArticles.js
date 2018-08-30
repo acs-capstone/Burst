@@ -55,10 +55,7 @@ class PopularArticles extends Component {
                 className="popular-article-card"
               >
                 <div className="page-header-item-secondary">
-                  {/* <div> */}
                   <h5>{article.topic}</h5>
-                  {/* </div>
-                  <div> */}
                   <button
                     type="button"
                     id="video-burst"
@@ -68,7 +65,6 @@ class PopularArticles extends Component {
                   >
                     Join Video Burst
                   </button>
-                  {/* </div> */}
                 </div>
                 <div className="popular-article">
                   <Article article={article} />

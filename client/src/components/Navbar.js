@@ -4,49 +4,36 @@ import { Link } from 'react-router-dom'
 import { logout } from '../store'
 import Burst_logo from '../Burst_logo.png'
 
-
-const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
+const Navbar = ({ handleClick, isLoggedIn, sources }) => (
   <nav className="navbar navbar-expand-lg fixed-top">
-
-    <div className="container ">
+    <div className="container">
       {isLoggedIn && sources && sources.length ? (
-
-        <div>
+        < div >
+          {/* The navbar will show these links if you're logged in and have completed the quiz */}
           <nav className="navbar">
-
             <Link className="navbar-brand" to="/home">
               <img src={Burst_logo} id="nav-logo" alt="Burst" />
             </Link>
 
-            <a className="nav-item">
-              <Link className="nav-link" to="/home">
-                Home
+            <Link className="nav-link" to="/home">
+              Home
               </Link>
-            </a>
 
-            <a className="nav-item">
-              <Link className="nav-link" to="/news">
-                Browse
+            <Link className="nav-link" to="/news">
+              Browse
               </Link>
-            </a>
 
-            <a className="nav-item">
-              <Link className="nav-link" to="/popular">
-                Discuss
+            <Link className="nav-link" to="/popular">
+              Discuss
               </Link>
-            </a>
 
-            <a className="nav-item">
-              <Link className="nav-link" to="/explore">
-                Visualize
+            <Link className="nav-link" to="/explore">
+              Visualize
               </Link>
-            </a>
 
-            <a className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
+            <Link className="nav-link" to="/about">
+              About
               </Link>
-            </a>
 
             <a className="nav-item">
               <a className="nav-link" href="/" onClick={handleClick}>
@@ -58,34 +45,32 @@ const Navbar = ({ id, handleClick, isLoggedIn, sources }) => (
         </div>
       ) : !isLoggedIn ? (
         <div>
-          {/* The navbar will show these links before you log in */}
+          {/* The navbar will show these links before you've logged in */}
           <nav className="navbar">
             <img src={Burst_logo} id="nav-logo" alt="Burst" />
-            <a className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
-            </a>
-            <a className="nav-item">
-              <Link className="nav-link" to="/login">
-                Login
-              </Link>
-            </a>
-            <a className="nav-item">
-              <Link className="nav-link" to="/signup">
-                Sign Up
-              </Link>
-            </a>
+
+            <Link className="nav-link" to="/about">
+              About
+            </Link>
+
+            <Link className="nav-link" to="/login">
+              Login
+            </Link>
+
+            <Link className="nav-link" to="/signup">
+              Sign Up
+            </Link>
           </nav>
         </div>
       ) : (
-            <div>
+            < div >
+              {/* The navbar will show these links if you're logged in and have not completed the quiz */}
               <nav className="navbar">
                 <img src={Burst_logo} id="nav-logo" alt="Burst" />
                 <a className="nav-item">
                   <a className="nav-link" href="/" onClick={handleClick}>
                     Logout
-              </a>
+                  </a>
                 </a>
               </nav>
             </div>

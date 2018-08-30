@@ -46,11 +46,11 @@ router.post('/logout', (req, res) => {
 })
 
 
-router.use('/google', require('./google'))
-// router.use('/google', (req, res, next) => {
-//   console.log('****')
-//   next();
-// })
+// router.use('/google', require('./google'))
+// // router.use('/google', (req, res, next) => {
+// //   console.log('****')
+// //   next();
+// // })
 
 router.get('/me', async (req, res) => {
   try {

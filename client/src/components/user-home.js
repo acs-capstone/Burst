@@ -27,19 +27,19 @@ export const UserHome = props => {
       <div className="page-header-item" id="icon-headers">
         <div className="logo-btn">
           <Link to="/news">
-            <img className="icon" src={Browse_icon} />
+            <img className="icon" src={Browse_icon} alt="browse" />
             <button className="home-burst-options">Browse</button>
           </Link>
         </div>
         <div className="logo-btn">
           <Link to="/popular">
-            <img className="icon" src={Talk_icon} />
+            <img className="icon" src={Talk_icon} alt="discuss" />
             <button className="home-burst-options">Discuss</button>
           </Link>
         </div>
         <div className="logo-btn">
           <Link to="/explore">
-            <img className="icon" src={Visualize_icon} />
+            <img className="icon" src={Visualize_icon} alt="explore" />
 
             <button className="home-burst-options">Visualize</button>
           </Link>
