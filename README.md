@@ -17,22 +17,22 @@ To run this app locally,
 4. npm run dev
 
 ## Built With
-*Javascript
-*HTML
-*CSS & Flexbox
-*React-Redux
-*D3 - data visualization library
-*WebGL - renders 3d graphics
-*Node.js
-*Express
-*Webpack
-*PostgreSQL
-*Sequelize 
-*NewsApi.org - news aggregation API
-*OpenTok by tokbox - video chat API
+* Javascript
+* HTML
+* CSS & Flexbox
+* React-Redux
+* D3 - data visualization library
+* WebGL - renders 3d graphics
+* Node.js
+* Express
+* Webpack
+* PostgreSQL
+* Sequelize 
+* NewsApi.org - news aggregation API
+* OpenTok by tokbox - video chat API
 
 ## Authors
-*Claire Watson
-*Sarah Hailey
-*Alicia Dinkel
+* Claire Watson
+* Sarah Hailey
+* Alicia Dinkel
 
